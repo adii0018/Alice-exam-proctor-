@@ -1,0 +1,598 @@
+/**
+ * Natural Day Theme - Quiz Interface Styles
+ * Applies warm, sunny styling to quiz pages and quiz-taking interface
+ */
+
+/* ============================================
+   QUIZ CODE ENTRY (Task 4.2)
+   ============================================ */
+
+/* Quiz code entry container */
+.quiz-code-entry {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* Quiz code input */
+.quiz-code-input {
+  background: var(--color-surface-alt);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  padding: 1rem 1.5rem;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-code-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15), var(--shadow-md);
+  background: white;
+}
+
+.quiz-code-input::placeholder {
+  color: var(--color-text-disabled);
+  letter-spacing: 0.1em;
+}
+
+/* Start quiz button */
+.quiz-start-button {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(74, 144, 226, 0.3);
+}
+
+.quiz-start-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Info cards in quiz entry */
+.quiz-info-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  background: var(--color-surface-hover);
+}
+
+.quiz-info-card.camera {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(74, 144, 226, 0.05));
+  border-color: rgba(74, 144, 226, 0.2);
+}
+
+.quiz-info-card.audio {
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(156, 39, 176, 0.05));
+  border-color: rgba(156, 39, 176, 0.2);
+}
+
+.quiz-info-card.ai {
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(233, 30, 99, 0.05));
+  border-color: rgba(233, 30, 99, 0.2);
+}
+
+/* ============================================
+   QUIZ INTERFACE HEADER (Task 4.2)
+   ============================================ */
+
+/* Quiz header container */
+.quiz-header {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Quiz title */
+.quiz-title {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Quiz description */
+.quiz-description {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   QUIZ TIMER (Task 4.2)
+   ============================================ */
+
+/* Timer display */
+.quiz-timer {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-shadow: 0 2px 4px rgba(139, 90, 43, 0.1);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-timer.warning {
+  color: var(--color-warning);
+  animation: pulse-warning 1s ease-in-out infinite;
+}
+
+.quiz-timer.critical {
+  color: var(--color-error);
+  animation: pulse-critical 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse-warning {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulse-critical {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* ============================================
+   QUIZ PROGRESS BAR (Task 4.2)
+   ============================================ */
+
+/* Progress bar container */
+.quiz-progress-container {
+  height: 8px;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress bar fill */
+.quiz-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+}
+
+/* Progress text */
+.quiz-progress-text {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   QUESTION NAVIGATOR (Task 4.2)
+   ============================================ */
+
+/* Navigator container */
+.question-navigator {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.question-navigator-title {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Question number buttons */
+.question-nav-button {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  transition: all var(--transition-duration) var(--transition-timing);
+  border: 1px solid var(--color-border);
+}
+
+.question-nav-button.current {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.question-nav-button.answered {
+  background: rgba(102, 187, 106, 0.15);
+  border-color: rgba(102, 187, 106, 0.3);
+  color: var(--color-success);
+}
+
+.question-nav-button.unanswered {
+  background: var(--color-surface-alt);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.question-nav-button:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Navigator legend */
+.question-nav-legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.question-nav-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.question-nav-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.question-nav-legend-dot.current {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+.question-nav-legend-dot.answered {
+  background: rgba(102, 187, 106, 0.3);
+  border: 1px solid rgba(102, 187, 106, 0.5);
+}
+
+.question-nav-legend-dot.unanswered {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+}
+
+/* ============================================
+   QUIZ QUESTIONS (Task 4.2)
+   ============================================ */
+
+/* Question container */
+.quiz-question-container {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Question text */
+.quiz-question-text {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Answered badge */
+.quiz-answered-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(102, 187, 106, 0.15);
+  border: 1px solid rgba(102, 187, 106, 0.3);
+  border-radius: 20px;
+  color: var(--color-success);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   QUIZ OPTIONS (Task 4.2)
+   ============================================ */
+
+/* Option button */
+.quiz-option {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: left;
+  transition: all var(--transition-duration) var(--transition-timing);
+  background: var(--color-surface-alt);
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.quiz-option:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+  transform: translateX(8px);
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-option.selected {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-color: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+/* Option radio indicator */
+.quiz-option-radio {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-option.selected .quiz-option-radio {
+  border-color: white;
+  background: white;
+}
+
+.quiz-option-radio-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+/* ============================================
+   QUIZ NAVIGATION BUTTONS (Task 4.2)
+   ============================================ */
+
+/* Previous button */
+.quiz-nav-previous {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-nav-previous:hover:not(:disabled) {
+  background: var(--color-surface-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-nav-previous:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Next button */
+.quiz-nav-next {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-nav-next:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Submit button */
+.quiz-submit-button {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-success), #4CAF50);
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(102, 187, 106, 0.4);
+}
+
+/* Cancel button */
+.quiz-cancel-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: rgba(239, 83, 80, 0.15);
+  border: 1px solid rgba(239, 83, 80, 0.3);
+  color: var(--color-error);
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.quiz-cancel-button:hover {
+  background: rgba(239, 83, 80, 0.25);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   QUIZ VIOLATIONS WARNING (Task 4.2)
+   ============================================ */
+
+/* Violations container */
+.quiz-violations {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 167, 38, 0.15);
+  border: 1px solid rgba(255, 167, 38, 0.3);
+  border-radius: 8px;
+}
+
+.quiz-violations.warning {
+  background: rgba(255, 167, 38, 0.15);
+  border-color: rgba(255, 167, 38, 0.3);
+  color: var(--color-warning);
+}
+
+.quiz-violations.critical {
+  background: rgba(239, 83, 80, 0.15);
+  border-color: rgba(239, 83, 80, 0.3);
+  color: var(--color-error);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* ============================================
+   QUIZ TIPS SECTION (Task 4.2)
+   ============================================ */
+
+/* Tips container */
+.quiz-tips {
+  background: linear-gradient(135deg, 
+    rgba(74, 144, 226, 0.1), 
+    rgba(156, 39, 176, 0.1));
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.quiz-tips-title {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-tips-list {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.quiz-tips-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* ============================================
+   ANSWER SUMMARY (Task 4.2)
+   ============================================ */
+
+/* Summary container */
+.quiz-summary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-summary-title {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.quiz-summary-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.quiz-summary-answered {
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.quiz-summary-remaining {
+  color: var(--color-warning);
+  font-weight: bold;
+}
+
+/* ============================================
+   DARK THEME OVERRIDES
+   Ensure dark theme remains unchanged
+   ============================================ */
+
+[data-theme="dark"] .quiz-code-entry,
+[data-theme="dark"] .quiz-header,
+[data-theme="dark"] .question-navigator,
+[data-theme="dark"] .quiz-question-container,
+[data-theme="dark"] .quiz-summary {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .quiz-code-input,
+[data-theme="dark"] .quiz-option {
+  background: #111827;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .quiz-option:hover {
+  background: #1f2937;
+}
+
+[data-theme="dark"] .quiz-nav-previous {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .quiz-nav-previous:hover:not(:disabled) {
+  background: #374151;
+}
+
+[data-theme="dark"] .quiz-tips {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(168, 85, 247, 0.1));
+  border-color: rgba(96, 165, 250, 0.2);
+}

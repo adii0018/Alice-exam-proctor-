@@ -1,0 +1,740 @@
+/**
+ * Professional Light Theme - Inspired by Wix Education Template
+ * Clean, minimal, corporate look - ONLY for light mode
+ * Dark mode will keep the space theme
+ */
+
+/* ============================================
+   HIDE SPACE EFFECTS IN LIGHT MODE
+   ============================================ */
+
+/* Hide starfield background */
+[data-theme="light"] canvas {
+  display: none !important;
+}
+
+/* Hide all cosmic orbs and floating effects */
+[data-theme="light"] .absolute.inset-0.overflow-hidden.pointer-events-none,
+[data-theme="light"] .absolute.inset-0.overflow-hidden {
+  display: none !important;
+}
+
+/* Clean page backgrounds */
+[data-theme="light"] .min-h-screen {
+  background: #F8F9FA !important;
+}
+
+[data-theme="light"] .min-h-screen.relative.overflow-hidden {
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 50%, #F8F9FA 100%) !important;
+}
+
+/* ============================================
+   LIGHT THEME ONLY - Professional Style
+   ============================================ */
+
+[data-theme="light"] {
+  /* Pure white background */
+  --color-background: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8F9FA;
+  --color-surface-alt: #F8F9FA;
+  
+  /* Professional text colors */
+  --color-text: #2C3E50;
+  --color-text-secondary: #5A6C7D;
+  --color-text-muted: #95A5A6;
+  --color-text-disabled: #BDC3C7;
+  
+  /* Accent colors - Professional blue */
+  --color-primary: #3498DB;
+  --color-primary-hover: #2980B9;
+  --color-secondary: #E74C3C;
+  --color-accent: #2ECC71;
+  
+  /* Borders - Very subtle */
+  --color-border: #E8EBED;
+  --color-border-hover: #D5DBDF;
+  --color-border-focus: #3498DB;
+  
+  /* State colors */
+  --color-error: #E74C3C;
+  --color-success: #2ECC71;
+  --color-warning: #F39C12;
+  --color-info: #3498DB;
+  
+  /* Subtle shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================
+   BODY & LAYOUT - Light Theme Only
+   ============================================ */
+
+[data-theme="light"] body {
+  background-color: #FFFFFF;
+  color: #2C3E50;
+}
+
+/* ============================================
+   BUTTONS - Professional Style
+   ============================================ */
+
+[data-theme="light"] button.bg-gradient-to-r.from-primary,
+[data-theme="light"] .btn-primary {
+  background: #3498DB;
+  color: white;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.25);
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] button.bg-gradient-to-r.from-primary:hover,
+[data-theme="light"] .btn-primary:hover {
+  background: #2980B9;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.35);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] button.from-primary.to-secondary {
+  background: #3498DB;
+}
+
+[data-theme="light"] button.bg-secondary {
+  background: #E74C3C;
+  color: white;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.25);
+}
+
+[data-theme="light"] button.bg-secondary:hover {
+  background: #C0392B;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.35);
+}
+
+[data-theme="light"] button.bg-accent {
+  background: #2ECC71;
+  color: white;
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.25);
+}
+
+[data-theme="light"] button.bg-accent:hover {
+  background: #27AE60;
+}
+
+[data-theme="light"] button.bg-surface,
+[data-theme="light"] .btn-ghost {
+  background: #FFFFFF;
+  border: 2px solid #E8EBED;
+  color: #2C3E50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] button.bg-surface:hover,
+[data-theme="light"] .btn-ghost:hover {
+  background: #F8F9FA;
+  border-color: #D5DBDF;
+}
+
+/* ============================================
+   CARDS - Clean White Cards
+   ============================================ */
+
+[data-theme="light"] .card,
+[data-theme="light"] .bg-surface,
+[data-theme="light"] div[class*="bg-surface"] {
+  background: #FFFFFF;
+  border: 1px solid #E8EBED;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-color: #D5DBDF;
+}
+
+[data-theme="light"] .backdrop-blur-xl.bg-surface\/50,
+[data-theme="light"] .backdrop-blur-lg.bg-surface\/50 {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid #E8EBED;
+}
+
+/* ============================================
+   FORM INPUTS - Clean & Professional
+   ============================================ */
+
+[data-theme="light"] input[type="text"],
+[data-theme="light"] input[type="email"],
+[data-theme="light"] input[type="password"],
+[data-theme="light"] input[type="number"],
+[data-theme="light"] input[type="search"],
+[data-theme="light"] input[type="tel"],
+[data-theme="light"] input[type="url"],
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background: #FFFFFF;
+  border: 2px solid #E8EBED;
+  border-radius: 6px;
+  color: #2C3E50;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] input:hover,
+[data-theme="light"] textarea:hover,
+[data-theme="light"] select:hover {
+  border-color: #D5DBDF;
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+  outline: none;
+  border-color: #3498DB;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  background: #FFFFFF;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #95A5A6;
+}
+
+/* ============================================
+   NAVIGATION - Clean Header
+   ============================================ */
+
+[data-theme="light"] nav,
+[data-theme="light"] header {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #E8EBED !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  backdrop-filter: none !important;
+}
+
+/* Override backdrop blur on nav */
+[data-theme="light"] nav.backdrop-blur-xl,
+[data-theme="light"] .backdrop-blur-xl {
+  backdrop-filter: none !important;
+  background: #FFFFFF !important;
+}
+
+[data-theme="light"] nav a,
+[data-theme="light"] .nav-link {
+  color: #5A6C7D !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] nav a:hover,
+[data-theme="light"] .nav-link:hover {
+  color: #3498DB !important;
+}
+
+[data-theme="light"] nav a.active {
+  color: #3498DB !important;
+  font-weight: 600;
+}
+
+/* Nav text colors */
+[data-theme="light"] nav .text-text {
+  color: #2C3E50 !important;
+}
+
+[data-theme="light"] nav .text-text-secondary {
+  color: #5A6C7D !important;
+}
+
+/* ============================================
+   DASHBOARD - Professional Layout
+   ============================================ */
+
+[data-theme="light"] .dashboard-welcome {
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+  border: 1px solid #E8EBED;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .stat-card {
+  background: #FFFFFF;
+  border: 1px solid #E8EBED;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .stat-card.blue {
+  border-left: 4px solid #3498DB;
+}
+
+[data-theme="light"] .stat-card.green {
+  border-left: 4px solid #2ECC71;
+}
+
+[data-theme="light"] .stat-card.red {
+  border-left: 4px solid #E74C3C;
+}
+
+[data-theme="light"] .stat-card.amber {
+  border-left: 4px solid #F39C12;
+}
+
+[data-theme="light"] .stat-card.purple {
+  border-left: 4px solid #9B59B6;
+}
+
+[data-theme="light"] .stat-number {
+  color: #2C3E50;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+[data-theme="light"] .stat-label {
+  color: #5A6C7D;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   QUIZ CARDS - Clean List Style
+   ============================================ */
+
+[data-theme="light"] .quiz-card {
+  background: #FFFFFF;
+  border: 1px solid #E8EBED;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .quiz-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateX(4px);
+  border-color: #3498DB;
+}
+
+[data-theme="light"] .quiz-card-title {
+  color: #2C3E50;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+[data-theme="light"] .quiz-card-date {
+  color: #5A6C7D;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   AUTH PAGE - Professional Login
+   ============================================ */
+
+/* Auth page background - clean gradient */
+[data-theme="light"] .min-h-screen.relative.overflow-hidden {
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 50%, #F8F9FA 100%);
+}
+
+/* Hide all cosmic orbs and effects in light mode */
+[data-theme="light"] .min-h-screen .absolute.inset-0 > div[class*="absolute"] {
+  display: none !important;
+}
+
+[data-theme="light"] .auth-card,
+[data-theme="light"] .auth-card-glass {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EBED !important;
+  border-radius: 12px !important;
+  padding: 3rem !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: none !important;
+}
+
+/* Override any glassmorphism in light mode */
+[data-theme="light"] .backdrop-blur-2xl,
+[data-theme="light"] .backdrop-blur-xl,
+[data-theme="light"] .backdrop-blur-lg,
+[data-theme="light"] .backdrop-blur-md {
+  backdrop-filter: none !important;
+  background: #FFFFFF !important;
+}
+
+/* Clean white cards */
+[data-theme="light"] .rounded-3xl,
+[data-theme="light"] .rounded-\[2rem\] {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EBED !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .auth-input {
+  background: #FFFFFF !important;
+  border: 2px solid #E8EBED !important;
+  border-radius: 6px !important;
+  color: #2C3E50 !important;
+}
+
+[data-theme="light"] .auth-input:focus {
+  border-color: #3498DB !important;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1) !important;
+}
+
+[data-theme="light"] .auth-button-primary {
+  background: #3498DB !important;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3) !important;
+}
+
+[data-theme="light"] .auth-button-primary:hover {
+  background: #2980B9 !important;
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4) !important;
+}
+
+/* Tab switcher */
+[data-theme="light"] .flex.gap-2.mb-6,
+[data-theme="light"] .flex.gap-2.mb-8 {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EBED !important;
+  border-radius: 10px !important;
+}
+
+[data-theme="light"] .auth-tab.active,
+[data-theme="light"] button[class*="text-white shadow-xl"] {
+  background: #3498DB !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3) !important;
+}
+
+/* Text colors in auth page */
+[data-theme="light"] .text-gray-200,
+[data-theme="light"] .text-gray-300,
+[data-theme="light"] .text-gray-400 {
+  color: #5A6C7D !important;
+}
+
+/* Remove text shadows in light mode */
+[data-theme="light"] * {
+  text-shadow: none !important;
+}
+
+/* ============================================
+   FOOTER - Clean & Minimal
+   ============================================ */
+
+[data-theme="light"] footer {
+  background: #F8F9FA;
+  border-top: 1px solid #E8EBED;
+}
+
+[data-theme="light"] footer p,
+[data-theme="light"] footer span {
+  color: #5A6C7D;
+}
+
+[data-theme="light"] footer h3,
+[data-theme="light"] footer h4 {
+  color: #2C3E50;
+  font-weight: 600;
+}
+
+[data-theme="light"] footer a {
+  color: #5A6C7D;
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] footer a:hover {
+  color: #3498DB;
+}
+
+/* ============================================
+   TYPOGRAPHY - Professional Fonts
+   ============================================ */
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #2C3E50;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="light"] p {
+  color: #5A6C7D;
+  line-height: 1.7;
+}
+
+/* ============================================
+   SCROLLBAR - Minimal Style
+   ============================================ */
+
+[data-theme="light"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #D5DBDF;
+  border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #BDC3C7;
+}
+
+/* ============================================
+   BADGES & STATUS - Clean Design
+   ============================================ */
+
+[data-theme="light"] .quiz-status.active {
+  background: #E8F8F5;
+  color: #27AE60;
+  border: 1px solid #A9DFBF;
+  font-weight: 600;
+}
+
+[data-theme="light"] .quiz-status.inactive {
+  background: #FADBD8;
+  color: #C0392B;
+  border: 1px solid #F5B7B1;
+  font-weight: 600;
+}
+
+[data-theme="light"] .quiz-status.completed {
+  background: #EBF5FB;
+  color: #2980B9;
+  border: 1px solid #AED6F1;
+  font-weight: 600;
+}
+
+/* ============================================
+   TABLES - Clean Data Display
+   ============================================ */
+
+[data-theme="light"] table {
+  background: #FFFFFF;
+  border: 1px solid #E8EBED;
+  border-radius: 8px;
+}
+
+[data-theme="light"] th {
+  background: #F8F9FA;
+  color: #2C3E50;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #E8EBED;
+}
+
+[data-theme="light"] td {
+  color: #5A6C7D;
+  border-bottom: 1px solid #F8F9FA;
+}
+
+[data-theme="light"] tr:hover {
+  background: #F8F9FA;
+}
+
+/* ============================================
+   MODALS - Professional Overlays
+   ============================================ */
+
+[data-theme="light"] .modal-backdrop {
+  background: rgba(44, 62, 80, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+[data-theme="light"] .modal-content {
+  background: #FFFFFF;
+  border: 1px solid #E8EBED;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   ALERTS & NOTIFICATIONS
+   ============================================ */
+
+[data-theme="light"] .alert-success {
+  background: #E8F8F5;
+  border-left: 4px solid #2ECC71;
+  color: #27AE60;
+}
+
+[data-theme="light"] .alert-error {
+  background: #FADBD8;
+  border-left: 4px solid #E74C3C;
+  color: #C0392B;
+}
+
+[data-theme="light"] .alert-warning {
+  background: #FEF5E7;
+  border-left: 4px solid #F39C12;
+  color: #D68910;
+}
+
+[data-theme="light"] .alert-info {
+  background: #EBF5FB;
+  border-left: 4px solid #3498DB;
+  color: #2980B9;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+[data-theme="light"] .skeleton {
+  background: linear-gradient(90deg, #F8F9FA 25%, #E8EBED 50%, #F8F9FA 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   FOCUS STATES - Accessibility
+   ============================================ */
+
+[data-theme="light"] *:focus-visible {
+  outline: 3px solid #3498DB;
+  outline-offset: 2px;
+}
+
+[data-theme="light"] button:focus-visible {
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+}
+
+
+/* ============================================
+   COMPREHENSIVE TAILWIND OVERRIDES
+   ============================================ */
+
+/* Background overrides */
+[data-theme="light"] .bg-surface\/80,
+[data-theme="light"] .bg-surface\/50,
+[data-theme="light"] .bg-surface\/30 {
+  background: #FFFFFF !important;
+}
+
+[data-theme="light"] .bg-white\/10,
+[data-theme="light"] .bg-white\/5 {
+  background: #FFFFFF !important;
+}
+
+/* Border overrides */
+[data-theme="light"] .border-border,
+[data-theme="light"] .border-border\/30,
+[data-theme="light"] .border-white\/10,
+[data-theme="light"] .border-white\/20,
+[data-theme="light"] .border-white\/30 {
+  border-color: #E8EBED !important;
+}
+
+/* Text color overrides */
+[data-theme="light"] .text-text {
+  color: #2C3E50 !important;
+}
+
+[data-theme="light"] .text-text-secondary {
+  color: #5A6C7D !important;
+}
+
+[data-theme="light"] .text-text-muted {
+  color: #95A5A6 !important;
+}
+
+/* Gradient backgrounds - make solid in light mode */
+[data-theme="light"] .bg-gradient-to-br,
+[data-theme="light"] .bg-gradient-to-r,
+[data-theme="light"] .bg-gradient-to-l,
+[data-theme="light"] .bg-gradient-to-t,
+[data-theme="light"] .bg-gradient-to-b {
+  background: #FFFFFF !important;
+}
+
+/* Primary color gradients */
+[data-theme="light"] .from-primary {
+  background: #3498DB !important;
+}
+
+[data-theme="light"] .from-primary\/10 {
+  background: rgba(52, 152, 219, 0.1) !important;
+}
+
+[data-theme="light"] .from-primary\/5 {
+  background: rgba(52, 152, 219, 0.05) !important;
+}
+
+/* Remove all blur effects in light mode */
+[data-theme="light"] .blur-lg,
+[data-theme="light"] .blur-xl,
+[data-theme="light"] .blur-2xl,
+[data-theme="light"] .blur-3xl {
+  filter: none !important;
+}
+
+/* Clean container backgrounds */
+[data-theme="light"] .relative.z-10,
+[data-theme="light"] .relative.z-20 {
+  background: transparent !important;
+}
+
+/* Override any remaining glassmorphism */
+[data-theme="light"] [class*="backdrop-blur"] {
+  backdrop-filter: none !important;
+  background: #FFFFFF !important;
+}
+
+/* Clean shadows */
+[data-theme="light"] .shadow-2xl {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .shadow-xl {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Logo container */
+[data-theme="light"] .w-14.h-14.bg-gradient-to-br {
+  background: #F8F9FA !important;
+  border: 2px solid #E8EBED !important;
+}
+
+/* Remove gradient overlays */
+[data-theme="light"] .absolute.inset-0.bg-gradient-to-br {
+  display: none !important;
+}
+
+/* Clean button styles */
+[data-theme="light"] button {
+  text-shadow: none !important;
+}
+
+/* Override motion div backgrounds */
+[data-theme="light"] motion-div,
+[data-theme="light"] [class*="motion"] {
+  text-shadow: none !important;
+}

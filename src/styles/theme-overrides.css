@@ -1,0 +1,196 @@
+/**
+ * Theme Overrides for Tailwind Classes
+ * This file ensures Tailwind utility classes respect theme variables
+ */
+
+/* Background color overrides */
+.bg-white {
+  background-color: var(--color-background) !important;
+}
+
+.bg-gray-50 {
+  background-color: var(--color-surface-alt) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--color-surface) !important;
+}
+
+.bg-gray-200 {
+  background-color: var(--color-surface-hover) !important;
+}
+
+/* Text color overrides */
+.text-gray-900 {
+  color: var(--color-text) !important;
+}
+
+.text-gray-800 {
+  color: var(--color-text) !important;
+}
+
+.text-gray-700 {
+  color: var(--color-text-secondary) !important;
+}
+
+.text-gray-600 {
+  color: var(--color-text-secondary) !important;
+}
+
+.text-gray-500 {
+  color: var(--color-text-muted) !important;
+}
+
+.text-gray-400 {
+  color: var(--color-text-muted) !important;
+}
+
+.text-gray-300 {
+  color: var(--color-text-secondary) !important;
+}
+
+.text-gray-200 {
+  color: var(--color-text-secondary) !important;
+}
+
+/* Border color overrides */
+.border-gray-200 {
+  border-color: var(--color-border) !important;
+}
+
+.border-gray-300 {
+  border-color: var(--color-border) !important;
+}
+
+.border-gray-400 {
+  border-color: var(--color-border-hover) !important;
+}
+
+/* Hover state overrides */
+.hover\:bg-gray-50:hover {
+  background-color: var(--color-surface-hover) !important;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: var(--color-surface-hover) !important;
+}
+
+.hover\:text-gray-900:hover {
+  color: var(--color-text) !important;
+}
+
+.hover\:text-gray-700:hover {
+  color: var(--color-text) !important;
+}
+
+/* Focus state overrides */
+.focus\:border-gray-400:focus {
+  border-color: var(--color-border-focus) !important;
+}
+
+.focus\:ring-gray-200:focus {
+  --tw-ring-color: var(--color-border) !important;
+}
+
+/* Placeholder overrides */
+.placeholder-gray-400::placeholder {
+  color: var(--color-text-disabled) !important;
+}
+
+.placeholder-gray-500::placeholder {
+  color: var(--color-text-muted) !important;
+}
+
+/* Divide color overrides */
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--color-border) !important;
+}
+
+/* Ring color overrides */
+.ring-gray-200 {
+  --tw-ring-color: var(--color-border) !important;
+}
+
+.ring-gray-300 {
+  --tw-ring-color: var(--color-border) !important;
+}
+
+/* Shadow overrides for theme consistency */
+.shadow-sm {
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Ensure black and white backgrounds work with theme */
+.bg-black {
+  background-color: var(--color-background) !important;
+  opacity: 0.95;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #000000 !important;
+  opacity: 1;
+}
+
+/* Glass morphism with theme awareness */
+.bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .bg-white\/10 {
+  background-color: rgba(31, 41, 55, 0.5) !important;
+}
+
+.bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme="dark"] .bg-white\/5 {
+  background-color: rgba(31, 41, 55, 0.3) !important;
+}
+
+.border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .border-white\/10 {
+  border-color: rgba(55, 65, 81, 0.5) !important;
+}
+
+.border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .border-white\/20 {
+  border-color: rgba(55, 65, 81, 0.7) !important;
+}
+
+.border-white\/30 {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme="dark"] .border-white\/30 {
+  border-color: rgba(55, 65, 81, 0.9) !important;
+}
+
+/* Backdrop blur with theme */
+.backdrop-blur-xl,
+.backdrop-blur-2xl,
+.backdrop-blur-lg,
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+/* Ensure proper contrast for all themes */
+[data-high-contrast="true"] .bg-white\/10,
+[data-high-contrast="true"] .bg-white\/5 {
+  background-color: var(--color-surface) !important;
+  border: 2px solid var(--color-border) !important;
+}

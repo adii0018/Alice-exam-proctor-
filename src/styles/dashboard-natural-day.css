@@ -1,0 +1,460 @@
+/**
+ * Natural Day Theme - Dashboard Page Styles
+ * Applies warm, sunny styling to Student and Teacher dashboard pages
+ */
+
+/* ============================================
+   DASHBOARD CARDS (Task 4.1)
+   ============================================ */
+
+/* Welcome section - Warm gradient background */
+.dashboard-welcome {
+  background: linear-gradient(135deg, 
+    rgba(74, 144, 226, 0.1) 0%, 
+    rgba(245, 166, 35, 0.1) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.dashboard-welcome:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Statistics cards - Warm colored backgrounds */
+.stat-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Stat card variants with warm colors */
+.stat-card.blue {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(74, 144, 226, 0.05));
+  border-color: rgba(74, 144, 226, 0.2);
+}
+
+.stat-card.green {
+  background: linear-gradient(135deg, rgba(124, 179, 66, 0.1), rgba(124, 179, 66, 0.05));
+  border-color: rgba(124, 179, 66, 0.2);
+}
+
+.stat-card.purple {
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(156, 39, 176, 0.05));
+  border-color: rgba(156, 39, 176, 0.2);
+}
+
+.stat-card.red {
+  background: linear-gradient(135deg, rgba(239, 83, 80, 0.1), rgba(239, 83, 80, 0.05));
+  border-color: rgba(239, 83, 80, 0.2);
+}
+
+.stat-card.amber {
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.1), rgba(245, 166, 35, 0.05));
+  border-color: rgba(245, 166, 35, 0.2);
+}
+
+/* Stat card numbers - Warm colors */
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-shadow: 0 2px 4px rgba(139, 90, 43, 0.1);
+}
+
+.stat-number.blue {
+  color: #4A90E2;
+}
+
+.stat-number.green {
+  color: #7CB342;
+}
+
+.stat-number.purple {
+  color: #9C27B0;
+}
+
+.stat-number.red {
+  color: #EF5350;
+}
+
+.stat-number.amber {
+  color: #F5A623;
+}
+
+/* Stat card labels */
+.stat-label {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ============================================
+   QUIZ LISTS (Task 4.1)
+   ============================================ */
+
+/* Quiz list container */
+.quiz-list {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Quiz card - Soft cream background with warm borders */
+.quiz-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+}
+
+.quiz-card:hover {
+  background: var(--color-surface-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateX(8px);
+  border-color: var(--color-border-hover);
+}
+
+/* Quiz card header */
+.quiz-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.quiz-card-title {
+  color: var(--color-text);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.quiz-card-date {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Quiz card score display */
+.quiz-score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quiz-score-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.quiz-score-percentage {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.quiz-score-percentage.high {
+  background: rgba(102, 187, 106, 0.15);
+  color: #66BB6A;
+  border: 1px solid rgba(102, 187, 106, 0.3);
+}
+
+.quiz-score-percentage.medium {
+  background: rgba(255, 167, 38, 0.15);
+  color: #FFA726;
+  border: 1px solid rgba(255, 167, 38, 0.3);
+}
+
+.quiz-score-percentage.low {
+  background: rgba(239, 83, 80, 0.15);
+  color: #EF5350;
+  border: 1px solid rgba(239, 83, 80, 0.3);
+}
+
+/* Quiz card flags indicator */
+.quiz-flags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(255, 167, 38, 0.1);
+  border: 1px solid rgba(255, 167, 38, 0.2);
+  border-radius: 8px;
+  color: #FFA726;
+  font-size: 0.875rem;
+}
+
+/* Quiz status badge */
+.quiz-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quiz-status.active {
+  background: rgba(102, 187, 106, 0.15);
+  color: #66BB6A;
+  border: 1px solid rgba(102, 187, 106, 0.3);
+}
+
+.quiz-status.inactive {
+  background: rgba(141, 110, 99, 0.15);
+  color: #8D6E63;
+  border: 1px solid rgba(141, 110, 99, 0.3);
+}
+
+.quiz-status.completed {
+  background: rgba(74, 144, 226, 0.15);
+  color: #4A90E2;
+  border: 1px solid rgba(74, 144, 226, 0.3);
+}
+
+/* Empty state for quiz lists */
+.quiz-list-empty {
+  background: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.quiz-list-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.quiz-list-empty-text {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+/* ============================================
+   SUBMISSION CARDS (Task 4.1)
+   ============================================ */
+
+/* Recent submissions section */
+.submissions-section {
+  margin-top: 2rem;
+}
+
+.submissions-title {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Submission card */
+.submission-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+}
+
+.submission-card:hover {
+  background: var(--color-surface-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateX(8px);
+}
+
+/* ============================================
+   DASHBOARD TABS (Task 4.1)
+   ============================================ */
+
+/* Tab container */
+.dashboard-tabs {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Tab button */
+.dashboard-tab {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all var(--transition-duration) var(--transition-timing);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.dashboard-tab:hover {
+  color: var(--color-text);
+  background: var(--color-surface-hover);
+}
+
+.dashboard-tab.active {
+  color: white;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  box-shadow: var(--shadow-md);
+}
+
+/* Tab icon */
+.dashboard-tab-icon {
+  margin-right: 0.5rem;
+}
+
+/* ============================================
+   DASHBOARD NAVBAR (Task 4.1)
+   ============================================ */
+
+/* Navbar with warm white background */
+.dashboard-navbar {
+  background: rgba(255, 249, 240, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Logo container */
+.dashboard-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dashboard-logo-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, 
+    rgba(74, 144, 226, 0.1), 
+    rgba(245, 166, 35, 0.1), 
+    rgba(124, 179, 66, 0.1));
+  border: 1px solid rgba(230, 213, 195, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.dashboard-logo-icon:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-logo-title {
+  color: var(--color-text);
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.dashboard-logo-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+}
+
+/* User info section */
+.dashboard-user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-user-details {
+  text-align: right;
+}
+
+.dashboard-user-name {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.dashboard-user-role {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Logout button */
+.dashboard-logout {
+  padding: 0.5rem 1rem;
+  background: rgba(239, 83, 80, 0.2);
+  border: 1px solid rgba(239, 83, 80, 0.3);
+  color: #EF5350;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.dashboard-logout:hover {
+  background: rgba(239, 83, 80, 0.3);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   DARK THEME OVERRIDES
+   Ensure dark theme remains unchanged
+   ============================================ */
+
+[data-theme="dark"] .dashboard-welcome {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+  border-color: #374151;
+}
+
+[data-theme="dark"] .stat-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .quiz-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .quiz-card:hover {
+  background: #374151;
+}
+
+[data-theme="dark"] .dashboard-tabs {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .dashboard-navbar {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: #374151;
+}
+
+[data-theme="dark"] .dashboard-logo-icon {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(168, 85, 247, 0.1));
+  border-color: #374151;
+}

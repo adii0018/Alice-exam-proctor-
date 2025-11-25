@@ -1,0 +1,214 @@
+/**
+ * Light Day Background Styles
+ * Beautiful animated background for light theme
+ */
+
+/* Gradient background with animation */
+.light-day-gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f0f9ff 25%,
+    #e0f2fe 50%,
+    #dbeafe 75%,
+    #eff6ff 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Floating orbs */
+.light-day-orbs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.light-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.light-orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+  top: -10%;
+  left: -10%;
+  animation-duration: 25s;
+}
+
+.light-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+  top: 20%;
+  right: -5%;
+  animation-duration: 30s;
+  animation-delay: -5s;
+}
+
+.light-orb-3 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%);
+  bottom: -15%;
+  left: 30%;
+  animation-duration: 35s;
+  animation-delay: -10s;
+}
+
+.light-orb-4 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+  bottom: 10%;
+  right: 20%;
+  animation-duration: 28s;
+  animation-delay: -15s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(50px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-30px, 30px) scale(0.9);
+  }
+  75% {
+    transform: translate(40px, 60px) scale(1.05);
+  }
+}
+
+/* Particle canvas */
+.light-day-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Animated waves at bottom */
+.light-day-waves {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+
+.wave path {
+  fill: currentColor;
+}
+
+.wave-1 {
+  color: rgba(59, 130, 246, 0.3);
+  animation: wave-animation 15s ease-in-out infinite;
+}
+
+.wave-2 {
+  color: rgba(139, 92, 246, 0.25);
+  animation: wave-animation 20s ease-in-out infinite reverse;
+  animation-delay: -5s;
+}
+
+.wave-3 {
+  color: rgba(236, 72, 153, 0.2);
+  animation: wave-animation 25s ease-in-out infinite;
+  animation-delay: -10s;
+}
+
+@keyframes wave-animation {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-25%) translateY(-10px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0);
+  }
+  75% {
+    transform: translateX(-25%) translateY(10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .light-orb {
+    filter: blur(60px);
+  }
+
+  .light-orb-1,
+  .light-orb-2,
+  .light-orb-3,
+  .light-orb-4 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .light-day-waves {
+    height: 100px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .light-day-gradient-bg,
+  .light-orb,
+  .wave {
+    animation: none !important;
+  }
+
+  .light-day-gradient-bg {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  }
+}
+
+/* Performance optimization - hide on low-end devices */
+@media (max-width: 480px) {
+  .light-day-canvas {
+    display: none;
+  }
+}

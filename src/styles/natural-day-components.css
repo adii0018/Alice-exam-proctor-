@@ -1,0 +1,554 @@
+/**
+ * Natural Day Theme - Core UI Component Styles
+ * Applies warm, sunny, nature-inspired styling to buttons, cards, forms, navigation, and footer
+ */
+
+/* ============================================
+   BUTTON COMPONENTS (Task 2.1)
+   ============================================ */
+
+/* Primary Buttons - Sky blue gradient with warm shadows */
+button.bg-gradient-to-r.from-primary,
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  color: white;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+button.bg-gradient-to-r.from-primary:hover,
+.btn-primary:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+button.bg-gradient-to-r.from-primary:active,
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Primary to Secondary gradient buttons */
+button.from-primary.to-secondary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  box-shadow: var(--shadow-md);
+}
+
+button.from-primary.to-secondary:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Secondary Buttons - Warm amber colors */
+.btn-secondary,
+button.bg-secondary {
+  background: var(--color-secondary);
+  color: white;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.btn-secondary:hover,
+button.bg-secondary:hover {
+  background: linear-gradient(135deg, var(--color-secondary), #E09612);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Accent Buttons - Sage green */
+button.bg-accent,
+button.from-accent {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+button.bg-accent:hover,
+button.from-accent:hover {
+  background: linear-gradient(135deg, var(--color-accent), #689F38);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Surface/Ghost Buttons - Warm borders and backgrounds */
+button.bg-surface,
+.btn-ghost {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+button.bg-surface:hover,
+.btn-ghost:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Button focus states with sky blue */
+button:focus-visible {
+  outline: 3px solid var(--color-border-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+}
+
+/* Disabled button states */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================================
+   CARD AND SURFACE COMPONENTS (Task 2.2)
+   ============================================ */
+
+/* Card base styles - Soft cream background with warm borders */
+.card,
+.bg-surface,
+div[class*="bg-surface"] {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+/* Card hover states - Light peach background with enhanced shadow */
+.card:hover,
+.hover\:bg-surface:hover {
+  background: var(--color-surface-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Backdrop blur surfaces - Enhanced with warm tones */
+.backdrop-blur-xl.bg-surface\/50,
+.backdrop-blur-lg.bg-surface\/50 {
+  background: rgba(255, 244, 224, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Alternative surface with sky tint */
+.bg-surface-alt {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+}
+
+/* Surface with gradient borders */
+.surface-gradient-border {
+  position: relative;
+  background: var(--color-surface);
+  border-radius: 12px;
+}
+
+.surface-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Elevated cards with stronger shadows */
+.card-elevated {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   FORM INPUT COMPONENTS (Task 2.3)
+   ============================================ */
+
+/* Input base styles - Sky tint background with warm borders */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  background: var(--color-surface-alt);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+/* Input hover states */
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: var(--color-border-hover);
+}
+
+/* Input focus states - Sky blue borders with warm shadow */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1), var(--shadow-sm);
+  background: white;
+}
+
+/* Placeholder text - Soft gray */
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-disabled);
+  opacity: 1;
+}
+
+/* Input with icons */
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  padding-right: 3rem;
+}
+
+.input-with-icon .icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+}
+
+/* Form labels */
+label {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Checkbox and radio custom styling */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Toggle switches */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  transition: var(--transition-duration);
+  border-radius: 24px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: var(--transition-duration);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+input:checked + .toggle-slider {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Range sliders */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   NAVIGATION AND HEADER COMPONENTS (Task 2.4)
+   ============================================ */
+
+/* Navigation bar - Warm white background */
+nav,
+header {
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Navigation links - Sky blue on hover */
+nav a,
+.nav-link {
+  color: var(--color-text-secondary);
+  transition: all var(--transition-duration) var(--transition-timing);
+  position: relative;
+}
+
+nav a:hover,
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+/* Active navigation link indicator */
+nav a.active::after,
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: 2px;
+}
+
+/* Navigation hover underline effect */
+nav a::before,
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: all var(--transition-duration) var(--transition-timing);
+  transform: translateX(-50%);
+}
+
+nav a:hover::before,
+.nav-link:hover::before {
+  width: 100%;
+}
+
+/* Header container */
+.header-container {
+  background: var(--color-background);
+  backdrop-filter: blur(8px);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   FOOTER COMPONENT (Task 2.5)
+   ============================================ */
+
+/* Footer base - Gradient background with warm tones */
+footer {
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-surface) 50%, var(--color-background) 100%);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Footer text - Appropriate brown tones */
+footer p,
+footer span {
+  color: var(--color-text-secondary);
+}
+
+/* Footer headings */
+footer h3,
+footer h4,
+footer h5 {
+  color: var(--color-text);
+}
+
+/* Footer links - Sky blue on hover */
+footer a {
+  color: var(--color-text-secondary);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+footer a:hover {
+  color: var(--color-primary);
+}
+
+/* Footer social icons */
+footer .social-link {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: all var(--transition-duration) var(--transition-timing);
+  box-shadow: var(--shadow-sm);
+}
+
+footer .social-link:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Footer newsletter input */
+footer input[type="email"] {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+footer input[type="email"]:focus {
+  background: white;
+  border-color: var(--color-primary);
+}
+
+/* Footer sections */
+footer .footer-section {
+  padding: 2rem 0;
+}
+
+/* Footer bottom bar */
+footer .footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: 2rem;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Warm shadow utilities */
+.shadow-warm-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-warm-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-warm-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Hover lift effect with warm shadow */
+.hover-lift-warm {
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.hover-lift-warm:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Gradient text */
+.text-gradient-natural {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Warm border utilities */
+.border-warm {
+  border-color: var(--color-border);
+}
+
+.border-warm-hover:hover {
+  border-color: var(--color-border-hover);
+}
+
+/* ============================================
+   DARK THEME OVERRIDES
+   Ensure dark theme remains unchanged
+   ============================================ */
+
+[data-theme="dark"] button.bg-gradient-to-r.from-primary,
+[data-theme="dark"] .btn-primary {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .bg-surface {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] nav,
+[data-theme="dark"] header {
+  background: #111827;
+  border-color: #374151;
+}
+
+[data-theme="dark"] footer {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);
+  border-color: #374151;
+}

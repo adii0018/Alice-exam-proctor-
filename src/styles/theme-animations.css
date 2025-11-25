@@ -1,0 +1,582 @@
+/**
+ * Theme Animations and Transitions
+ * Smooth animations for theme changes with reduced motion support
+ */
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+/* Fade in animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide up animation for modal */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Ripple effect animation */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Pulse animation for selection */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Rotate animation for sun/moon icon */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bounce animation for selection indicator */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Glow effect */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--color-primary);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--color-primary), 0 0 30px var(--color-primary);
+  }
+}
+
+/* ============================================
+   MODAL ANIMATIONS
+   ============================================ */
+
+/* Theme settings modal fade-in */
+.theme-modal-backdrop {
+  animation: fadeIn 200ms var(--transition-timing);
+}
+
+.theme-modal-content {
+  animation: slideUp 300ms var(--transition-timing);
+}
+
+/* ============================================
+   COLOR SCHEME ANIMATIONS
+   ============================================ */
+
+/* Ripple effect container */
+.scheme-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.scheme-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.scheme-card.ripple-active::after {
+  animation: ripple 600ms var(--transition-timing);
+}
+
+/* Scheme selection animation */
+.scheme-card-selected {
+  animation: pulse 400ms var(--transition-timing);
+}
+
+/* Hover scale effect */
+.scheme-card:hover .scheme-swatch {
+  transform: scale(1.05);
+  transition: transform 200ms var(--transition-timing);
+}
+
+/* ============================================
+   THEME TOGGLE ANIMATIONS
+   ============================================ */
+
+/* Sun/moon icon rotation and fade */
+.theme-icon-sun {
+  transition: opacity 300ms var(--transition-timing),
+              transform 300ms var(--transition-timing);
+}
+
+.theme-icon-moon {
+  transition: opacity 300ms var(--transition-timing),
+              transform 300ms var(--transition-timing);
+}
+
+/* Button press effect */
+.theme-toggle-button:active {
+  transform: scale(0.95);
+  transition: transform 100ms var(--transition-timing);
+}
+
+/* Glow effect on hover */
+.theme-toggle-button:hover {
+  box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.1);
+  transition: box-shadow 200ms var(--transition-timing);
+}
+
+/* ============================================
+   COLOR TRANSITION ANIMATIONS
+   ============================================ */
+
+/* Smooth color transitions for all theme changes */
+.theme-transition {
+  transition: background-color 300ms var(--transition-timing),
+              border-color 300ms var(--transition-timing),
+              color 300ms var(--transition-timing),
+              box-shadow 300ms var(--transition-timing);
+}
+
+/* Enhanced transition for interactive elements */
+.theme-transition-interactive {
+  transition: background-color 200ms var(--transition-timing),
+              border-color 200ms var(--transition-timing),
+              color 200ms var(--transition-timing),
+              transform 200ms var(--transition-timing),
+              box-shadow 200ms var(--transition-timing);
+}
+
+/* Global theme transition for all elements - Natural Day Theme optimized */
+/* This ensures smooth transitions when switching between light and dark modes */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent transitions on page load to avoid flash of unstyled content */
+.preload * {
+  transition: none !important;
+}
+
+/* Specific transitions for common elements to prevent visual glitches */
+body,
+main,
+header,
+footer,
+nav,
+section,
+article,
+aside {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card and surface transitions */
+.card,
+[class*="card"],
+[class*="surface"],
+[class*="panel"] {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button transitions */
+button,
+[role="button"],
+.btn,
+[class*="btn-"] {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Input and form element transitions */
+input,
+textarea,
+select,
+[contenteditable] {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Link transitions */
+a {
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* SVG and icon transitions */
+svg,
+svg path,
+svg circle,
+svg rect,
+svg polygon {
+  transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent layout shift during theme transitions */
+img,
+video,
+iframe {
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Shadow transitions for depth changes */
+[class*="shadow"],
+.elevation-1,
+.elevation-2,
+.elevation-3 {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme transitioning state - Prevents visual glitches */
+.theme-transitioning {
+  /* Ensure smooth transition without flicker */
+  pointer-events: none;
+}
+
+.theme-transitioning * {
+  /* Prevent interaction during transition to avoid visual glitches */
+  pointer-events: none;
+}
+
+/* Re-enable pointer events after transition */
+html:not(.theme-transitioning) {
+  pointer-events: auto;
+}
+
+html:not(.theme-transitioning) * {
+  pointer-events: auto;
+}
+
+/* ============================================
+   ACCESSIBILITY PANEL ANIMATIONS
+   ============================================ */
+
+/* Slide in animation for accessibility options */
+.a11y-option {
+  animation: slideUp 300ms var(--transition-timing) backwards;
+}
+
+.a11y-option:nth-child(1) {
+  animation-delay: 50ms;
+}
+
+.a11y-option:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.a11y-option:nth-child(3) {
+  animation-delay: 150ms;
+}
+
+/* Toggle switch animation */
+.toggle-switch {
+  transition: background-color 200ms var(--transition-timing);
+}
+
+.toggle-switch-handle {
+  transition: transform 200ms var(--transition-timing);
+}
+
+/* ============================================
+   PREVIEW PANEL ANIMATIONS
+   ============================================ */
+
+/* Preview update animation */
+.theme-preview-update {
+  animation: pulse 300ms var(--transition-timing);
+}
+
+/* ============================================
+   BUTTON ANIMATIONS
+   ============================================ */
+
+/* Button hover lift effect */
+.btn-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 200ms var(--transition-timing),
+              box-shadow 200ms var(--transition-timing);
+}
+
+/* Button press effect */
+.btn-press:active {
+  transform: scale(0.98);
+  transition: transform 100ms var(--transition-timing);
+}
+
+/* ============================================
+   LOADING ANIMATIONS
+   ============================================ */
+
+/* Shimmer loading effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 0%,
+    var(--color-surface-hover) 50%,
+    var(--color-surface) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* ============================================
+   NOTIFICATION ANIMATIONS
+   ============================================ */
+
+/* Toast notification slide in */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification-toast {
+  animation: slideInRight 300ms var(--transition-timing);
+}
+
+/* ============================================
+   REDUCED MOTION OVERRIDES
+   ============================================ */
+
+/* Respect reduced motion preference - Instant theme transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Disable all animations */
+  .theme-modal-backdrop,
+  .theme-modal-content,
+  .scheme-card,
+  .theme-icon-sun,
+  .theme-icon-moon,
+  .a11y-option,
+  .notification-toast {
+    animation: none !important;
+  }
+  
+  /* Disable transform animations */
+  .scheme-card:hover .scheme-swatch,
+  .theme-toggle-button:active,
+  .btn-lift:hover,
+  .btn-press:active {
+    transform: none !important;
+  }
+  
+  /* Instant theme color transitions */
+  body,
+  main,
+  header,
+  footer,
+  nav,
+  section,
+  article,
+  aside,
+  button,
+  input,
+  textarea,
+  select,
+  a,
+  .card,
+  [class*="card"],
+  [class*="surface"],
+  [class*="panel"] {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Manual reduced motion setting - Instant theme transitions */
+[data-reduced-motion="true"] *,
+[data-reduced-motion="true"] *::before,
+[data-reduced-motion="true"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Disable all animations when reduced motion is enabled */
+[data-reduced-motion="true"] .theme-modal-backdrop,
+[data-reduced-motion="true"] .theme-modal-content,
+[data-reduced-motion="true"] .scheme-card,
+[data-reduced-motion="true"] .theme-icon-sun,
+[data-reduced-motion="true"] .theme-icon-moon,
+[data-reduced-motion="true"] .a11y-option,
+[data-reduced-motion="true"] .notification-toast {
+  animation: none !important;
+}
+
+/* Disable transform animations when reduced motion is enabled */
+[data-reduced-motion="true"] .scheme-card:hover .scheme-swatch,
+[data-reduced-motion="true"] .theme-toggle-button:active,
+[data-reduced-motion="true"] .btn-lift:hover,
+[data-reduced-motion="true"] .btn-press:active {
+  transform: none !important;
+}
+
+/* Instant theme color transitions when reduced motion is enabled */
+[data-reduced-motion="true"] body,
+[data-reduced-motion="true"] main,
+[data-reduced-motion="true"] header,
+[data-reduced-motion="true"] footer,
+[data-reduced-motion="true"] nav,
+[data-reduced-motion="true"] section,
+[data-reduced-motion="true"] article,
+[data-reduced-motion="true"] aside,
+[data-reduced-motion="true"] button,
+[data-reduced-motion="true"] input,
+[data-reduced-motion="true"] textarea,
+[data-reduced-motion="true"] select,
+[data-reduced-motion="true"] a,
+[data-reduced-motion="true"] .card,
+[data-reduced-motion="true"] [class*="card"],
+[data-reduced-motion="true"] [class*="surface"],
+[data-reduced-motion="true"] [class*="panel"] {
+  transition-duration: 0.01ms !important;
+}
+
+/* Keep essential state changes visible but instant */
+[data-reduced-motion="true"] button:hover,
+[data-reduced-motion="true"] a:hover,
+[data-reduced-motion="true"] input:focus,
+[data-reduced-motion="true"] select:focus,
+[data-reduced-motion="true"] textarea:focus {
+  transition: opacity 0.01ms, background-color 0.01ms, border-color 0.01ms !important;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Apply fade-in to any element */
+.animate-fade-in {
+  animation: fadeIn 300ms var(--transition-timing);
+}
+
+/* Apply slide-up to any element */
+.animate-slide-up {
+  animation: slideUp 300ms var(--transition-timing);
+}
+
+/* Apply scale-in to any element */
+.animate-scale-in {
+  animation: scaleIn 300ms var(--transition-timing);
+}
+
+/* Apply pulse to any element */
+.animate-pulse {
+  animation: pulse 400ms var(--transition-timing);
+}
+
+/* Apply glow to any element */
+.animate-glow {
+  animation: glow 2s infinite;
+}
+
+/* Delay utilities */
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Use GPU acceleration for animations */
+.theme-modal-content,
+.scheme-card,
+.theme-toggle-button,
+.btn-lift {
+  will-change: transform;
+}
+
+/* Remove will-change after animation completes */
+.animation-complete {
+  will-change: auto;
+}

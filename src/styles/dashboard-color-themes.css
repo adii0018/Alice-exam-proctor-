@@ -1,0 +1,471 @@
+/* ========================================
+   DASHBOARD COLOR THEMES
+   ======================================== */
+
+/* Theme 1: Ocean Blue - Professional & Calming */
+.theme-ocean {
+  --primary-color: #0ea5e9;
+  --secondary-color: #0284c7;
+  --accent-color: #06b6d4;
+  --background-gradient: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+  --nav-bg: rgba(14, 165, 233, 0.95);
+  --hero-bg: rgba(255, 255, 255, 0.9);
+  --content-bg: rgba(255, 255, 255, 0.85);
+  --text-primary: #0c4a6e;
+  --text-secondary: #075985;
+}
+
+/* Theme 2: Forest Green - Natural & Fresh */
+.theme-forest {
+  --primary-color: #059669;
+  --secondary-color: #047857;
+  --accent-color: #10b981;
+  --background-gradient: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+  --nav-bg: rgba(5, 150, 105, 0.95);
+  --hero-bg: rgba(255, 255, 255, 0.9);
+  --content-bg: rgba(255, 255, 255, 0.85);
+  --text-primary: #064e3b;
+  --text-secondary: #065f46;
+}
+
+/* Theme 3: Sunset Orange - Warm & Energetic */
+.theme-sunset {
+  --primary-color: #ea580c;
+  --secondary-color: #dc2626;
+  --accent-color: #f59e0b;
+  --background-gradient: linear-gradient(135deg, #fff7ed 0%, #fed7aa 50%, #fdba74 100%);
+  --nav-bg: rgba(234, 88, 12, 0.95);
+  --hero-bg: rgba(255, 255, 255, 0.9);
+  --content-bg: rgba(255, 255, 255, 0.85);
+  --text-primary: #9a3412;
+  --text-secondary: #c2410c;
+}
+
+/* Theme 4: Purple Galaxy - Creative & Modern */
+.theme-galaxy {
+  --primary-color: #7c3aed;
+  --secondary-color: #6d28d9;
+  --accent-color: #a855f7;
+  --background-gradient: linear-gradient(135deg, #faf5ff 0%, #e9d5ff 50%, #d8b4fe 100%);
+  --nav-bg: rgba(124, 58, 237, 0.95);
+  --hero-bg: rgba(255, 255, 255, 0.9);
+  --content-bg: rgba(255, 255, 255, 0.85);
+  --text-primary: #581c87;
+  --text-secondary: #6b21a8;
+}
+
+/* Theme 5: Rose Gold - Elegant & Sophisticated */
+.theme-rose {
+  --primary-color: #e11d48;
+  --secondary-color: #be185d;
+  --accent-color: #f43f5e;
+  --background-gradient: linear-gradient(135deg, #fff1f2 0%, #fecdd3 50%, #fda4af 100%);
+  --nav-bg: rgba(225, 29, 72, 0.95);
+  --hero-bg: rgba(255, 255, 255, 0.9);
+  --content-bg: rgba(255, 255, 255, 0.85);
+  --text-primary: #881337;
+  --text-secondary: #9f1239;
+}
+
+/* Theme 6: Dark Mode - Sleek & Professional */
+.theme-dark {
+  --primary-color: #3b82f6;
+  --secondary-color: #1d4ed8;
+  --accent-color: #60a5fa;
+  --background-gradient: linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%);
+  --nav-bg: rgba(31, 41, 55, 0.95);
+  --hero-bg: rgba(55, 65, 81, 0.9);
+  --content-bg: rgba(75, 85, 99, 0.85);
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+}
+
+/* Apply theme to dashboard */
+.teacher-dashboard.theme-ocean,
+.teacher-dashboard.theme-forest,
+.teacher-dashboard.theme-sunset,
+.teacher-dashboard.theme-galaxy,
+.teacher-dashboard.theme-rose,
+.teacher-dashboard.theme-dark {
+  background: var(--background-gradient) !important;
+}
+
+/* Navigation theming */
+.teacher-dashboard[class*="theme-"] .teacher-nav {
+  background: var(--nav-bg) !important;
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.teacher-dashboard[class*="theme-"] .teacher-nav-item.active {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+.teacher-dashboard[class*="theme-"] .teacher-nav-item:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Hero section theming */
+.teacher-dashboard[class*="theme-"] .teacher-hero {
+  background: var(--hero-bg) !important;
+  border: 2px solid var(--primary-color) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--primary-color) !important;
+}
+
+.teacher-dashboard[class*="theme-"] .hero-greeting {
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Stats cards theming */
+.teacher-dashboard[class*="theme-"] .quick-stat {
+  background: var(--content-bg) !important;
+  border: 2px solid var(--accent-color) !important;
+}
+
+.teacher-dashboard[class*="theme-"] .quick-stat:hover {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 8px 25px var(--primary-color)33 !important;
+}
+
+.teacher-dashboard[class*="theme-"] .stat-number {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Content sections theming */
+.teacher-dashboard[class*="theme-"] .content-section,
+.teacher-dashboard[class*="theme-"] .overview-section {
+  background: var(--content-bg) !important;
+  border: 1px solid var(--accent-color) !important;
+}
+
+.teacher-dashboard[class*="theme-"] .section-title {
+  color: var(--text-primary) !important;
+}
+
+.teacher-dashboard[class*="theme-"] .section-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+/* Button theming */
+.teacher-dashboard[class*="theme-"] .btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  border: none !important;
+}
+
+.teacher-dashboard[class*="theme-"] .btn-secondary {
+  border: 2px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.teacher-dashboard[class*="theme-"] .btn-secondary:hover {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* Dark theme specific adjustments */
+.teacher-dashboard.theme-dark .logo-main,
+.teacher-dashboard.theme-dark .user-name,
+.teacher-dashboard.theme-dark .current-time {
+  color: var(--text-primary) !important;
+}
+
+.teacher-dashboard.theme-dark .logo-sub,
+.teacher-dashboard.theme-dark .user-role,
+.teacher-dashboard.theme-dark .current-date {
+  color: var(--text-secondary) !important;
+}
+
+.teacher-dashboard.theme-dark .teacher-nav-item {
+  color: var(--text-secondary) !important;
+}
+
+.teacher-dashboard.theme-dark .hero-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+.teacher-dashboard.theme-dark .stat-label {
+  color: var(--text-secondary) !important;
+}
+
+/* ========================================
+   THEME SELECTOR STYLING
+   ======================================== */
+
+.theme-selector {
+  margin-right: 1rem;
+}
+
+.theme-dropdown {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  min-width: 140px;
+}
+
+.theme-dropdown:hover {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.theme-dropdown:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Theme-specific dropdown styling */
+.teacher-dashboard.theme-ocean .theme-dropdown {
+  border-color: var(--primary-color) !important;
+}
+
+.teacher-dashboard.theme-forest .theme-dropdown {
+  border-color: var(--primary-color) !important;
+}
+
+.teacher-dashboard.theme-sunset .theme-dropdown {
+  border-color: var(--primary-color) !important;
+}
+
+.teacher-dashboard.theme-galaxy .theme-dropdown {
+  border-color: var(--primary-color) !important;
+}
+
+.teacher-dashboard.theme-rose .theme-dropdown {
+  border-color: var(--primary-color) !important;
+}
+
+.teacher-dashboard.theme-dark .theme-dropdown {
+  background: rgba(75, 85, 99, 0.9) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Responsive theme selector */
+@media (max-width: 768px) {
+  .theme-selector {
+    margin-right: 0.5rem;
+  }
+  
+  .theme-dropdown {
+    min-width: 120px;
+    font-size: 0.75rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+}
+
+/* Theme transition animation */
+.teacher-dashboard {
+  transition: all 0.5s ease !important;
+}
+
+.teacher-dashboard * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* Theme preview in dropdown */
+.theme-dropdown option {
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+/* Custom scrollbar for themed dashboard */
+.teacher-dashboard.theme-dark::-webkit-scrollbar-track {
+  background: rgba(55, 65, 81, 0.3);
+}
+
+.teacher-dashboard.theme-dark::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+.teacher-dashboard.theme-ocean::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+.teacher-dashboard.theme-forest::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+.teacher-dashboard.theme-sunset::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+.teacher-dashboard.theme-galaxy::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+.teacher-dashboard.theme-rose::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}/* ====
+====================================
+   STUDENT DASHBOARD THEMING
+   ======================================== */
+
+/* Apply theme to student dashboard */
+.student-dashboard.theme-ocean,
+.student-dashboard.theme-forest,
+.student-dashboard.theme-sunset,
+.student-dashboard.theme-galaxy,
+.student-dashboard.theme-rose,
+.student-dashboard.theme-dark {
+  background: var(--background-gradient) !important;
+}
+
+/* Student Navigation theming */
+.student-dashboard[class*="theme-"] nav {
+  background: var(--nav-bg) !important;
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.student-dashboard[class*="theme-"] nav .bg-white\/20 {
+  background: var(--primary-color) !important;
+}
+
+.student-dashboard[class*="theme-"] nav button:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Student stats cards theming */
+.student-dashboard[class*="theme-"] .bg-white\/10 {
+  background: var(--content-bg) !important;
+  border: 1px solid var(--accent-color) !important;
+}
+
+.student-dashboard[class*="theme-"] .bg-white\/15:hover {
+  background: var(--hero-bg) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Student action cards theming */
+.student-dashboard[class*="theme-"] .bg-gradient-to-r {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+.student-dashboard[class*="theme-"] .from-blue-500 {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+.student-dashboard[class*="theme-"] .from-green-400 {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color)) !important;
+}
+
+/* Student text theming */
+.student-dashboard[class*="theme-"] .text-white {
+  color: white !important;
+}
+
+.student-dashboard[class*="theme-"] .text-white\/80 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.student-dashboard[class*="theme-"] .text-white\/70 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Student quiz history theming */
+.student-dashboard[class*="theme-"] .bg-white\/10.backdrop-blur-xl {
+  background: var(--content-bg) !important;
+  border: 2px solid var(--accent-color) !important;
+}
+
+.student-dashboard[class*="theme-"] .bg-white\/15.hover\:bg-white\/15 {
+  background: var(--hero-bg) !important;
+}
+
+/* Student floating action button theming */
+.student-dashboard[class*="theme-"] .bg-gradient-to-r.from-pink-500 {
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color)) !important;
+}
+
+/* Dark theme specific adjustments for student */
+.student-dashboard.theme-dark {
+  color: var(--text-primary) !important;
+}
+
+.student-dashboard.theme-dark .text-white {
+  color: var(--text-primary) !important;
+}
+
+.student-dashboard.theme-dark .text-white\/80 {
+  color: var(--text-secondary) !important;
+}
+
+.student-dashboard.theme-dark .text-white\/70 {
+  color: rgba(229, 231, 235, 0.7) !important;
+}
+
+/* Student dashboard background effects theming */
+.student-dashboard[class*="theme-"] .bg-gradient-to-b {
+  background: var(--background-gradient) !important;
+}
+
+/* Override space background for themed versions */
+.student-dashboard.theme-ocean .from-gray-900,
+.student-dashboard.theme-forest .from-gray-900,
+.student-dashboard.theme-sunset .from-gray-900,
+.student-dashboard.theme-galaxy .from-gray-900,
+.student-dashboard.theme-rose .from-gray-900 {
+  background: var(--background-gradient) !important;
+}
+
+/* Student navigation logo theming */
+.student-dashboard[class*="theme-"] .w-12.h-12.rounded-xl {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+/* Student avatar theming */
+.student-dashboard[class*="theme-"] .bg-gradient-to-br.from-purple-400 {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color)) !important;
+}
+
+/* Student theme selector positioning */
+.student-dashboard .theme-selector {
+  margin-right: 0.75rem;
+}
+
+.student-dashboard .theme-dropdown {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.student-dashboard .theme-dropdown:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.student-dashboard .theme-dropdown:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Student theme dropdown options */
+.student-dashboard .theme-dropdown option {
+  background: rgba(31, 41, 55, 0.95) !important;
+  color: white !important;
+}
+
+/* Mobile responsive for student dashboard */
+@media (max-width: 768px) {
+  .student-dashboard .theme-selector {
+    margin-right: 0.5rem;
+  }
+  
+  .student-dashboard .theme-dropdown {
+    min-width: 100px;
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.6rem !important;
+  }
+}

@@ -1,0 +1,378 @@
+/**
+ * COMPONENT-SPECIFIC TEXT OVERRIDES
+ * Ensures perfect text visibility in all components
+ */
+
+/* ============================================
+   STUDENT DASHBOARD TEXT FIXES
+   ============================================ */
+
+/* Welcome section */
+[data-theme="light"] .backdrop-blur-xl.bg-gradient-to-r h2 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .backdrop-blur-xl.bg-gradient-to-r p {
+  color: #334155 !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-gradient-to-r h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-gradient-to-r p {
+  color: #e2e8f0 !important;
+}
+
+/* Submission cards */
+[data-theme="light"] .backdrop-blur-xl.bg-surface h4 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .backdrop-blur-xl.bg-surface p {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .backdrop-blur-xl.bg-surface .text-2xl {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-surface h4 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-surface p {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-surface .text-2xl {
+  color: #ffffff !important;
+}
+
+/* ============================================
+   TEACHER DASHBOARD TEXT FIXES
+   ============================================ */
+
+/* Stats cards with colored backgrounds */
+[data-theme="light"] .backdrop-blur-xl.bg-blue-500\/10 .text-3xl,
+[data-theme="light"] .backdrop-blur-xl.bg-green-500\/10 .text-3xl,
+[data-theme="light"] .backdrop-blur-xl.bg-purple-500\/10 .text-3xl,
+[data-theme="light"] .backdrop-blur-xl.bg-red-500\/10 .text-3xl {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .backdrop-blur-xl.bg-blue-500\/10 p,
+[data-theme="light"] .backdrop-blur-xl.bg-green-500\/10 p,
+[data-theme="light"] .backdrop-blur-xl.bg-purple-500\/10 p,
+[data-theme="light"] .backdrop-blur-xl.bg-red-500\/10 p {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-blue-500\/10 .text-3xl,
+[data-theme="dark"] .backdrop-blur-xl.bg-green-500\/10 .text-3xl,
+[data-theme="dark"] .backdrop-blur-xl.bg-purple-500\/10 .text-3xl,
+[data-theme="dark"] .backdrop-blur-xl.bg-red-500\/10 .text-3xl {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-blue-500\/10 p,
+[data-theme="dark"] .backdrop-blur-xl.bg-green-500\/10 p,
+[data-theme="dark"] .backdrop-blur-xl.bg-purple-500\/10 p,
+[data-theme="dark"] .backdrop-blur-xl.bg-red-500\/10 p {
+  color: #e2e8f0 !important;
+}
+
+/* Tab buttons */
+[data-theme="light"] .backdrop-blur-xl.bg-surface button:not(.relative) {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .backdrop-blur-xl.bg-surface button.relative span {
+  color: inherit !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-surface button:not(.relative) {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-surface button.relative span {
+  color: inherit !important;
+}
+
+/* ============================================
+   QUIZ INTERFACE TEXT FIXES
+   ============================================ */
+
+/* Quiz header with backdrop blur */
+[data-theme="light"] .quiz-header h2 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .quiz-header p {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-header h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .quiz-header p {
+  color: #d1d5db !important;
+}
+
+/* Question container */
+[data-theme="light"] .quiz-question-container h3 {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .quiz-question-container h3 {
+  color: #ffffff !important;
+}
+
+/* Question navigator */
+[data-theme="light"] .question-navigator h4 {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .question-navigator h4 {
+  color: #d1d5db !important;
+}
+
+/* Quiz summary */
+[data-theme="light"] .quiz-summary h4 {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-summary h4 {
+  color: #d1d5db !important;
+}
+
+/* Quiz tips */
+[data-theme="light"] .quiz-tips h4 {
+  color: #3b82f6 !important;
+}
+
+[data-theme="light"] .quiz-tips ul {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-tips h4 {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] .quiz-tips ul {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   NAVBAR TEXT FIXES
+   ============================================ */
+
+/* Navbar with backdrop blur */
+[data-theme="light"] nav.backdrop-blur-xl h1 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] nav.backdrop-blur-xl p {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] nav.backdrop-blur-xl h1 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] nav.backdrop-blur-xl p {
+  color: #d1d5db !important;
+}
+
+/* User info in navbar */
+[data-theme="light"] nav .text-right p:first-child {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] nav .text-right p:last-child {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] nav .text-right p:first-child {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] nav .text-right p:last-child {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   BUTTON TEXT FIXES
+   ============================================ */
+
+/* Logout button */
+[data-theme="light"] button.bg-red-500\/20 {
+  color: #dc2626 !important;
+}
+
+[data-theme="dark"] button.bg-red-500\/20 {
+  color: #f87171 !important;
+}
+
+/* Surface buttons */
+[data-theme="light"] button.bg-surface {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] button.bg-surface {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   FORM TEXT FIXES
+   ============================================ */
+
+/* Input labels */
+[data-theme="light"] label.block {
+  color: #334155 !important;
+}
+
+[data-theme="dark"] label.block {
+  color: #d1d5db !important;
+}
+
+/* Input fields */
+[data-theme="light"] input.bg-surface {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] input.bg-surface {
+  color: #f9fafb !important;
+}
+
+/* Placeholder text */
+[data-theme="light"] input::placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] input::placeholder {
+  color: #6b7280 !important;
+}
+
+/* ============================================
+   SPECIAL COMPONENT FIXES
+   ============================================ */
+
+/* Empty state messages */
+[data-theme="light"] .backdrop-blur-xl.bg-surface.text-center p {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl.bg-surface.text-center p {
+  color: #d1d5db !important;
+}
+
+/* Score displays */
+[data-theme="light"] .text-2xl.font-bold {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .text-2xl.font-bold {
+  color: #ffffff !important;
+}
+
+/* Percentage badges */
+[data-theme="light"] .text-sm.text-green-400,
+[data-theme="light"] .text-sm.text-yellow-400,
+[data-theme="light"] .text-sm.text-red-400 {
+  /* Keep original colors for status indicators */
+  color: inherit !important;
+}
+
+[data-theme="dark"] .text-sm.text-green-400,
+[data-theme="dark"] .text-sm.text-yellow-400,
+[data-theme="dark"] .text-sm.text-red-400 {
+  /* Keep original colors for status indicators */
+  color: inherit !important;
+}
+
+/* ============================================
+   ANIMATION CONTAINER TEXT FIXES
+   ============================================ */
+
+/* Motion divs with backdrop blur */
+[data-theme="light"] .backdrop-blur-xl * {
+  color: inherit;
+}
+
+[data-theme="light"] .backdrop-blur-xl h1,
+[data-theme="light"] .backdrop-blur-xl h2,
+[data-theme="light"] .backdrop-blur-xl h3,
+[data-theme="light"] .backdrop-blur-xl h4,
+[data-theme="light"] .backdrop-blur-xl h5,
+[data-theme="light"] .backdrop-blur-xl h6 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .backdrop-blur-xl p:not(.text-green-400):not(.text-yellow-400):not(.text-red-400):not(.text-orange-400) {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl * {
+  color: inherit;
+}
+
+[data-theme="dark"] .backdrop-blur-xl h1,
+[data-theme="dark"] .backdrop-blur-xl h2,
+[data-theme="dark"] .backdrop-blur-xl h3,
+[data-theme="dark"] .backdrop-blur-xl h4,
+[data-theme="dark"] .backdrop-blur-xl h5,
+[data-theme="dark"] .backdrop-blur-xl h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .backdrop-blur-xl p:not(.text-green-400):not(.text-yellow-400):not(.text-red-400):not(.text-orange-400) {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   QUIZ CODE ENTRY TEXT FIXES
+   ============================================ */
+
+[data-theme="light"] .quiz-code-entry h2,
+[data-theme="light"] .quiz-code-entry h3 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .quiz-code-entry p {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-code-entry h2,
+[data-theme="dark"] .quiz-code-entry h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .quiz-code-entry p {
+  color: #d1d5db !important;
+}
+
+/* Info cards in quiz entry */
+[data-theme="light"] .quiz-info-card p {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-info-card p {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   ENSURE ICONS REMAIN VISIBLE
+   ============================================ */
+
+/* SVG icons should inherit color */
+svg {
+  color: inherit;
+}
+
+/* Emoji should always be visible */
+span:has(emoji),
+.text-3xl:has(emoji) {
+  opacity: 1 !important;
+}

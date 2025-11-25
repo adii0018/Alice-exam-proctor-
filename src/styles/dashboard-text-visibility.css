@@ -1,0 +1,515 @@
+/* Dashboard Text Visibility Enhancement for Cherry Blossom Theme */
+
+/* Global text visibility improvements */
+.teacher-dashboard {
+  /* Ensure all text has good contrast against cherry blossom background */
+  font-weight: 500;
+}
+
+/* Primary headings - Dark with white shadow for visibility */
+.teacher-dashboard .section-title,
+.teacher-dashboard .quick-actions .section-title,
+.teacher-dashboard .recent-activity .section-title {
+  color: #1a202c !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #1a202c !important;
+  background-clip: unset !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Secondary text - Medium dark with light shadow */
+.teacher-dashboard .section-subtitle,
+.teacher-dashboard .action-content p,
+.teacher-dashboard .activity-content p {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Action card headings */
+.teacher-dashboard .action-content h4 {
+  color: #1a202c !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #1a202c !important;
+  background-clip: unset !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Strong/bold text in activities */
+.teacher-dashboard .activity-content p strong {
+  color: #667eea !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #667eea !important;
+  background-clip: unset !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Time stamps and secondary info */
+.teacher-dashboard .activity-time {
+  color: #4a5568 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Navigation text (already white, enhance shadow) */
+.teacher-nav * {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Hero section text (already white, enhance shadow) */
+.teacher-hero .hero-greeting {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.teacher-hero .hero-subtitle {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Stats text (already white, enhance shadow) */
+.teacher-hero .stat-number,
+.teacher-hero .stat-label {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Ensure no gradient text interferes */
+.teacher-dashboard * {
+  /* Remove any gradient text that might be invisible */
+  -webkit-font-smoothing: antialiased;
+}
+
+.teacher-dashboard [style*="background-clip: text"],
+.teacher-dashboard [style*="-webkit-background-clip: text"] {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #1a202c !important;
+  background-clip: unset !important;
+  color: #1a202c !important;
+}
+
+/* Loading text */
+.teacher-dashboard .loading-text {
+  color: #667eea !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Button text */
+.teacher-dashboard .circle-btn,
+.teacher-dashboard .action-arrow {
+  color: #1a202c !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Form elements */
+.teacher-dashboard input,
+.teacher-dashboard textarea,
+.teacher-dashboard select,
+.teacher-dashboard label {
+  color: #1a202c !important;
+  text-shadow: none !important;
+}
+
+/* Responsive text visibility */
+@media (max-width: 768px) {
+  .teacher-dashboard .section-title {
+    font-size: 1.8rem !important;
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .teacher-dashboard .section-subtitle {
+    font-size: 1rem !important;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+  }
+}/* A
+dditional contrast improvements */
+.teacher-dashboard .content-card {
+  /* Enhance background opacity for better text readability */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) !important;
+}
+
+.teacher-dashboard .quick-actions,
+.teacher-dashboard .recent-activity {
+  /* Enhance background opacity for better text readability */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.25)) !important;
+}
+
+/* Ensure action cards have good text visibility */
+.teacher-dashboard .action-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) !important;
+}
+
+/* Activity card background enhancement */
+.teacher-dashboard .activity-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) !important;
+}/* Qui
+z Components Text Visibility Fixes */
+
+/* QuizSearchBar Component */
+.teacher-dashboard .backdrop-blur-xl h3,
+.teacher-dashboard .backdrop-blur-xl .text-lg {
+  color: #1a202c !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+.teacher-dashboard .backdrop-blur-xl p,
+.teacher-dashboard .backdrop-blur-xl .text-sm,
+.teacher-dashboard .backdrop-blur-xl .text-text-secondary {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Search Input Styling */
+.teacher-dashboard .search-input {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+}
+
+.teacher-dashboard .search-input::placeholder {
+  color: #4a5568 !important;
+}
+
+.teacher-dashboard .search-input:focus {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(255, 182, 193, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2) !important;
+}
+
+/* Select Dropdowns */
+.teacher-dashboard select {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard select option {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  color: #1a202c !important;
+}
+
+.teacher-dashboard select:focus {
+  border-color: rgba(255, 182, 193, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2) !important;
+}
+
+/* Date Inputs */
+.teacher-dashboard input[type='date'] {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+}
+
+.teacher-dashboard input[type='date']:focus {
+  border-color: rgba(255, 182, 193, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2) !important;
+}
+
+/* All Input Elements */
+.teacher-dashboard input,
+.teacher-dashboard textarea,
+.teacher-dashboard select {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-weight: 500 !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard input:focus,
+.teacher-dashboard textarea:focus,
+.teacher-dashboard select:focus {
+  outline: none !important;
+  border-color: rgba(255, 182, 193, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+.teacher-dashboard input::placeholder,
+.teacher-dashboard textarea::placeholder {
+  color: #4a5568 !important;
+  opacity: 0.8 !important;
+}
+
+/* Labels */
+.teacher-dashboard label {
+  color: #1a202c !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+/* QuizList Component Text */
+.teacher-dashboard .quiz-card h3,
+.teacher-dashboard .quiz-card h4,
+.teacher-dashboard .quiz-card .font-bold {
+  color: #1a202c !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+.teacher-dashboard .quiz-card p,
+.teacher-dashboard .quiz-card span,
+.teacher-dashboard .quiz-card .text-sm {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Button Text in Components */
+.teacher-dashboard button {
+  color: #1a202c !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6) !important;
+}
+
+.teacher-dashboard button:hover {
+  color: #1a202c !important;
+}
+
+/* Utility Classes Override */
+.teacher-dashboard .text-text {
+  color: #1a202c !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+.teacher-dashboard .text-text-secondary {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+.teacher-dashboard .text-gray-600,
+.teacher-dashboard .text-gray-500,
+.teacher-dashboard .text-gray-400 {
+  color: #4a5568 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Clear Button Styling */
+.teacher-dashboard .search-clear-btn {
+  color: #4a5568 !important;
+}
+
+.teacher-dashboard .search-clear-btn:hover {
+  color: #1a202c !important;
+}
+
+/* Search Icon */
+.teacher-dashboard .search-icon {
+  color: #4a5568 !important;
+}/* 
+Quiz Cards Enhanced Styling */
+
+/* Quiz card container */
+.teacher-dashboard .space-y-4 > div {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.teacher-dashboard .space-y-4 > div:hover {
+  border-color: rgba(255, 182, 193, 0.4) !important;
+  box-shadow: 0 20px 40px rgba(255, 182, 193, 0.15) !important;
+}
+
+/* Quiz card title with gradient text fix */
+.teacher-dashboard .space-y-4 h3[class*="bg-gradient"] {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #1a202c !important;
+  background-clip: unset !important;
+  color: #1a202c !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Action buttons container */
+.teacher-dashboard .flex.flex-col.gap-3 {
+  gap: 0.75rem !important;
+}
+
+/* Individual action buttons */
+.teacher-dashboard .flex.flex-col.gap-3 button {
+  min-width: 140px !important;
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Button text visibility */
+.teacher-dashboard .flex.flex-col.gap-3 button {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Quiz info section styling */
+.teacher-dashboard .flex.flex-wrap.gap-4 > div {
+  backdrop-filter: blur(10px) !important;
+  border-width: 1px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Font mono code styling */
+.teacher-dashboard .font-mono {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+}/* Anal
+ytics and Monitoring Components Enhancement */
+
+/* Chart and Graph Containers */
+.teacher-dashboard .chart-container,
+.teacher-dashboard .graph-wrapper {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* Chart Labels and Text */
+.teacher-dashboard .chart-label,
+.teacher-dashboard .axis-label {
+  color: #1a202c !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Progress Bars */
+.teacher-dashboard .progress-bar {
+  background: rgba(255, 182, 193, 0.2) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.teacher-dashboard .progress-fill {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  border-radius: 10px !important;
+}
+
+/* Metric Cards */
+.teacher-dashboard .metric-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  text-align: center !important;
+}
+
+.teacher-dashboard .metric-value {
+  color: #1a202c !important;
+  font-size: 2rem !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+.teacher-dashboard .metric-label {
+  color: #4a5568 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Timeline Components */
+.teacher-dashboard .timeline-item {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-bottom: 12px !important;
+}
+
+.teacher-dashboard .timeline-time {
+  color: #4a5568 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+.teacher-dashboard .timeline-content {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Audio Flag Components */
+.teacher-dashboard .audio-flag {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+}
+
+.teacher-dashboard .audio-waveform {
+  background: rgba(255, 182, 193, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+}
+
+/* Student List */
+.teacher-dashboard .student-item {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-bottom: 12px !important;
+}
+
+.teacher-dashboard .student-name {
+  color: #1a202c !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+.teacher-dashboard .student-status {
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+.teacher-dashboard .student-online {
+  color: #38a169 !important;
+}
+
+.teacher-dashboard .student-offline {
+  color: #e53e3e !important;
+}
+
+/* Notification Badges */
+.teacher-dashboard .notification-badge {
+  background: linear-gradient(135deg, #f56565, #e53e3e) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  padding: 4px 8px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Loading States */
+.teacher-dashboard .loading-spinner {
+  color: #667eea !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8) !important;
+}
+
+.teacher-dashboard .loading-text {
+  color: #4a5568 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Empty States */
+.teacher-dashboard .empty-state {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px dashed rgba(255, 182, 193, 0.3) !important;
+  border-radius: 16px !important;
+  padding: 40px !important;
+  text-align: center !important;
+}
+
+.teacher-dashboard .empty-state h3 {
+  color: #1a202c !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+.teacher-dashboard .empty-state p {
+  color: #4a5568 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}

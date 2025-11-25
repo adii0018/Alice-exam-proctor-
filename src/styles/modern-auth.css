@@ -1,0 +1,408 @@
+/**
+ * Modern Auth Page Styles
+ * Contemporary, asymmetrical login design with dark theme
+ */
+
+/* Force Dark Theme for Auth Page */
+.auth-page-container {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 20%, #16213e 40%, #0f3460 70%, #533483 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+/* Ensure all text is visible on dark background */
+.auth-page-container * {
+  color: inherit;
+}
+
+/* Modern Auth Card Styling */
+.modern-auth-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-auth-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, 
+    rgba(6, 182, 212, 0.5) 0%, 
+    rgba(139, 92, 246, 0.5) 25%, 
+    rgba(236, 72, 153, 0.5) 50%, 
+    rgba(139, 92, 246, 0.5) 75%, 
+    rgba(6, 182, 212, 0.5) 100%);
+  background-size: 200% 200%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  animation: modernBorderFlow 6s ease-in-out infinite;
+}
+
+@keyframes modernBorderFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+}
+
+/* Modern Auth Card Hover Effect */
+.modern-auth-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 35px 70px rgba(0, 0, 0, 0.4), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-auth-card:hover::before {
+  animation: modernBorderFlow 3s ease-in-out infinite;
+  opacity: 1;
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 1024px) {
+  .auth-page-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .auth-hero-section {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  
+  .auth-form-section {
+    justify-content: center;
+  }
+}
+
+/* Feature Pills Styling */
+.feature-pill {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-pill:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Typography */
+.auth-hero-title {
+  background: linear-gradient(135deg, 
+    #ffffff 0%, 
+    #f8fafc 50%, 
+    #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.auth-hero-subtitle {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Modern Input Styling for Auth Form */
+.modern-auth-card input {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.modern-auth-card input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.modern-auth-card input:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.modern-auth-card input:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(6, 182, 212, 0.6) !important;
+  box-shadow: 
+    0 0 0 3px rgba(6, 182, 212, 0.2),
+    0 4px 20px rgba(6, 182, 212, 0.15) !important;
+  outline: none !important;
+}
+
+/* Modern Button Styling */
+.modern-auth-card button[type="submit"] {
+  background: linear-gradient(135deg, 
+    #06b6d4 0%, 
+    #8b5cf6 50%, 
+    #ec4899 100%) !important;
+  border: none !important;
+  box-shadow: 
+    0 8px 25px rgba(139, 92, 246, 0.4),
+    0 4px 15px rgba(6, 182, 212, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.modern-auth-card button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-2px) !important;
+  box-shadow: 
+    0 12px 35px rgba(139, 92, 246, 0.5),
+    0 6px 20px rgba(6, 182, 212, 0.4) !important;
+}
+
+.modern-auth-card button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0) !important;
+}
+
+/* Modern Demo Buttons */
+.modern-auth-card .space-y-6 > div:last-child button {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modern-auth-card .space-y-6 > div:last-child button:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+/* Modern Labels */
+.modern-auth-card label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+}
+
+/* Modern Links */
+.modern-auth-card a {
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: all 0.3s ease !important;
+}
+
+.modern-auth-card a:hover {
+  color: #06b6d4 !important;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .modern-auth-card {
+    margin: 1rem;
+    padding: 1.5rem !important;
+  }
+  
+  .auth-hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+  
+  .feature-pill {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Enhanced Focus States */
+.modern-auth-card *:focus-visible {
+  outline: 2px solid rgba(6, 182, 212, 0.6);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .modern-auth-card,
+  .modern-auth-card *,
+  .feature-pill {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .modern-auth-card {
+    border: 2px solid white !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+  }
+  
+  .modern-auth-card input {
+    border: 2px solid white !important;
+    background: black !important;
+  }
+}
+/*
+ Enhanced Snowflake Visibility */
+.auth-page-container .snowflake {
+  color: #ffffff !important;
+  text-shadow: 
+    0 0 20px rgba(255, 255, 255, 1), 
+    0 0 40px rgba(173, 216, 230, 0.8), 
+    0 0 60px rgba(135, 206, 235, 0.6) !important;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 1)) 
+          drop-shadow(0 0 25px rgba(173, 216, 230, 0.8)) !important;
+}
+
+/* Ensure proper contrast for all text elements */
+.auth-page-container h1,
+.auth-page-container h2,
+.auth-page-container h3,
+.auth-page-container p,
+.auth-page-container span,
+.auth-page-container label {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Make sure buttons are visible */
+.auth-page-container button {
+  color: white !important;
+}
+
+/* Clean snowflake-only background - no extra elements needed */
+
+/* Dark theme optimizations */
+@media (prefers-color-scheme: dark) {
+  .auth-page-container {
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 20%, #16213e 40%, #0f3460 70%, #533483 100%) !important;
+  }
+}
+
+/* Performance optimizations for animations */
+.auth-page-container * {
+  will-change: auto;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Smooth transitions */
+.auth-page-container {
+  transition: all 0.3s ease-in-out;
+}
+/
+* Additional Performance Optimizations for Auth Page */
+.auth-page-container {
+  /* Force hardware acceleration */
+  transform: translateZ(0) !important;
+  will-change: scroll-position !important;
+  backface-visibility: hidden !important;
+  
+  /* Optimize scrolling */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  
+  /* Prevent layout shifts */
+  contain: layout style paint;
+  isolation: isolate;
+}
+
+/* Optimize all motion elements */
+.auth-page-container [class*="motion-"],
+.auth-page-container .framer-motion-div {
+  transform: translateZ(0) !important;
+  will-change: transform, opacity !important;
+  backface-visibility: hidden !important;
+  contain: layout style paint;
+}
+
+/* Optimize grid layout */
+.auth-page-container .grid {
+  contain: layout style;
+  transform: translateZ(0);
+}
+
+/* Optimize form elements */
+.modern-auth-card input,
+.modern-auth-card button {
+  will-change: background-color, border-color, box-shadow, transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize hover effects */
+.modern-auth-card button:hover,
+.modern-auth-card input:hover,
+.modern-auth-card input:focus {
+  will-change: transform, background-color, border-color, box-shadow;
+}
+
+/* Reduce animations on scroll */
+@media (prefers-reduced-motion: no-preference) {
+  .auth-page-container {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  .auth-page-container * {
+    /* Reduce animation complexity on mobile */
+    animation-duration: 0.3s !important;
+    transition-duration: 0.2s !important;
+  }
+  
+  /* Optimize touch interactions */
+  .modern-auth-card {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
+
+/* Low-end device optimizations */
+@media (max-resolution: 1.5dppx) {
+  .auth-page-container {
+    /* Reduce visual effects on low-end devices */
+    filter: none !important;
+  }
+  
+  .auth-page-container * {
+    box-shadow: none !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5) !important;
+  }
+}

@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database
+*.sqlite3
+db.sqlite3
+
+# Audio storage
+django_backend/storage/
+
+# Coverage
+coverage/
+.nyc_output/
+htmlcov/
+
+# Testing
+.pytest_cache/
+
+# Misc
+.cache/
+temp/
+tmp/

@@ -1,0 +1,567 @@
+/**
+ * Global Component Styles
+ * Consistent buttons and inputs across the entire application
+ */
+
+/* ============================================
+   GLOBAL BUTTON STYLES
+   ============================================ */
+
+/* Primary Button - Main action buttons */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Light Theme Primary Button */
+[data-theme="light"] .btn-primary,
+[data-theme="natural-day"] .btn-primary {
+  background: linear-gradient(135deg, #4a90e2, #5b9fd8, #87ceeb);
+  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.3);
+}
+
+[data-theme="light"] .btn-primary:hover:not(:disabled),
+[data-theme="natural-day"] .btn-primary:hover:not(:disabled) {
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.35);
+}
+
+/* Dark Theme Primary Button */
+[data-theme="dark"] .btn-primary {
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6, #ec4899);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+}
+
+[data-theme="dark"] .btn-primary:hover:not(:disabled) {
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
+}
+
+/* Secondary Button - Alternative actions */
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Light Theme Secondary Button */
+[data-theme="light"] .btn-secondary,
+[data-theme="natural-day"] .btn-secondary {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
+  border: 2px solid rgba(226, 232, 240, 0.8);
+}
+
+[data-theme="light"] .btn-secondary:hover:not(:disabled),
+[data-theme="natural-day"] .btn-secondary:hover:not(:disabled) {
+  background: white;
+  border-color: #4a90e2;
+  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.15);
+}
+
+/* Dark Theme Secondary Button */
+[data-theme="dark"] .btn-secondary {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.9));
+  border: 2px solid rgba(75, 85, 99, 0.6);
+}
+
+[data-theme="dark"] .btn-secondary:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.9), rgba(31, 41, 55, 0.95));
+  border-color: #8b5cf6;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2);
+}
+
+/* Danger Button - Delete/Cancel actions */
+.btn-danger {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+.btn-danger:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-danger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Success Button - Confirm actions */
+.btn-success {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-success:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-success:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Small Button Size */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Large Button Size */
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Icon Button */
+.btn-icon {
+  padding: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+/* ============================================
+   GLOBAL INPUT STYLES
+   ============================================ */
+
+/* Standard Input Field */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input-field::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+.input-field:hover {
+  border-color: var(--color-border-hover);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.12);
+}
+
+/* Light Theme Input */
+[data-theme="light"] .input-field,
+[data-theme="natural-day"] .input-field {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
+  border: 2px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .input-field:hover,
+[data-theme="natural-day"] .input-field:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .input-field:focus,
+[data-theme="natural-day"] .input-field:focus {
+  background: white;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.12), 0 2px 12px rgba(74, 144, 226, 0.1);
+}
+
+/* Dark Theme Input */
+[data-theme="dark"] .input-field {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
+  border: 2px solid rgba(75, 85, 99, 0.6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .input-field:hover {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.9), rgba(55, 65, 81, 0.7));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .input-field:focus {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(55, 65, 81, 0.8));
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15), 0 2px 12px rgba(139, 92, 246, 0.2);
+}
+
+/* Pill Input Style (Rounded) - Your Custom Style */
+.input-pill {
+  width: 100%;
+  padding: 0.625rem 1.25rem;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 9999px;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.input-pill::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+/* Light Theme Pill Input */
+[data-theme="light"] .input-pill,
+[data-theme="natural-day"] .input-pill {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.08);
+  color: #1e293b;
+}
+
+[data-theme="light"] .input-pill:hover,
+[data-theme="natural-day"] .input-pill:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: inset 2px 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .input-pill:focus,
+[data-theme="natural-day"] .input-pill:focus {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: inset 2px 5px 15px rgba(74, 144, 226, 0.15), 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+[data-theme="light"] .input-pill::placeholder,
+[data-theme="natural-day"] .input-pill::placeholder {
+  color: #64748b;
+}
+
+/* Dark Theme Pill Input */
+[data-theme="dark"] .input-pill {
+  background: rgba(17, 24, 39, 0.6);
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .input-pill:hover {
+  background: rgba(31, 41, 55, 0.7);
+  box-shadow: inset 2px 5px 12px rgb(3, 3, 3);
+}
+
+[data-theme="dark"] .input-pill:focus {
+  background: rgba(31, 41, 55, 0.8);
+  box-shadow: inset 2px 5px 15px rgba(139, 92, 246, 0.2), 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+[data-theme="dark"] .input-pill::placeholder {
+  color: #9ca3af;
+}
+
+/* Textarea */
+.textarea-field {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Select Dropdown */
+.select-field {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+/* Input with Icon */
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  padding-right: 3rem;
+}
+
+.input-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.input-icon:hover {
+  color: var(--color-text);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Input Label */
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Input Error State */
+.input-field.error {
+  border-color: #ef4444;
+}
+
+.input-field.error:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12);
+}
+
+.input-error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Input Success State */
+.input-field.success {
+  border-color: #10b981;
+}
+
+.input-field.success:focus {
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Light Theme Card */
+[data-theme="light"] .card,
+[data-theme="natural-day"] .card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .card:hover,
+[data-theme="natural-day"] .card:hover {
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.1);
+}
+
+/* Dark Theme Card */
+[data-theme="dark"] .card {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.9));
+  border: 1px solid rgba(75, 85, 99, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
+}
+
+/* ============================================
+   BADGE STYLES
+   ============================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.badge-success {
+  background: #10b981;
+  color: white;
+}
+
+.badge-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.badge-warning {
+  background: #f59e0b;
+  color: white;
+}
+
+.badge-info {
+  background: #3b82f6;
+  color: white;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+.loading-spinner {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.w-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,1446 @@
+/* Teacher Dashboard Text Visibility Fixes */
+
+/* Main text colors for better visibility */
+.teacher-dashboard {
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+  --bg-card: #ffffff;
+  --bg-input: #f9fafb;
+  --border-color: #e5e7eb;
+}
+
+/* Dark backgrounds need light text */
+.teacher-dashboard .dark-bg {
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+  --text-muted: #d1d5db;
+}
+
+/* Quiz Creator Form Styles */
+.quiz-creator-form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-creator-form label {
+  color: #1f2937 !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.quiz-creator-form input,
+.quiz-creator-form textarea,
+.quiz-creator-form select {
+  background: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  color: #1f2937 !important;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.quiz-creator-form input:focus,
+.quiz-creator-form textarea:focus,
+.quiz-creator-form select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  outline: none;
+}
+
+.quiz-creator-form input::placeholder,
+.quiz-creator-form textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Step indicators */
+.step-indicator {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.step-indicator .step-number {
+  background: #3b82f6;
+  color: #ffffff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.step-indicator .step-number.inactive {
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+.step-indicator .step-label {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.step-indicator .step-label.inactive {
+  color: #9ca3af;
+}
+
+/* Question cards */
+.question-card {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.question-card .question-text {
+  color: #1f2937 !important;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.question-card .option-text {
+  color: #374151 !important;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.question-card .correct-indicator {
+  background: #10b981;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Quiz list items */
+.quiz-list-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.quiz-list-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.quiz-list-item .quiz-title {
+  color: #1f2937 !important;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-list-item .quiz-description {
+  color: #4b5563 !important;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.quiz-list-item .quiz-meta {
+  color: #6b7280 !important;
+  font-size: 0.875rem;
+}
+
+/* Status badges */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.status-badge.inactive {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Form sections */
+.form-section {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-section-title {
+  color: #1f2937 !important;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-section-subtitle {
+  color: #6b7280 !important;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button text fixes */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #ffffff !important;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #374151 !important;
+  border: 2px solid #e5e7eb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* Tab navigation */
+.tab-nav {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tab-nav-item {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #6b7280;
+}
+
+.tab-nav-item.active {
+  background: #3b82f6;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.tab-nav-item:hover:not(.active) {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* Stats cards */
+.stats-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stats-card .stats-number {
+  color: #1f2937 !important;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stats-card .stats-label {
+  color: #6b7280 !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Search and filter components */
+.search-input {
+  background: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  color: #1f2937 !important;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.search-input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #9ca3af !important;
+}
+
+.filter-select {
+  background: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  color: #1f2937 !important;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quiz-creator-form {
+    padding: 1rem;
+  }
+  
+  .step-indicator {
+    padding: 1rem;
+  }
+  
+  .question-card {
+    padding: 1rem;
+  }
+  
+  .quiz-list-item {
+    padding: 1rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .quiz-creator-form input,
+  .quiz-creator-form textarea,
+  .quiz-creator-form select {
+    border-width: 3px !important;
+  }
+  
+  .quiz-creator-form label {
+    font-weight: 700 !important;
+  }
+  
+  .question-card {
+    border-width: 3px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .quiz-creator-form,
+  .question-card,
+  .quiz-list-item {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+  }
+}
+/* Addit
+ional high contrast fixes for teacher dashboard */
+.teacher-dashboard * {
+  /* Force better text contrast */
+  text-shadow: none !important;
+}
+
+.teacher-dashboard h1,
+.teacher-dashboard h2,
+.teacher-dashboard h3,
+.teacher-dashboard h4,
+.teacher-dashboard h5,
+.teacher-dashboard h6 {
+  color: #1f2937 !important;
+  font-weight: 700;
+}
+
+.teacher-dashboard p {
+  color: #374151 !important;
+  line-height: 1.6;
+}
+
+.teacher-dashboard span {
+  color: #4b5563 !important;
+}
+
+/* Override any gradient text that might be hard to read */
+.teacher-dashboard .bg-clip-text {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  color: #1f2937 !important;
+}
+
+/* Ensure form elements are always readable */
+.teacher-dashboard input,
+.teacher-dashboard textarea,
+.teacher-dashboard select {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+  border: 2px solid #d1d5db !important;
+}
+
+.teacher-dashboard input:focus,
+.teacher-dashboard textarea:focus,
+.teacher-dashboard select:focus {
+  border-color: #3b82f6 !important;
+  background: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Button text visibility */
+.teacher-dashboard button {
+  font-weight: 600;
+}
+
+.teacher-dashboard .btn-primary {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+.teacher-dashboard .btn-secondary {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+  border: 2px solid #d1d5db !important;
+}
+
+/* Status badges with better contrast */
+.teacher-dashboard .status-badge {
+  font-weight: 700;
+  border: 2px solid;
+}
+
+/* Quiz cards text */
+.teacher-dashboard .quiz-list-item h3 {
+  color: #1f2937 !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.teacher-dashboard .quiz-list-item p {
+  color: #4b5563 !important;
+  font-size: 1rem;
+}
+
+/* Form labels */
+.teacher-dashboard label {
+  color: #1f2937 !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Placeholder text */
+.teacher-dashboard input::placeholder,
+.teacher-dashboard textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 1;
+}
+
+/* Ensure no transparent backgrounds interfere */
+.teacher-dashboard .backdrop-blur-xl,
+.teacher-dashboard .bg-white\/90,
+.teacher-dashboard .bg-surface\/50 {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Tab navigation text */
+.teacher-dashboard .tab-nav-item {
+  color: #6b7280 !important;
+}
+
+.teacher-dashboard .tab-nav-item.active {
+  color: #ffffff !important;
+  background: #3b82f6 !important;
+}
+
+/* Stats text */
+.teacher-dashboard .stats-number {
+  color: #1f2937 !important;
+  font-weight: 700;
+}
+
+.teacher-dashboard .stats-label {
+  color: #6b7280 !important;
+  font-weight: 500;
+}
+/* ====
+====================================
+   HEADER TEXT VISIBILITY FIXES
+   ======================================== */
+
+/* Navigation Header - Fixed Layout */
+.teacher-nav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+.teacher-nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 70px;
+}
+
+/* Logo Section - Compact */
+.teacher-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  min-width: 200px;
+}
+
+.logo-icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.logo-text .logo-main {
+  color: #1f2937 !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+}
+
+.logo-text .logo-sub {
+  color: #6b7280 !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: block;
+}
+
+/* Navigation Menu - Flexible */
+.teacher-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(249, 250, 251, 0.8);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.5rem;
+  flex: 1;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.teacher-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #6b7280 !important;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.teacher-nav-item:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6 !important;
+}
+
+.teacher-nav-item.active {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.teacher-nav-item .nav-icon {
+  font-size: 1rem;
+}
+
+.teacher-nav-item .nav-label {
+  font-weight: 600;
+}
+
+/* User Section - Compact Layout */
+.teacher-user-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  min-width: 350px;
+  justify-content: flex-end;
+}
+
+.time-display {
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+.current-time {
+  color: #1f2937 !important;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.current-date {
+  color: #6b7280 !important;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.teacher-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(249, 250, 251, 0.8);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.user-avatar {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #10b981;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.user-info {
+  text-align: left;
+}
+
+.user-name {
+  color: #1f2937 !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.user-role {
+  color: #6b7280 !important;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.logout-btn {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 2px solid rgba(239, 68, 68, 0.3) !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  font-size: 1rem !important;
+  padding: 0.5rem !important;
+  color: #dc2626 !important;
+  font-weight: 600 !important;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.2) !important;
+  border-color: rgba(239, 68, 68, 0.5) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+.logout-btn:active {
+  transform: scale(0.95) !important;
+}
+
+.logout-text {
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #dc2626 !important;
+}
+
+/* Mobile responsive logout button */
+@media (max-width: 768px) {
+  .logout-btn {
+    min-width: 2rem !important;
+    height: 2rem !important;
+    padding: 0.25rem !important;
+  }
+  
+  .logout-text {
+    display: none !important;
+  }
+}
+
+/* Hero Section */
+.teacher-hero {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-greeting {
+  color: #1f2937 !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  color: #4b5563 !important;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Hero Stats */
+.hero-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.quick-stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-number {
+  color: #1f2937 !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-label {
+  color: #6b7280 !important;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Section Headers */
+.teacher-main {
+  padding: 0 2rem 2rem;
+}
+
+.section-title {
+  color: #1f2937 !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-subtitle {
+  color: #6b7280 !important;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Content Sections */
+.overview-section,
+.content-section {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  color: #1f2937 !important;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: #6b7280 !important;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Quick Actions */
+.quick-actions {
+  margin-bottom: 2rem;
+}
+
+.quick-actions h3 {
+  color: #1f2937 !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Loading States */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-spinner {
+  text-align: center;
+}
+
+.loading-text {
+  color: #1f2937 !important;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .teacher-nav-container {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .teacher-nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-greeting {
+    font-size: 2rem;
+  }
+  
+  .teacher-main {
+    padding: 0 1rem 1rem;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .teacher-nav {
+    background: #ffffff !important;
+    border-bottom: 3px solid #000000;
+  }
+  
+  .logo-text .logo-main {
+    color: #000000 !important;
+  }
+  
+  .teacher-nav-item {
+    color: #000000 !important;
+    border: 2px solid transparent;
+  }
+  
+  .teacher-nav-item.active {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000;
+  }
+  
+  .hero-greeting {
+    color: #000000 !important;
+  }
+  
+  .section-title {
+    color: #000000 !important;
+  }
+}
+
+/* ========================================
+   FORCE HEADER TEXT VISIBILITY - IMPORTANT
+   ======================================== */
+
+/* Specific header text visibility fixes */
+.teacher-dashboard .logo-main,
+.teacher-dashboard .hero-greeting,
+.teacher-dashboard .section-title h2,
+.teacher-dashboard .section-title,
+.teacher-dashboard .user-name,
+.teacher-dashboard .current-time,
+.teacher-dashboard .stat-number {
+  color: #1f2937 !important;
+  text-shadow: none !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.teacher-dashboard .logo-sub,
+.teacher-dashboard .hero-subtitle,
+.teacher-dashboard .section-subtitle,
+.teacher-dashboard .user-role,
+.teacher-dashboard .current-date,
+.teacher-dashboard .stat-label {
+  color: #6b7280 !important;
+  text-shadow: none !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* Navigation items */
+.teacher-dashboard .teacher-nav-item {
+  color: #6b7280 !important;
+}
+
+.teacher-dashboard .teacher-nav-item:hover {
+  color: #3b82f6 !important;
+}
+
+.teacher-dashboard .teacher-nav-item.active {
+  color: #ffffff !important;
+}
+
+/* Override gradient text effects that hide content */
+.teacher-dashboard [class*="bg-gradient"],
+.teacher-dashboard [class*="text-gradient"],
+.teacher-dashboard [class*="bg-clip-text"] {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* Ensure proper backgrounds */
+.teacher-dashboard .teacher-nav,
+.teacher-dashboard .teacher-hero,
+.teacher-dashboard .content-section,
+.teacher-dashboard .overview-section {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Headers should be dark and bold */
+.teacher-dashboard h1,
+.teacher-dashboard h2,
+.teacher-dashboard h3,
+.teacher-dashboard h4,
+.teacher-dashboard h5,
+.teacher-dashboard h6 {
+  color: #1f2937 !important;
+  font-weight: 700;
+}
+
+/* Regular text should be readable gray */
+.teacher-dashboard p {
+  color: #4b5563 !important;
+}
+
+/* Keep white text where appropriate */
+.teacher-dashboard .text-white {
+  color: #ffffff !important;
+}/
+* Enhanced Logout Button Visibility */
+.logout-btn {
+  position: relative !important;
+  overflow: visible !important;
+  z-index: 1000 !important;
+}
+
+/* Add glow effect to make it more visible */
+.logout-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ef4444, #dc2626, #b91c1c);
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logout-btn:hover::before {
+  opacity: 0.3;
+}
+
+/* Make logout button more prominent */
+.logout-btn {
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2) !important;
+}
+
+.logout-btn:hover {
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Ensure logout button is clickable */
+.logout-btn {
+  pointer-events: auto !important;
+  user-select: none !important;
+}
+
+/* Debug outline for logout button */
+.logout-btn {
+  outline: 1px solid rgba(239, 68, 68, 0.3) !important;
+  outline-offset: 1px;
+}
+
+.logout-btn:focus {
+  outline: 2px solid #ef4444 !important;
+  outline-offset: 2px;
+}
+/
+* ========================================
+   LOGOUT BUTTON VISIBILITY FIX - CRITICAL
+   ======================================== */
+
+/* Force logout button to be visible and clickable */
+.logout-btn-enhanced,
+.logout-btn {
+  /* Positioning and visibility */
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  
+  /* Size and spacing */
+  min-width: 100px !important;
+  height: 40px !important;
+  padding: 0.5rem 1rem !important;
+  
+  /* Colors and styling */
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  border: 2px solid #dc2626 !important;
+  border-radius: 8px !important;
+  
+  /* Typography */
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  
+  /* Interaction */
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+  
+  /* Effects */
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3) !important;
+  transition: all 0.2s ease !important;
+  
+  /* Z-index to ensure it's on top */
+  z-index: 9999 !important;
+  
+  /* Prevent any parent styles from hiding it */
+  opacity: 1 !important;
+  visibility: visible !important;
+  overflow: visible !important;
+}
+
+/* Hover state */
+.logout-btn-enhanced:hover,
+.logout-btn:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #b91c1c !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Active state */
+.logout-btn-enhanced:active,
+.logout-btn:active {
+  transform: scale(0.95) !important;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Focus state for accessibility */
+.logout-btn-enhanced:focus,
+.logout-btn:focus {
+  outline: 3px solid rgba(239, 68, 68, 0.5) !important;
+  outline-offset: 2px !important;
+}
+
+/* Text inside logout button */
+.logout-text {
+  color: #ffffff !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+
+/* Icon inside logout button */
+.logout-btn-enhanced span:first-child,
+.logout-btn span:first-child {
+  font-size: 1rem !important;
+  color: #ffffff !important;
+}
+
+/* Ensure parent container doesn't hide logout button */
+.teacher-user-section,
+.teacher-nav-container {
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+/* Force visibility in navigation */
+.teacher-nav .logout-btn-enhanced,
+.teacher-nav .logout-btn {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .logout-btn-enhanced,
+  .logout-btn {
+    min-width: 80px !important;
+    height: 36px !important;
+    padding: 0.25rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .logout-text {
+    display: none !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .logout-btn-enhanced,
+  .logout-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 3px solid #ffffff !important;
+  }
+  
+  .logout-btn-enhanced:hover,
+  .logout-btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+}
+
+/* Ensure no parent element can hide the logout button */
+.teacher-dashboard .logout-btn-enhanced,
+.teacher-dashboard .logout-btn {
+  /* Force display even if parent tries to hide */
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 9999 !important;
+}/* =========
+===============================
+   HEADER LAYOUT FIX FOR DESKTOP
+   ======================================== */
+
+/* Theme Selector Compact */
+.theme-selector {
+  background: rgba(249, 250, 251, 0.8);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.25rem;
+  flex-shrink: 0;
+}
+
+.theme-dropdown {
+  background: transparent !important;
+  border: none !important;
+  color: #1f2937 !important;
+  font-size: 0.75rem !important;
+  padding: 0.25rem !important;
+  cursor: pointer !important;
+  min-width: 100px;
+  max-width: 120px;
+}
+
+/* Responsive Header Layout */
+@media (min-width: 1024px) {
+  .teacher-nav-container {
+    padding: 0.75rem 2rem;
+    gap: 1.5rem;
+  }
+  
+  .teacher-logo {
+    min-width: 220px;
+  }
+  
+  .teacher-nav-menu {
+    max-width: 700px;
+    gap: 0.5rem;
+  }
+  
+  .teacher-user-section {
+    min-width: 400px;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .teacher-nav-container {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+  
+  .teacher-logo {
+    min-width: 150px;
+  }
+  
+  .teacher-nav-menu {
+    max-width: 400px;
+    gap: 0.25rem;
+  }
+  
+  .teacher-user-section {
+    min-width: 280px;
+    gap: 0.5rem;
+  }
+  
+  .theme-dropdown {
+    min-width: 80px;
+    font-size: 0.7rem !important;
+  }
+  
+  .time-display {
+    min-width: 60px;
+  }
+  
+  .current-time {
+    font-size: 0.75rem !important;
+  }
+  
+  .current-date {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-nav-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: auto;
+  }
+  
+  .teacher-logo,
+  .teacher-nav-menu,
+  .teacher-user-section {
+    width: 100%;
+    min-width: auto;
+    justify-content: center;
+  }
+  
+  .teacher-nav-menu {
+    max-width: none;
+    flex-wrap: wrap;
+  }
+  
+  .teacher-user-section {
+    justify-content: space-between;
+  }
+}
+
+/* Navigation Item Responsive */
+.teacher-nav-item {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  .teacher-nav-item {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+  
+  .nav-label {
+    display: none;
+  }
+  
+  .nav-icon {
+    font-size: 1.1rem;
+  }
+}
+
+/* User Profile Compact */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 1023px) {
+  .user-info {
+    display: none;
+  }
+}
+
+/* Logo Text Responsive */
+@media (max-width: 1023px) {
+  .logo-text .logo-main {
+    font-size: 1.2rem !important;
+  }
+  
+  .logo-text .logo-sub {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* Ensure logout button always visible */
+.logout-btn-enhanced {
+  flex-shrink: 0 !important;
+  min-width: 90px !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 1023px) {
+  .logout-btn-enhanced {
+    min-width: 70px !important;
+  }
+  
+  .logout-text {
+    display: none !important;
+  }
+}
+
+/* Force proper spacing */
+.teacher-user-section > * {
+  flex-shrink: 0;
+}
+
+/* Prevent overflow */
+.teacher-nav-container {
+  overflow: visible !important;
+}
+
+.teacher-nav {
+  overflow: visible !important;
+}

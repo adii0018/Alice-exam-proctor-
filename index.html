@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%22 y=%2250%22 font-size=%2260%22 fill=%22%23ffffff%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>☁️</text></svg>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Ａʟ ɪ c ᴇㅤ☁ - Next-Gen AI-Powered Exam Proctoring System with Real-time Monitoring" />
+  <meta name="keywords" content="AI proctoring, online exam, exam monitoring, secure testing, educational technology, remote proctoring, Alice exam proctor" />
+  <meta name="author" content="Ａʟ ɪ c ᴇㅤ☁ Team" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ａʟ ɪ c ᴇㅤ☁ Exam Proctor - AI-Powered Online Proctoring" />
+  <meta property="og:description" content="Experience the most advanced AI-powered proctoring system with real-time monitoring and space-grade security" />
+  <meta property="og:image" content="/og-image.png" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Ａʟ ɪ c ᴇㅤ☁ Exam Proctor - AI-Powered Online Proctoring" />
+  <meta property="twitter:description" content="Experience the most advanced AI-powered proctoring system with real-time monitoring and space-grade security" />
+  <meta property="twitter:image" content="/og-image.png" />
+  
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>   Ａʟ ɪ c ᴇㅤ✈︎ </title>
+  
+  <!-- Force Dark Theme - Prevent Flash of Light Theme -->
+  <script>
+    // Set dark theme immediately before any rendering
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.setAttribute('data-scheme', 'default');
+    
+    // Clear any old light theme from localStorage
+    try {
+      const theme = localStorage.getItem('alice_theme');
+      if (theme) {
+        const parsed = JSON.parse(theme);
+        if (parsed.mode !== 'dark') {
+          localStorage.setItem('alice_theme', JSON.stringify({
+            mode: 'dark',
+            scheme: 'default',
+            customColors: null,
+            accessibility: {
+              highContrast: false,
+              fontSize: 'medium',
+              reducedMotion: false
+            }
+          }));
+        }
+      }
+    } catch (e) {
+      console.log('Alice theme initialization:', e);
+    }
+  </script>
+  
+  <style>
+    /* Prevent flash of unstyled content */
+    html {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+    
+    body {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+    
+    #root {
+      min-height: 100vh;
+      background-color: #0f172a;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

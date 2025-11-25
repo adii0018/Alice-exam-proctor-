@@ -1,0 +1,1587 @@
+/**
+ * Natural Day Theme - Authentication Page Styles
+ * Applies warm, sunny styling to login and registration pages
+ */
+
+/* ============================================
+   THEME-ADAPTIVE BACKGROUND ORBS
+   ============================================ */
+
+/* Light Theme - Vibrant, Dynamic Orbs */
+[data-theme="light"] .auth-orb-cyan,
+[data-theme="natural-day"] .auth-orb-cyan {
+  background: radial-gradient(circle, 
+    rgba(59, 130, 246, 0.25) 0%, 
+    rgba(96, 165, 250, 0.18) 40%, 
+    transparent 70%);
+  filter: blur(60px);
+  animation: orbPulse 8s ease-in-out infinite;
+}
+
+[data-theme="light"] .auth-orb-purple,
+[data-theme="natural-day"] .auth-orb-purple {
+  background: radial-gradient(circle, 
+    rgba(139, 92, 246, 0.22) 0%, 
+    rgba(168, 85, 247, 0.15) 40%, 
+    transparent 70%);
+  filter: blur(60px);
+  animation: orbPulse 10s ease-in-out infinite;
+}
+
+[data-theme="light"] .auth-orb-pink,
+[data-theme="natural-day"] .auth-orb-pink {
+  background: radial-gradient(circle, 
+    rgba(236, 72, 153, 0.2) 0%, 
+    rgba(244, 114, 182, 0.14) 40%, 
+    transparent 70%);
+  filter: blur(70px);
+  animation: orbPulse 12s ease-in-out infinite;
+}
+
+[data-theme="light"] .auth-orb-emerald,
+[data-theme="natural-day"] .auth-orb-emerald {
+  background: radial-gradient(circle, 
+    rgba(16, 185, 129, 0.18) 0%, 
+    rgba(52, 211, 153, 0.12) 40%,
+    transparent 70%);
+  filter: blur(50px);
+  animation: orbPulse 9s ease-in-out infinite;
+}
+
+@keyframes orbPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Dark Theme - Vibrant Orbs */
+[data-theme="dark"] .auth-orb-cyan {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, rgba(59, 130, 246, 0.3) 40%, transparent 70%);
+  filter: blur(50px);
+}
+
+[data-theme="dark"] .auth-orb-purple {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, rgba(168, 85, 247, 0.3) 40%, transparent 70%);
+  filter: blur(50px);
+}
+
+[data-theme="dark"] .auth-orb-pink {
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, rgba(244, 114, 182, 0.2) 40%, transparent 70%);
+  filter: blur(70px);
+}
+
+[data-theme="dark"] .auth-orb-emerald {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+  filter: blur(45px);
+}
+
+/* ============================================
+   THEME-ADAPTIVE AUTH CARD
+   ============================================ */
+
+/* Light Theme - Dark Neumorphic Card (Black Style) */
+[data-theme="light"] .auth-card-main,
+[data-theme="natural-day"] .auth-card-main {
+  position: relative;
+  background: #171717;
+  border: 1px solid #000000;
+  background-clip: padding-box;
+  box-shadow: 
+    inset 2px 5px 10px rgb(5, 5, 5),
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    0 5px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: .4s ease-in-out;
+}
+
+/* Hover effect for Light Theme Dark Card */
+[data-theme="light"] .auth-card-main:hover,
+[data-theme="natural-day"] .auth-card-main:hover {
+  transform: scale(1.02);
+  box-shadow: 
+    inset 2px 5px 10px rgb(5, 5, 5),
+    0 15px 50px rgba(0, 0, 0, 0.6),
+    0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Remove border animation for light theme */
+[data-theme="light"] .auth-card-main::before,
+[data-theme="natural-day"] .auth-card-main::before {
+  display: none;
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.8;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+}
+
+/* Dark Theme - Enhanced Glassmorphism Card */
+[data-theme="dark"] .auth-card-main {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.18) 0%, 
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.15) 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 
+    0 10px 50px 0 rgba(139, 92, 246, 0.4), 
+    0 0 100px 0 rgba(6, 182, 212, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+/* Animated Gradient Border for Dark Theme */
+[data-theme="dark"] .auth-card-main::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, 
+    #06b6d4 0%, 
+    #8b5cf6 25%, 
+    #ec4899 50%, 
+    #8b5cf6 75%, 
+    #06b6d4 100%);
+  background-size: 200% 200%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  animation: borderGlow 4s ease-in-out infinite;
+}
+
+/* ============================================
+   LIGHT THEME - MODERN DYNAMIC REDESIGN
+   Making it as cool as dark theme!
+   ============================================ */
+
+/* Light Theme - Premium Glassmorphism with Gradient Border */
+[data-theme="light"] .auth-card-main,
+[data-theme="natural-day"] .auth-card-main {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(248, 250, 252, 0.92) 50%,
+    rgba(255, 255, 255, 0.95) 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 
+    0 25px 70px rgba(59, 130, 246, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(226, 232, 240, 0.4);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animated Gradient Border for Light Theme */
+[data-theme="light"] .auth-card-main::before,
+[data-theme="natural-day"] .auth-card-main::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, 
+    #3b82f6 0%, 
+    #8b5cf6 20%,
+    #ec4899 40%, 
+    #f59e0b 60%,
+    #10b981 80%,
+    #3b82f6 100%);
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  animation: lightBorderFlow 6s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes lightBorderFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.7;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   CARD HOVER EFFECTS - ENHANCED
+   ============================================ */
+
+/* Light Theme Card Hover - Dynamic & Classy */
+[data-theme="light"] .auth-card-main:hover,
+[data-theme="natural-day"] .auth-card-main:hover {
+  box-shadow: 
+    0 35px 90px rgba(59, 130, 246, 0.2),
+    0 20px 50px rgba(139, 92, 246, 0.15),
+    0 0 80px rgba(236, 72, 153, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(226, 232, 240, 0.5);
+  transform: translateY(-4px) scale(1.01);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme Card - Glow effect on hover */
+[data-theme="light"] .auth-card-main:hover::before,
+[data-theme="natural-day"] .auth-card-main:hover::before {
+  animation: lightBorderFlow 3s ease-in-out infinite;
+  opacity: 1;
+}
+
+/* Dark Theme Card Hover */
+[data-theme="dark"] .auth-card-main:hover {
+  box-shadow: 
+    0 15px 60px 0 rgba(139, 92, 246, 0.5), 
+    0 0 120px 0 rgba(6, 182, 212, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   THEME-ADAPTIVE TAB SWITCHER
+   ============================================ */
+
+/* Light Theme - Modern Glassmorphic Tabs */
+[data-theme="light"] .auth-tabs-container,
+[data-theme="natural-day"] .auth-tabs-container {
+  background: linear-gradient(135deg, 
+    rgba(248, 250, 252, 0.9) 0%, 
+    rgba(241, 245, 249, 0.85) 100%);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .auth-tab-button,
+[data-theme="natural-day"] .auth-tab-button {
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .auth-tab-button:hover:not(.active),
+[data-theme="natural-day"] .auth-tab-button:hover:not(.active) {
+  color: #334155;
+  background: rgba(241, 245, 249, 0.8);
+}
+
+[data-theme="light"] .auth-tab-button.active,
+[data-theme="natural-day"] .auth-tab-button.active {
+  color: white;
+}
+
+[data-theme="light"] .auth-tab-active,
+[data-theme="natural-day"] .auth-tab-active {
+  background: linear-gradient(135deg, 
+    #3b82f6 0%, 
+    #8b5cf6 50%, 
+    #ec4899 100%);
+  background-size: 200% 200%;
+  animation: tabGradientFlow 4s ease infinite;
+  box-shadow: 
+    0 4px 16px rgba(59, 130, 246, 0.3),
+    0 2px 8px rgba(139, 92, 246, 0.2),
+    0 0 30px rgba(236, 72, 153, 0.15);
+}
+
+@keyframes tabGradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Dark Theme - Vibrant Tabs */
+[data-theme="dark"] .auth-tabs-container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .auth-tab-button {
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .auth-tab-button:hover:not(.active) {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .auth-tab-button.active {
+  color: white;
+}
+
+[data-theme="dark"] .auth-tab-active {
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6, #ec4899);
+  box-shadow: 
+    0 4px 20px rgba(139, 92, 246, 0.5), 
+    0 0 40px rgba(6, 182, 212, 0.3);
+}
+
+/* ============================================
+   AUTH PAGE CONTAINER (Task 4.3)
+   ============================================ */
+
+/* Auth card container */
+.auth-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(12px);
+}
+
+/* Auth card with glassmorphism effect */
+.auth-card-glass {
+  background: linear-gradient(135deg, 
+    rgba(255, 249, 240, 0.95) 0%, 
+    rgba(255, 244, 224, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  border-radius: 32px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(74, 144, 226, 0.1);
+}
+
+/* ============================================
+   AUTH FORM INPUTS (Task 4.3)
+   ============================================ */
+
+/* Form input fields */
+.auth-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface-alt);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+/* Light Theme Input Styling - Dark Style */
+[data-theme="light"] .auth-input,
+[data-theme="natural-day"] .auth-input {
+  background: #171717;
+  border: none;
+  color: #d3d3d3;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .auth-input::placeholder,
+[data-theme="natural-day"] .auth-input::placeholder {
+  color: #666666;
+}
+
+[data-theme="light"] .auth-input:hover,
+[data-theme="natural-day"] .auth-input:hover {
+  background: #1a1a1a;
+  box-shadow: inset 2px 5px 12px rgb(3, 3, 3);
+}
+
+[data-theme="light"] .auth-input:focus,
+[data-theme="natural-day"] .auth-input:focus {
+  outline: none;
+  background: #1a1a1a;
+  box-shadow: 
+    inset 2px 5px 12px rgb(3, 3, 3),
+    0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Theme Input Styling */
+[data-theme="dark"] .auth-input {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
+  border: 2px solid rgba(75, 85, 99, 0.6);
+  color: #f9fafb;
+  box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .auth-input::placeholder {
+  color: #6b7280;
+}
+
+[data-theme="dark"] .auth-input:hover {
+  border-color: rgba(107, 114, 128, 0.8);
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.9), rgba(55, 65, 81, 0.7));
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .auth-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(55, 65, 81, 0.8));
+  box-shadow: 
+    0 0 0 4px rgba(139, 92, 246, 0.15),
+    0 2px 12px rgba(139, 92, 246, 0.2),
+    inset 0 1px 2px rgba(139, 92, 246, 0.1);
+}
+
+.auth-input::placeholder {
+  color: var(--color-text-disabled);
+}
+
+.auth-input:hover {
+  border-color: var(--color-border-hover);
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1), var(--shadow-sm);
+}
+
+/* Input with icon */
+.auth-input-with-icon {
+  position: relative;
+}
+
+.auth-input-with-icon input {
+  padding-right: 3rem;
+}
+
+.auth-input-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color var(--transition-duration);
+}
+
+.auth-input-icon:hover {
+  color: var(--color-text);
+}
+
+/* Input labels */
+.auth-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Light Theme Labels - White text for dark background */
+[data-theme="light"] .auth-label,
+[data-theme="natural-day"] .auth-label {
+  color: #ffffff;
+}
+
+/* Input helper text */
+.auth-helper-text {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Light Theme Helper Text - Gray */
+[data-theme="light"] .auth-helper-text,
+[data-theme="natural-day"] .auth-helper-text {
+  color: #666666;
+}
+
+/* ============================================
+   AUTH BUTTONS (Task 4.3)
+   ============================================ */
+
+/* Primary auth button - Sky blue gradient */
+.auth-button-primary {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer effect overlay */
+.auth-button-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.auth-button-primary:hover::before {
+  left: 100%;
+}
+
+/* Light Theme Button Styling - Dark Style */
+[data-theme="light"] .auth-button-primary,
+[data-theme="natural-day"] .auth-button-primary {
+  background: #252525;
+  background-size: 200% 200%;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease-in-out;
+  animation: none;
+}
+
+[data-theme="light"] .auth-button-primary:hover:not(:disabled),
+[data-theme="natural-day"] .auth-button-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #000000;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .auth-button-primary:active:not(:disabled),
+[data-theme="natural-day"] .auth-button-primary:active:not(:disabled) {
+  transform: translateY(0);
+  background: #1a1a1a;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Dark Theme Button Styling */
+[data-theme="dark"] .auth-button-primary {
+  background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #ec4899 100%);
+  box-shadow: 
+    0 4px 16px rgba(139, 92, 246, 0.4),
+    0 2px 8px rgba(6, 182, 212, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .auth-button-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 24px rgba(139, 92, 246, 0.5),
+    0 4px 16px rgba(6, 182, 212, 0.4),
+    0 0 40px rgba(236, 72, 153, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #0891b2 0%, #7c3aed 50%, #db2777 100%);
+}
+
+[data-theme="dark"] .auth-button-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 
+    0 4px 12px rgba(139, 92, 246, 0.3),
+    0 2px 6px rgba(6, 182, 212, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Disabled state */
+.auth-button-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.auth-button-primary:disabled::before {
+  display: none;
+}
+
+/* Secondary auth button */
+.auth-button-secondary {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+}
+
+/* Light Theme Secondary Button */
+[data-theme="light"] .auth-button-secondary,
+[data-theme="natural-day"] .auth-button-secondary {
+  background: white;
+  border: 2px solid rgba(226, 232, 240, 0.8);
+  color: #475569;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .auth-button-secondary:hover,
+[data-theme="natural-day"] .auth-button-secondary:hover {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: rgba(148, 163, 184, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #1e293b;
+}
+
+.auth-button-secondary:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Demo credential buttons */
+.auth-demo-button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Light Theme Demo Button - Dark Style */
+[data-theme="light"] .auth-demo-button,
+[data-theme="natural-day"] .auth-demo-button {
+  background: #252525;
+  border: none;
+  color: #ffffff;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease-in-out;
+}
+
+[data-theme="light"] .auth-demo-button:hover,
+[data-theme="natural-day"] .auth-demo-button:hover {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+[data-theme="light"] .auth-demo-button:active,
+[data-theme="natural-day"] .auth-demo-button:active {
+  transform: translateY(0);
+  background: #1a1a1a;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Dark Theme Demo Button */
+[data-theme="dark"] .auth-demo-button {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.9));
+  border: 2px solid rgba(75, 85, 99, 0.6);
+  color: #9ca3af;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .auth-demo-button:hover {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.9), rgba(31, 41, 55, 0.95));
+  color: #f9fafb;
+  box-shadow: 
+    0 4px 16px rgba(139, 92, 246, 0.2),
+    0 2px 8px rgba(6, 182, 212, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(139, 92, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .auth-demo-button:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Icon styling within demo buttons */
+.auth-demo-button svg {
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+[data-theme="light"] .auth-demo-button:hover svg,
+[data-theme="natural-day"] .auth-demo-button:hover svg {
+  color: #4a90e2;
+  filter: drop-shadow(0 2px 4px rgba(74, 144, 226, 0.3));
+}
+
+[data-theme="dark"] .auth-demo-button:hover svg {
+  color: #8b5cf6;
+  filter: drop-shadow(0 2px 4px rgba(139, 92, 246, 0.4));
+}
+
+/* ============================================
+   AUTH TAB SWITCHER (Task 4.3)
+   ============================================ */
+
+/* Tab container */
+.auth-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.375rem;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+/* Tab button */
+.auth-tab {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-duration) var(--transition-timing);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.auth-tab:hover:not(.active) {
+  color: var(--color-text);
+  background: var(--color-surface-hover);
+}
+
+.auth-tab.active {
+  color: white;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   REGISTRATION PROGRESS INDICATOR (Task 4.3)
+   ============================================ */
+
+/* Progress container */
+.auth-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/* Progress step */
+.auth-progress-step {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Step circle */
+.auth-progress-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-duration) var(--transition-timing);
+  border: 2px solid var(--color-border);
+}
+
+.auth-progress-circle.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.2);
+  transform: scale(1.1);
+}
+
+.auth-progress-circle.completed {
+  background: var(--color-success);
+  color: white;
+  border-color: var(--color-success);
+}
+
+.auth-progress-circle.inactive {
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+/* Progress line */
+.auth-progress-line {
+  flex: 1;
+  height: 4px;
+  margin: 0 0.5rem;
+  background: var(--color-surface);
+  border-radius: 2px;
+  transition: background var(--transition-duration);
+}
+
+.auth-progress-line.completed {
+  background: var(--color-primary);
+}
+
+/* ============================================
+   ROLE SELECTION (Task 4.3)
+   ============================================ */
+
+/* Role selector container */
+.auth-role-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Role button */
+.auth-role-button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-duration) var(--transition-timing);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Light Theme Role Button */
+[data-theme="light"] .auth-role-button,
+[data-theme="natural-day"] .auth-role-button {
+  background: rgba(248, 250, 252, 0.8);
+  border: 2px solid rgba(226, 232, 240, 0.8);
+  color: #64748b;
+}
+
+[data-theme="light"] .auth-role-button:hover:not(.selected),
+[data-theme="natural-day"] .auth-role-button:hover:not(.selected) {
+  background: white;
+  border-color: rgba(148, 163, 184, 0.6);
+}
+
+[data-theme="light"] .auth-role-button.selected,
+[data-theme="natural-day"] .auth-role-button.selected {
+  background: linear-gradient(135deg, #4a90e2, #5b9fd8, #87ceeb);
+  border-color: #4a90e2;
+  color: white;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.25);
+}
+
+.auth-role-button:hover:not(.selected) {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+}
+
+.auth-role-button.selected {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-color: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   AUTH LINKS (Task 4.3)
+   ============================================ */
+
+/* Forgot password link */
+.auth-link {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color var(--transition-duration);
+}
+
+/* Light Theme Links - White/Gray */
+[data-theme="light"] .auth-link,
+[data-theme="natural-day"] .auth-link {
+  color: #999999;
+}
+
+[data-theme="light"] .auth-link:hover,
+[data-theme="natural-day"] .auth-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.auth-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* ============================================
+   AUTH DIVIDER (Task 4.3)
+   ============================================ */
+
+/* Divider with text */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.auth-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Light Theme Divider - Dark Style */
+[data-theme="light"] .auth-divider-line,
+[data-theme="natural-day"] .auth-divider-line {
+  background: #333333;
+}
+
+.auth-divider-text {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Light Theme Divider Text - White */
+[data-theme="light"] .auth-divider-text,
+[data-theme="natural-day"] .auth-divider-text {
+  color: #999999;
+}
+
+/* ============================================
+   AUTH HERO SECTION (Task 4.3)
+   ============================================ */
+
+/* Logo container */
+.auth-logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.auth-logo-icon {
+  width: 7rem;
+  height: 6rem;
+  background: linear-gradient(135deg, 
+    var(--color-primary), 
+    var(--color-secondary), 
+    var(--color-accent));
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.auth-logo-icon:hover {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 0 0 40px rgba(74, 144, 226, 0.4);
+}
+
+/* Title */
+.auth-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, 
+    var(--color-primary), 
+    var(--color-secondary), 
+    var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Light Theme Title - Softer gradient */
+[data-theme="light"] .auth-title,
+[data-theme="natural-day"] .auth-title {
+  background: linear-gradient(135deg, #4a90e2, #5b9fd8, #87ceeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 8px rgba(74, 144, 226, 0.2));
+}
+
+/* Subtitle */
+.auth-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+/* Light Theme Subtitle */
+[data-theme="light"] .auth-subtitle,
+[data-theme="natural-day"] .auth-subtitle {
+  color: #64748b;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Decorative line */
+.auth-decorative-line {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--color-primary), 
+    var(--color-secondary), 
+    transparent);
+  border-radius: 2px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+}
+
+/* Light Theme Decorative Line - Dark Style */
+[data-theme="light"] .auth-decorative-line,
+[data-theme="natural-day"] .auth-decorative-line {
+  background: linear-gradient(90deg, 
+    transparent, 
+    #333333, 
+    #555555, 
+    transparent);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   AUTH FOOTER (Task 4.3)
+   ============================================ */
+
+/* Footer features */
+.auth-features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.auth-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+}
+
+/* Light Theme Features */
+[data-theme="light"] .auth-feature,
+[data-theme="natural-day"] .auth-feature {
+  color: #64748b;
+}
+
+[data-theme="light"] .auth-feature:hover,
+[data-theme="natural-day"] .auth-feature:hover {
+  color: #4a90e2;
+  transform: scale(1.1);
+}
+
+.auth-feature:hover {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.auth-feature-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Copyright text */
+.auth-copyright {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Light Theme Copyright */
+[data-theme="light"] .auth-copyright,
+[data-theme="natural-day"] .auth-copyright {
+  color: #94a3b8;
+}
+
+/* ============================================
+   PASSWORD STRENGTH INDICATOR (Task 4.3)
+   ============================================ */
+
+/* Strength bar container */
+.auth-password-strength {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* Strength bar segment */
+.auth-password-strength-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--color-surface);
+  border-radius: 2px;
+  transition: background var(--transition-duration);
+}
+
+.auth-password-strength-bar.weak {
+  background: var(--color-error);
+}
+
+.auth-password-strength-bar.medium {
+  background: var(--color-warning);
+}
+
+.auth-password-strength-bar.strong {
+  background: var(--color-success);
+}
+
+/* ============================================
+   DARK THEME OVERRIDES
+   Ensure dark theme remains unchanged
+   ============================================ */
+
+[data-theme="dark"] .auth-card,
+[data-theme="dark"] .auth-card-glass {
+  background: rgba(31, 41, 55, 0.95);
+  border-color: #374151;
+}
+
+[data-theme="dark"] .auth-input {
+  background: #111827;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .auth-input:focus {
+  background: #1f2937;
+}
+
+[data-theme="dark"] .auth-tabs {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .auth-button-secondary,
+[data-theme="dark"] .auth-demo-button {
+  background: #1f2937;
+  border-color: #374151;
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .auth-button-secondary:hover,
+[data-theme="dark"] .auth-demo-button:hover {
+  background: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .auth-progress-circle.inactive {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .auth-role-button {
+  background: #1f2937;
+  border-color: #374151;
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .auth-role-button:hover:not(.selected) {
+  background: #374151;
+}
+
+[data-theme="dark"] .auth-divider-line {
+  background: #374151;
+}
+
+[data-theme="dark"] .auth-logo-icon {
+  border-color: #374151;
+}
+
+
+/* ============================================
+   LIGHT THEME DARK STYLE - ADDITIONAL FIXES
+   ============================================ */
+
+/* Input icons colorful for light theme */
+[data-theme="light"] .auth-input-icon,
+[data-theme="natural-day"] .auth-input-icon {
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .auth-input-icon:hover,
+[data-theme="natural-day"] .auth-input-icon:hover {
+  color: #3b82f6;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
+}
+
+/* Placeholder colors for light theme */
+[data-theme="light"] .auth-input::placeholder,
+[data-theme="natural-day"] .auth-input::placeholder {
+  color: #94a3b8;
+}
+
+/* Secondary button for light theme */
+[data-theme="light"] .auth-button-secondary,
+[data-theme="natural-day"] .auth-button-secondary {
+  background: #252525;
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .auth-button-secondary:hover,
+[data-theme="natural-day"] .auth-button-secondary:hover {
+  background: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+/* Features text for light theme */
+[data-theme="light"] .auth-feature,
+[data-theme="natural-day"] .auth-feature {
+  color: #999999;
+}
+
+[data-theme="light"] .auth-feature:hover,
+[data-theme="natural-day"] .auth-feature:hover {
+  color: #ffffff;
+}
+
+/* Copyright text for light theme */
+[data-theme="light"] .auth-copyright,
+[data-theme="natural-day"] .auth-copyright {
+  color: #666666;
+}
+
+/* Title gradient for light theme - keep it visible */
+[data-theme="light"] .auth-title,
+[data-theme="natural-day"] .auth-title {
+  background: linear-gradient(135deg, #ffffff, #cccccc, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+}
+
+/* Subtitle for light theme */
+[data-theme="light"] .auth-subtitle,
+[data-theme="natural-day"] .auth-subtitle {
+  color: #999999;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Role button for light theme */
+[data-theme="light"] .auth-role-button,
+[data-theme="natural-day"] .auth-role-button {
+  background: #252525;
+  border: none;
+  color: #999999;
+}
+
+[data-theme="light"] .auth-role-button:hover:not(.selected),
+[data-theme="natural-day"] .auth-role-button:hover:not(.selected) {
+  background: #000000;
+  color: #ffffff;
+}
+
+[data-theme="light"] .auth-role-button.selected,
+[data-theme="natural-day"] .auth-role-button.selected {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Demo button icons glow */
+[data-theme="light"] .auth-demo-button:hover svg,
+[data-theme="natural-day"] .auth-demo-button:hover svg {
+  color: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.3));
+}
+
+/* Remove card hover brightness for light theme */
+[data-theme="light"] .auth-card-main:hover,
+[data-theme="natural-day"] .auth-card-main:hover {
+  filter: none;
+}
+
+
+/* Monkey Avatar Styling */
+.monkey-avatar {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3), 0 0 0 4px rgba(74, 144, 226, 0.1);
+}
+
+/* Light Theme - Dark border for monkey */
+[data-theme="light"] .monkey-avatar,
+[data-theme="natural-day"] .monkey-avatar {
+  border-color: #333333;
+  box-shadow: 
+    inset 2px 5px 10px rgb(5, 5, 5),
+    0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Theme - Keep colorful border */
+[data-theme="dark"] .monkey-avatar {
+  border-color: #8b5cf6;
+  box-shadow: 
+    0 10px 30px rgba(139, 92, 246, 0.4), 
+    0 0 0 4px rgba(139, 92, 246, 0.2);
+}
+
+
+/* ============================================
+   ENHANCED LOGIN PAGE IMPROVEMENTS
+   ============================================ */
+
+/* Better input styling with rounded corners */
+.auth-input {
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 0.875rem 1rem;
+  font-weight: 500;
+}
+
+/* Light theme - Modern Glassmorphic Inputs */
+[data-theme="light"] .auth-input,
+[data-theme="natural-day"] .auth-input {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(248, 250, 252, 0.85) 100%);
+  border: 2px solid rgba(203, 213, 225, 0.6);
+  color: #1e293b;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] .auth-input:hover,
+[data-theme="natural-day"] .auth-input:hover {
+  border-color: rgba(148, 163, 184, 0.8);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(248, 250, 252, 0.9) 100%);
+  box-shadow: 
+    0 4px 12px rgba(59, 130, 246, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .auth-input:focus,
+[data-theme="natural-day"] .auth-input:focus {
+  border-color: #3b82f6;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 
+    0 0 0 4px rgba(59, 130, 246, 0.15),
+    0 8px 20px rgba(59, 130, 246, 0.12),
+    0 0 40px rgba(139, 92, 246, 0.08),
+    inset 0 1px 2px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px) scale(1.01);
+}
+
+/* Better button styling */
+.auth-button-primary {
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+/* Light theme - Vibrant Gradient Button */
+[data-theme="light"] .auth-button-primary,
+[data-theme="natural-day"] .auth-button-primary {
+  background: linear-gradient(135deg, 
+    #3b82f6 0%, 
+    #8b5cf6 50%, 
+    #ec4899 100%);
+  background-size: 200% 200%;
+  border: 2px solid transparent;
+  box-shadow: 
+    0 6px 20px rgba(59, 130, 246, 0.35),
+    0 3px 10px rgba(139, 92, 246, 0.25),
+    0 0 40px rgba(236, 72, 153, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  animation: buttonGradientFlow 4s ease infinite;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes buttonGradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+[data-theme="light"] .auth-button-primary:hover:not(:disabled),
+[data-theme="natural-day"] .auth-button-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, 
+    #2563eb 0%, 
+    #7c3aed 50%, 
+    #db2777 100%);
+  background-size: 200% 200%;
+  animation: buttonGradientFlow 2s ease infinite;
+  box-shadow: 
+    0 10px 30px rgba(59, 130, 246, 0.45),
+    0 5px 15px rgba(139, 92, 246, 0.35),
+    0 0 60px rgba(236, 72, 153, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Demo buttons enhancement */
+.auth-demo-button {
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+[data-theme="light"] .auth-demo-button,
+[data-theme="natural-day"] .auth-demo-button {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(248, 250, 252, 0.85) 100%);
+  border: 2px solid rgba(203, 213, 225, 0.6);
+  color: #475569;
+  box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] .auth-demo-button:hover,
+[data-theme="natural-day"] .auth-demo-button:hover {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(139, 92, 246, 0.08) 100%);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: #1e293b;
+  box-shadow: 
+    0 6px 20px rgba(59, 130, 246, 0.2),
+    0 0 40px rgba(139, 92, 246, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Card spacing improvements */
+[data-theme="light"] .auth-card-main,
+[data-theme="natural-day"] .auth-card-main {
+  padding: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  [data-theme="light"] .auth-card-main,
+  [data-theme="natural-day"] .auth-card-main {
+    padding: 3rem;
+  }
+}
+
+/* Label improvements */
+.auth-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+[data-theme="light"] .auth-label,
+[data-theme="natural-day"] .auth-label {
+  color: #334155;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Divider improvements */
+[data-theme="light"] .auth-divider-line,
+[data-theme="natural-day"] .auth-divider-line {
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(59, 130, 246, 0.3), 
+    rgba(139, 92, 246, 0.3),
+    rgba(236, 72, 153, 0.3),
+    transparent);
+  height: 2px;
+}
+
+[data-theme="light"] .auth-divider-text,
+[data-theme="natural-day"] .auth-divider-text {
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* Link improvements */
+[data-theme="light"] .auth-link,
+[data-theme="natural-day"] .auth-link {
+  color: #64748b;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .auth-link:hover,
+[data-theme="natural-day"] .auth-link:hover {
+  color: #3b82f6;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Monkey avatar improvements */
+[data-theme="light"] .monkey-avatar,
+[data-theme="natural-day"] .monkey-avatar {
+  border-color: transparent;
+  border-width: 3px;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899) border-box;
+  box-shadow: 
+    0 10px 30px rgba(59, 130, 246, 0.25),
+    0 5px 15px rgba(139, 92, 246, 0.2),
+    0 0 40px rgba(236, 72, 153, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Heading improvements */
+.auth-heading {
+  letter-spacing: -0.02em;
+}
+
+[data-theme="light"] .auth-heading,
+[data-theme="natural-day"] .auth-heading {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 2px 8px rgba(59, 130, 246, 0.3));
+}

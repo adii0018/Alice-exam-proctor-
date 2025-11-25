@@ -1,0 +1,238 @@
+/* ========================================
+   LOGOUT BUTTON EMERGENCY FIX
+   ======================================== */
+
+/* Target all possible logout button classes */
+.logout-btn,
+.logout-btn-enhanced,
+button[title*="Logout"],
+button[class*="logout"],
+[class*="logout-btn"] {
+  /* FORCE VISIBILITY */
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  
+  /* POSITIONING */
+  position: relative !important;
+  z-index: 99999 !important;
+  
+  /* SIZE AND SPACING */
+  min-width: 100px !important;
+  min-height: 40px !important;
+  padding: 8px 16px !important;
+  
+  /* LAYOUT */
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  
+  /* COLORS - BRIGHT RED TO BE VISIBLE */
+  background: #ef4444 !important;
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+  border: 2px solid #dc2626 !important;
+  
+  /* TYPOGRAPHY */
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  
+  /* INTERACTION */
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+  
+  /* EFFECTS */
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3) !important;
+  transition: all 0.2s ease !important;
+  
+  /* PREVENT HIDING */
+  overflow: visible !important;
+  clip: unset !important;
+  clip-path: unset !important;
+  mask: unset !important;
+  transform: none !important;
+}
+
+/* HOVER STATE */
+.logout-btn:hover,
+.logout-btn-enhanced:hover,
+button[title*="Logout"]:hover,
+button[class*="logout"]:hover,
+[class*="logout-btn"]:hover {
+  background: #dc2626 !important;
+  background-color: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #b91c1c !important;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4) !important;
+  transform: scale(1.05) !important;
+}
+
+/* ACTIVE STATE */
+.logout-btn:active,
+.logout-btn-enhanced:active,
+button[title*="Logout"]:active,
+button[class*="logout"]:active,
+[class*="logout-btn"]:active {
+  transform: scale(0.95) !important;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* TEXT INSIDE LOGOUT BUTTON */
+.logout-text,
+.logout-btn span,
+.logout-btn-enhanced span,
+button[title*="Logout"] span,
+button[class*="logout"] span,
+[class*="logout-btn"] span {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* PARENT CONTAINERS - ENSURE THEY DON'T HIDE LOGOUT */
+.teacher-user-section,
+.teacher-nav-container,
+.teacher-nav,
+.nav-container,
+.header-container {
+  position: relative !important;
+  overflow: visible !important;
+  z-index: 100 !important;
+}
+
+/* FORCE VISIBILITY IN NAVIGATION */
+.teacher-nav .logout-btn,
+.teacher-nav .logout-btn-enhanced,
+.teacher-nav button[title*="Logout"],
+.teacher-nav button[class*="logout"],
+.teacher-nav [class*="logout-btn"],
+nav .logout-btn,
+nav .logout-btn-enhanced,
+nav button[title*="Logout"],
+nav button[class*="logout"],
+nav [class*="logout-btn"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 99999 !important;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .logout-btn,
+  .logout-btn-enhanced,
+  button[title*="Logout"],
+  button[class*="logout"],
+  [class*="logout-btn"] {
+    min-width: 80px !important;
+    min-height: 36px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+  
+  .logout-text {
+    display: none !important;
+  }
+}
+
+/* HIGH CONTRAST MODE */
+@media (prefers-contrast: high) {
+  .logout-btn,
+  .logout-btn-enhanced,
+  button[title*="Logout"],
+  button[class*="logout"],
+  [class*="logout-btn"] {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 3px solid #ffffff !important;
+  }
+  
+  .logout-btn:hover,
+  .logout-btn-enhanced:hover,
+  button[title*="Logout"]:hover,
+  button[class*="logout"]:hover,
+  [class*="logout-btn"]:hover {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+}
+
+/* DEBUG MODE - BRIGHT OUTLINE TO SEE BUTTON */
+.logout-btn,
+.logout-btn-enhanced,
+button[title*="Logout"],
+button[class*="logout"],
+[class*="logout-btn"] {
+  /* Bright outline for debugging */
+  outline: 2px solid #ff0000 !important;
+  outline-offset: 2px !important;
+}
+
+/* OVERRIDE ANY CONFLICTING STYLES */
+.teacher-dashboard .logout-btn,
+.teacher-dashboard .logout-btn-enhanced,
+.teacher-dashboard button[title*="Logout"],
+.teacher-dashboard button[class*="logout"],
+.teacher-dashboard [class*="logout-btn"],
+.student-dashboard .logout-btn,
+.student-dashboard .logout-btn-enhanced,
+.student-dashboard button[title*="Logout"],
+.student-dashboard button[class*="logout"],
+.student-dashboard [class*="logout-btn"] {
+  /* Force all styles even in dashboard context */
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 99999 !important;
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  border: 2px solid #dc2626 !important;
+  min-width: 100px !important;
+  min-height: 40px !important;
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+/* ENSURE MOTION COMPONENTS DON'T INTERFERE */
+.logout-btn[style],
+.logout-btn-enhanced[style],
+button[title*="Logout"][style],
+button[class*="logout"][style],
+[class*="logout-btn"][style] {
+  /* Even with inline styles, force these properties */
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+/* LAST RESORT - NUCLEAR OPTION */
+* .logout-btn,
+* .logout-btn-enhanced,
+* button[title*="Logout"],
+* button[class*="logout"],
+* [class*="logout-btn"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  z-index: 99999 !important;
+  position: relative !important;
+}

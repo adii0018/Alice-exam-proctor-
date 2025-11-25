@@ -1,0 +1,602 @@
+/* Animated Theme Button Styles */
+.animated-theme-container {
+  position: relative;
+  display: inline-block;
+}
+
+.palette-button {
+  background-color: #fff;
+  width: 140px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgb(196, 196, 196);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.palette {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.palette-button:hover .palette {
+  transform: rotate(-45deg);
+}
+
+.palette path {
+  fill: rgb(255, 163, 183);
+  stroke-width: 0;
+}
+
+.drop1 {
+  fill: rgb(115, 115, 255);
+  stroke-width: 0;
+}
+
+.drop2 {
+  fill: red;
+  stroke-width: 0;
+}
+
+.drop3 {
+  fill: yellow;
+  stroke-width: 0;
+}
+
+.drop4 {
+  fill: rgb(104, 255, 255);
+  stroke-width: 0;
+}
+
+.palette-button:hover {
+  transform: scale(1.05);
+  background-color: rgb(176, 115, 255);
+  color: white;
+  box-shadow: 0px 0px 15px rgba(176, 115, 255, 0.4);
+}
+
+.theme-button-text {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Theme Dropdown */
+.theme-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  z-index: 99999 !important;
+  overflow: visible !important;
+  margin-top: 8px;
+  min-width: 220px !important;
+  max-height: 300px;
+  overflow-y: auto;
+  
+  /* Force visibility */
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.theme-option {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 16px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1f2937 !important;
+  position: relative !important;
+  
+  /* Force visibility */
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+.theme-option:hover {
+  background: rgba(var(--theme-color-rgb, 59, 130, 246), 0.1);
+  transform: translateX(4px);
+}
+
+.theme-option.active {
+  background: rgba(var(--theme-color-rgb, 59, 130, 246), 0.15);
+  color: var(--theme-color, #3b82f6);
+  font-weight: 600;
+}
+
+.theme-color-preview {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-name {
+  flex: 1;
+  text-align: left;
+  font-size: 14px;
+}
+
+.active-indicator {
+  color: var(--theme-color, #3b82f6);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Backdrop */
+.theme-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .palette-button {
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+  }
+  
+  .palette {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .theme-button-text {
+    font-size: 12px;
+  }
+  
+  .theme-dropdown {
+    min-width: 180px;
+  }
+  
+  .theme-option {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .theme-color-preview {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .palette-button {
+    width: 100px;
+    height: 36px;
+    gap: 6px;
+  }
+  
+  .theme-button-text {
+    display: none;
+  }
+  
+  .palette {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .theme-dropdown {
+    min-width: 160px;
+    left: -30px;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .palette-button {
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .palette-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .theme-dropdown {
+    background: #ffffff;
+    border: 2px solid #000000;
+  }
+  
+  .theme-option {
+    color: #000000;
+  }
+  
+  .theme-option:hover {
+    background: #f0f0f0;
+  }
+  
+  .theme-option.active {
+    background: #e0e0e0;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .palette-button,
+  .palette,
+  .theme-dropdown,
+  .theme-option {
+    transition: none !important;
+  }
+  
+  .palette-button:hover .palette {
+    transform: none;
+  }
+}
+
+/* Dark Theme Support */
+.theme-dark .palette-button {
+  background-color: #374151;
+  color: #f9fafb;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .palette-button:hover {
+  background-color: rgb(176, 115, 255);
+}
+
+.theme-dark .theme-dropdown {
+  background: rgba(55, 65, 81, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .theme-option {
+  color: #f9fafb;
+}
+
+.theme-dark .theme-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .theme-option.active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Animation Keyframes */
+@keyframes paletteRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes optionSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Force visibility */
+.animated-theme-container {
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+.palette-button {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure dropdown appears above other elements */
+.theme-dropdown {
+  z-index: 99999 !important;
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: 0 !important;
+  width: 220px !important;
+}
+
+/* Force container to have proper stacking context */
+.animated-theme-container {
+  position: relative !important;
+  z-index: 1000 !important;
+  isolation: isolate !important;
+}
+
+/* Custom color variables for theme options */
+.theme-option[style*="--theme-color: #3b82f6"] {
+  --theme-color-rgb: 59, 130, 246;
+}
+
+.theme-option[style*="--theme-color: #10b981"] {
+  --theme-color-rgb: 16, 185, 129;
+}
+
+.theme-option[style*="--theme-color: #f59e0b"] {
+  --theme-color-rgb: 245, 158, 11;
+}
+
+.theme-option[style*="--theme-color: #8b5cf6"] {
+  --theme-color-rgb: 139, 92, 246;
+}
+
+.theme-option[style*="--theme-color: #ec4899"] {
+  --theme-color-rgb: 236, 72, 153;
+}
+
+.theme-option[style*="--theme-color: #1f2937"] {
+  --theme-color-rgb: 31, 41, 55;
+}/* 
+========================================
+   FALLBACK DROPDOWN STYLES
+   ======================================== */
+
+.theme-dropdown-fallback {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: 0 !important;
+  width: 220px !important;
+  background: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  z-index: 99999 !important;
+  overflow: hidden !important;
+  
+  /* Force visibility */
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.theme-option-fallback {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 16px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1f2937 !important;
+  text-align: left !important;
+  
+  /* Force visibility */
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.theme-option-fallback:hover {
+  background: #f3f4f6 !important;
+}
+
+.theme-option-fallback.active {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+  font-weight: 600 !important;
+}
+
+.theme-color-preview-fallback {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(0, 0, 0, 0.1) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Debug styles - bright colors to see if dropdown appears */
+.theme-dropdown-fallback {
+  background: #ffff00 !important; /* Bright yellow background for debugging */
+  border: 3px solid #ff0000 !important; /* Red border for debugging */
+}
+
+.theme-option-fallback {
+  background: #00ff00 !important; /* Green background for debugging */
+  color: #000000 !important;
+}
+
+/* Override any parent styles that might hide dropdown */
+.animated-theme-container .theme-dropdown-fallback,
+.animated-theme-container .theme-dropdown {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 99999 !important;
+  position: absolute !important;
+}
+
+/* Force container positioning */
+.animated-theme-container {
+  position: relative !important;
+  z-index: 1000 !important;
+  overflow: visible !important;
+}
+
+/* Ensure parent containers don't clip dropdown */
+.teacher-user-section,
+.teacher-nav-container,
+.teacher-nav,
+.student-dashboard .flex {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* Nuclear option - force dropdown visibility everywhere */
+* .theme-dropdown,
+* .theme-dropdown-fallback {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 99999 !important;
+}
+
+/* Debug info */
+.theme-dropdown::before,
+.theme-dropdown-fallback::before {
+  content: 'THEME DROPDOWN VISIBLE';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background: #ff0000;
+  color: #ffffff;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 100000;
+}/* ==
+======================================
+   SIMPLE DROPDOWN (ALWAYS WORKS)
+   ======================================== */
+
+.theme-dropdown-simple {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: 0 !important;
+  width: 220px !important;
+  background: #ffffff !important;
+  border: 2px solid #3b82f6 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  z-index: 99999 !important;
+  overflow: hidden !important;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+.theme-dropdown-simple.visible {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.theme-dropdown-simple.hidden {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.theme-option-simple {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 16px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1f2937 !important;
+  text-align: left !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.theme-option-simple:hover {
+  background: #f3f4f6 !important;
+}
+
+.theme-option-simple.active {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+  font-weight: 600 !important;
+}
+
+.theme-color-preview-simple {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(0, 0, 0, 0.1) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Debug Info */
+.theme-debug-info {
+  position: absolute !important;
+  top: -25px !important;
+  right: 0 !important;
+  background: #ff0000 !important;
+  color: #ffffff !important;
+  padding: 2px 8px !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  border-radius: 4px !important;
+  z-index: 100000 !important;
+}
+
+/* Force visibility for simple dropdown */
+.animated-theme-container .theme-dropdown-simple {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 99999 !important;
+}
+
+/* Remove debug colors from fallback */
+.theme-dropdown-fallback {
+  background: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+}
+
+.theme-option-fallback {
+  background: transparent !important;
+  color: #1f2937 !important;
+}
+
+/* Clean up debug styles */
+.theme-dropdown::before,
+.theme-dropdown-fallback::before {
+  display: none !important;
+}

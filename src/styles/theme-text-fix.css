@@ -1,0 +1,535 @@
+/**
+ * COMPREHENSIVE TEXT VISIBILITY FIX
+ * Ensures all text is readable in both light and dark themes
+ */
+
+/* ============================================
+   GLOBAL TEXT COLOR FIXES
+   ============================================ */
+
+/* Base text colors - ensure proper contrast */
+body {
+  color: var(--color-text);
+}
+
+/* Headings - always visible */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text) !important;
+}
+
+/* Paragraphs and spans */
+p, span, div {
+  color: var(--color-text);
+}
+
+/* Links */
+a {
+  color: var(--color-text-secondary);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* ============================================
+   LIGHT THEME - SPECIFIC TEXT FIXES
+   ============================================ */
+
+/* Light theme - ensure dark text on light backgrounds */
+[data-theme="light"] body,
+[data-theme="light"] .text-text {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .text-text-secondary,
+[data-theme="light"] p {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .text-text-muted {
+  color: #64748b !important;
+}
+
+/* Light theme - card text */
+[data-theme="light"] .card,
+[data-theme="light"] .bg-surface,
+[data-theme="light"] .backdrop-blur-xl {
+  color: #1e293b;
+}
+
+[data-theme="light"] .card h1,
+[data-theme="light"] .card h2,
+[data-theme="light"] .card h3,
+[data-theme="light"] .card h4,
+[data-theme="light"] .card h5,
+[data-theme="light"] .card h6,
+[data-theme="light"] .bg-surface h1,
+[data-theme="light"] .bg-surface h2,
+[data-theme="light"] .bg-surface h3,
+[data-theme="light"] .bg-surface h4,
+[data-theme="light"] .bg-surface h5,
+[data-theme="light"] .bg-surface h6 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .card p,
+[data-theme="light"] .bg-surface p {
+  color: #475569 !important;
+}
+
+/* Light theme - button text */
+[data-theme="light"] button:not(.bg-gradient-to-r):not(.auth-button-primary):not(.quiz-nav-next):not(.quiz-submit-button) {
+  color: #1e293b !important;
+}
+
+/* Light theme - input text */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Light theme - label text */
+[data-theme="light"] label {
+  color: #334155 !important;
+}
+
+/* ============================================
+   DARK THEME - SPECIFIC TEXT FIXES
+   ============================================ */
+
+/* Dark theme - ensure light text on dark backgrounds */
+[data-theme="dark"] body,
+[data-theme="dark"] .text-text {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-text-secondary,
+[data-theme="dark"] p {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .text-text-muted {
+  color: #9ca3af !important;
+}
+
+/* Dark theme - card text */
+[data-theme="dark"] .card,
+[data-theme="dark"] .bg-surface,
+[data-theme="dark"] .backdrop-blur-xl {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .card h1,
+[data-theme="dark"] .card h2,
+[data-theme="dark"] .card h3,
+[data-theme="dark"] .card h4,
+[data-theme="dark"] .card h5,
+[data-theme="dark"] .card h6,
+[data-theme="dark"] .bg-surface h1,
+[data-theme="dark"] .bg-surface h2,
+[data-theme="dark"] .bg-surface h3,
+[data-theme="dark"] .bg-surface h4,
+[data-theme="dark"] .bg-surface h5,
+[data-theme="dark"] .bg-surface h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .card p,
+[data-theme="dark"] .bg-surface p {
+  color: #d1d5db !important;
+}
+
+/* Dark theme - button text */
+[data-theme="dark"] button:not(.bg-gradient-to-r):not(.auth-button-primary):not(.quiz-nav-next):not(.quiz-submit-button) {
+  color: #f9fafb !important;
+}
+
+/* Dark theme - input text */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Dark theme - label text */
+[data-theme="dark"] label {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   DASHBOARD SPECIFIC FIXES
+   ============================================ */
+
+/* Dashboard welcome section */
+[data-theme="light"] .dashboard-welcome h2,
+[data-theme="light"] .dashboard-welcome p {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .dashboard-welcome h2,
+[data-theme="dark"] .dashboard-welcome p {
+  color: #ffffff !important;
+}
+
+/* Stat cards */
+[data-theme="light"] .stat-card .stat-number,
+[data-theme="light"] .stat-card .stat-label {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .stat-card .stat-number,
+[data-theme="dark"] .stat-card .stat-label {
+  color: #ffffff !important;
+}
+
+/* Quiz cards */
+[data-theme="light"] .quiz-card .quiz-card-title,
+[data-theme="light"] .quiz-card .quiz-card-date {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .quiz-card p {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-card .quiz-card-title,
+[data-theme="dark"] .quiz-card .quiz-card-date {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .quiz-card p {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   QUIZ INTERFACE SPECIFIC FIXES
+   ============================================ */
+
+/* Quiz header */
+[data-theme="light"] .quiz-header .quiz-title,
+[data-theme="light"] .quiz-header .quiz-description {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .quiz-header .quiz-title,
+[data-theme="dark"] .quiz-header .quiz-description {
+  color: #ffffff !important;
+}
+
+/* Quiz questions */
+[data-theme="light"] .quiz-question-text {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .quiz-question-text {
+  color: #ffffff !important;
+}
+
+/* Quiz options */
+[data-theme="light"] .quiz-option {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .quiz-option.selected {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .quiz-option {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] .quiz-option.selected {
+  color: #ffffff !important;
+}
+
+/* Question navigator */
+[data-theme="light"] .question-navigator-title,
+[data-theme="light"] .question-nav-legend {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .question-navigator-title,
+[data-theme="dark"] .question-nav-legend {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   AUTH PAGE SPECIFIC FIXES
+   ============================================ */
+
+/* Auth card - Light theme with dark card */
+[data-theme="light"] .auth-card-main {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .auth-card-main h1,
+[data-theme="light"] .auth-card-main h2,
+[data-theme="light"] .auth-card-main h3,
+[data-theme="light"] .auth-card-main h4,
+[data-theme="light"] .auth-card-main h5,
+[data-theme="light"] .auth-card-main h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .auth-card-main p {
+  color: #d1d5db !important;
+}
+
+[data-theme="light"] .auth-card-main label {
+  color: #ffffff !important;
+}
+
+/* Auth card - Dark theme */
+[data-theme="dark"] .auth-card-main {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] .auth-card-main h1,
+[data-theme="dark"] .auth-card-main h2,
+[data-theme="dark"] .auth-card-main h3,
+[data-theme="dark"] .auth-card-main h4,
+[data-theme="dark"] .auth-card-main h5,
+[data-theme="dark"] .auth-card-main h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .auth-card-main p {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .auth-card-main label {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   NAVBAR SPECIFIC FIXES
+   ============================================ */
+
+/* Navbar text */
+[data-theme="light"] nav h1,
+[data-theme="light"] nav p {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] nav .text-text {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] nav .text-text-secondary {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] nav h1,
+[data-theme="dark"] nav p {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] nav .text-text {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] nav .text-text-secondary {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   TAILWIND CLASS OVERRIDES
+   ============================================ */
+
+/* Text color utilities */
+[data-theme="light"] .text-text {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .text-text-secondary {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .text-text-muted {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] .text-text {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] .text-text-secondary {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .text-text-muted {
+  color: #9ca3af !important;
+}
+
+/* ============================================
+   SPECIAL CASES
+   ============================================ */
+
+/* Timer text */
+[data-theme="light"] .quiz-timer {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .quiz-timer.warning {
+  color: #f59e0b !important;
+}
+
+[data-theme="light"] .quiz-timer.critical {
+  color: #ef4444 !important;
+}
+
+[data-theme="dark"] .quiz-timer {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .quiz-timer.warning {
+  color: #fbbf24 !important;
+}
+
+[data-theme="dark"] .quiz-timer.critical {
+  color: #f87171 !important;
+}
+
+/* Progress text */
+[data-theme="light"] .quiz-progress-text,
+[data-theme="light"] .quiz-summary-title {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-progress-text,
+[data-theme="dark"] .quiz-summary-title {
+  color: #d1d5db !important;
+}
+
+/* Violation warnings */
+[data-theme="light"] .quiz-violations {
+  color: #ea580c !important;
+}
+
+[data-theme="dark"] .quiz-violations {
+  color: #fb923c !important;
+}
+
+/* Tips section */
+[data-theme="light"] .quiz-tips-title {
+  color: #3b82f6 !important;
+}
+
+[data-theme="light"] .quiz-tips-list {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-tips-title {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] .quiz-tips-list {
+  color: #d1d5db !important;
+}
+
+/* Empty state text */
+[data-theme="light"] .quiz-list-empty-text {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .quiz-list-empty-text {
+  color: #d1d5db !important;
+}
+
+/* Tab text */
+[data-theme="light"] .dashboard-tab:not(.active) {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .dashboard-tab:not(.active):hover {
+  color: #1e293b !important;
+}
+
+[data-theme="dark"] .dashboard-tab:not(.active) {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] .dashboard-tab:not(.active):hover {
+  color: #f9fafb !important;
+}
+
+/* ============================================
+   ENSURE GRADIENT TEXT IS VISIBLE
+   ============================================ */
+
+/* Light theme gradient text */
+[data-theme="light"] .text-gradient-natural {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark theme gradient text */
+[data-theme="dark"] .text-gradient-natural {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   FORCE VISIBILITY FOR CRITICAL ELEMENTS
+   ============================================ */
+
+/* Force visibility for user info */
+[data-theme="light"] .dashboard-user-name,
+[data-theme="light"] .dashboard-user-role {
+  color: #0f172a !important;
+}
+
+[data-theme="dark"] .dashboard-user-name,
+[data-theme="dark"] .dashboard-user-role {
+  color: #ffffff !important;
+}
+
+/* Force visibility for logo text */
+[data-theme="light"] .dashboard-logo-title {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .dashboard-logo-subtitle {
+  color: #475569 !important;
+}
+
+[data-theme="dark"] .dashboard-logo-title {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .dashboard-logo-subtitle {
+  color: #d1d5db !important;
+}

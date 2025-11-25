@@ -1,0 +1,424 @@
+/**
+ * Natural Day Theme - Profile and Settings Page Styles
+ * Applies warm, sunny styling to profile and settings pages
+ */
+
+/* ============================================
+   PROFILE CARD (Task 4.4)
+   ============================================ */
+
+/* Profile card container */
+.profile-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.profile-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Profile avatar */
+.profile-avatar {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Profile name */
+.profile-name {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+/* Profile email */
+.profile-email {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Profile role badge */
+.profile-role-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.profile-role-badge.teacher {
+  background: rgba(245, 166, 35, 0.15);
+  color: var(--color-secondary);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+}
+
+.profile-role-badge.student {
+  background: rgba(74, 144, 226, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+}
+
+/* Profile member since section */
+.profile-member-since {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-member-since-label {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-member-since-date {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* ============================================
+   SETTINGS SECTIONS (Task 4.4)
+   ============================================ */
+
+/* Settings section container */
+.settings-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.settings-section:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Settings section header */
+.settings-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  margin-bottom: 1.5rem;
+}
+
+.settings-section-title {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.settings-section-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+}
+
+/* Settings edit button */
+.settings-edit-button {
+  padding: 0.5rem 1rem;
+  background: rgba(74, 144, 226, 0.15);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  color: var(--color-primary);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+}
+
+.settings-edit-button:hover {
+  background: rgba(74, 144, 226, 0.25);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Settings form input */
+.settings-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.settings-input:hover {
+  border-color: var(--color-border-hover);
+}
+
+.settings-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.settings-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Settings input label */
+.settings-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Settings save button */
+.settings-save-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+  border: none;
+}
+
+.settings-save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   THEME SETTINGS PANEL (Task 4.4)
+   ============================================ */
+
+/* Theme settings container */
+.theme-settings-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Theme option card */
+.theme-option-card {
+  padding: 1rem;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.theme-option-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+/* Theme option title */
+.theme-option-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+/* Theme option description */
+.theme-option-description {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+/* Theme current mode indicator */
+.theme-current-mode {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.theme-current-mode-value {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: capitalize;
+}
+
+/* ============================================
+   PASSWORD CHANGE SECTION (Task 4.4)
+   ============================================ */
+
+/* Password change container */
+.password-change-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Password change button */
+.password-change-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-success));
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+  border: none;
+}
+
+.password-change-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   DANGER ZONE (Task 4.4)
+   ============================================ */
+
+/* Danger zone container */
+.danger-zone {
+  background: rgba(239, 83, 80, 0.1);
+  border: 1px solid rgba(239, 83, 80, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.danger-zone-title {
+  color: var(--color-error);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Danger zone button */
+.danger-zone-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: rgba(239, 83, 80, 0.15);
+  border: 1px solid rgba(239, 83, 80, 0.3);
+  color: var(--color-error);
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+}
+
+.danger-zone-button:hover {
+  background: rgba(239, 83, 80, 0.25);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   BACK BUTTON (Task 4.4)
+   ============================================ */
+
+/* Back button */
+.profile-back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.profile-back-button:hover {
+  color: var(--color-text);
+  transform: translateX(-4px);
+}
+
+/* ============================================
+   ADVANCED SETTINGS BUTTON (Task 4.4)
+   ============================================ */
+
+/* Advanced settings button */
+.advanced-settings-button {
+  padding: 0.5rem 1rem;
+  background: rgba(74, 144, 226, 0.15);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  color: var(--color-primary);
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-duration) var(--transition-timing);
+  cursor: pointer;
+}
+
+.advanced-settings-button:hover {
+  background: rgba(74, 144, 226, 0.25);
+  box-shadow: var(--shadow-sm);
+}
+
+.advanced-settings-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* ============================================
+   DARK THEME OVERRIDES
+   Ensure dark theme remains unchanged
+   ============================================ */
+
+[data-theme="dark"] .profile-card,
+[data-theme="dark"] .settings-section,
+[data-theme="dark"] .theme-settings-panel,
+[data-theme="dark"] .password-change-section {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .settings-input,
+[data-theme="dark"] .theme-option-card {
+  background: #111827;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .danger-zone {
+  background: rgba(239, 83, 80, 0.1);
+  border-color: rgba(239, 83, 80, 0.3);
+}
+
+[data-theme="dark"] .profile-member-since {
+  border-color: #374151;
+}
+
+[data-theme="dark"] .theme-current-mode {
+  border-color: #374151;
+}
+

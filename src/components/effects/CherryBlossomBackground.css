@@ -1,0 +1,145 @@
+.cherry-blossom-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1; /* Behind all content */
+  overflow: hidden;
+  will-change: transform; /* Optimize for animations */
+}
+
+.cherry-blossom-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 240, 245, 0.3) 0%,
+    rgba(255, 228, 225, 0.2) 25%,
+    rgba(255, 182, 193, 0.15) 50%,
+    rgba(255, 192, 203, 0.2) 75%,
+    rgba(255, 218, 185, 0.3) 100%
+  );
+}
+
+.cherry-blossom-static {
+  position: absolute;
+  user-select: none;
+  text-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+  filter: drop-shadow(0 0 8px rgba(255, 182, 193, 0.4));
+  will-change: transform;
+  opacity: 0.7;
+}
+
+.cherry-blossom-falling {
+  position: absolute;
+  user-select: none;
+  text-shadow: 0 0 12px rgba(255, 182, 193, 0.8);
+  filter: drop-shadow(0 0 6px rgba(255, 182, 193, 0.6));
+  will-change: transform, opacity;
+}
+
+.cherry-blossom-cluster {
+  user-select: none;
+  text-shadow: 0 0 18px rgba(255, 182, 193, 0.7);
+  filter: drop-shadow(0 0 10px rgba(255, 182, 193, 0.5));
+  will-change: transform;
+  opacity: 0.8;
+}
+
+.cherry-blossom-branch {
+  user-select: none;
+  text-shadow: 0 0 20px rgba(255, 182, 193, 0.8);
+  filter: drop-shadow(0 0 12px rgba(255, 182, 193, 0.6));
+  will-change: transform;
+  opacity: 0.6;
+}
+
+.cherry-blossom-twinkle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cherry-blossom-sparkle {
+  user-select: none;
+  text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+  filter: drop-shadow(0 0 4px rgba(255, 182, 193, 0.4));
+  will-change: transform, opacity;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cherry-blossom-static {
+    font-size: 0.8rem !important;
+  }
+  
+  .cherry-blossom-falling {
+    font-size: 0.7rem !important;
+  }
+  
+  .cherry-blossom-cluster {
+    font-size: 1.5rem !important;
+  }
+  
+  .cherry-blossom-branch {
+    font-size: 2rem !important;
+  }
+}
+
+/* Performance optimizations */
+.cherry-blossom-background * {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .cherry-blossom-background {
+    display: none;
+  }
+}
+
+/* Performance mode for lower-end devices */
+@media (max-width: 768px) {
+  .cherry-blossom-static {
+    font-size: 0.6rem !important;
+    opacity: 0.5;
+  }
+  
+  .cherry-blossom-falling {
+    font-size: 0.5rem !important;
+  }
+  
+  .cherry-blossom-cluster {
+    font-size: 1rem !important;
+    opacity: 0.6;
+  }
+  
+  .cherry-blossom-sparkle {
+    display: none; /* Hide sparkles on mobile for performance */
+  }
+}
+/* Optimized falling animation */
+@keyframes cherryBlossomFall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

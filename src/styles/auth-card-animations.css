@@ -1,0 +1,269 @@
+/**
+ * Auth Card Animations
+ * Additional animations for the login/register card
+ */
+
+/* Card entrance animation */
+.auth-card-main {
+  animation: cardEntrance 0.6s ease-out;
+}
+
+@keyframes cardEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Smooth transitions for all card interactions */
+.auth-card-main {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Pulse animation for card border on focus within */
+.auth-card-main:focus-within::before {
+  animation: borderPulse 2s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+  0%, 100% {
+    opacity: 0.8;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+}
+
+/* Floating animation for subtle movement */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Apply floating to card on hover (optional - can be enabled) */
+.auth-card-main.floating:hover {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Shimmer effect for inputs on focus */
+.auth-input:focus {
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-input:focus::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(74, 144, 226, 0.1), 
+    transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Button press effect */
+.auth-button-primary:active {
+  transform: scale(0.98);
+  box-shadow: 
+    0 2px 8px rgba(74, 144, 226, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Demo button ripple effect */
+.auth-demo-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-demo-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(74, 144, 226, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.auth-demo-button:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Tab switch animation enhancement */
+.auth-tab-active {
+  animation: tabSlide 0.3s ease-out;
+}
+
+@keyframes tabSlide {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Monkey avatar bounce on load */
+.auth-card-main label[for="blind-input"] {
+  animation: monkeyBounce 1s ease-out;
+}
+
+@keyframes monkeyBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Glow effect on card hover */
+[data-theme="light"] .auth-card-main:hover,
+[data-theme="natural-day"] .auth-card-main:hover {
+  filter: brightness(1.02);
+}
+
+[data-theme="dark"] .auth-card-main:hover {
+  filter: brightness(1.1);
+}
+
+
+/* Enhanced spacing and layout for auth card content */
+.auth-card-main > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth fade-in for form elements */
+.auth-card-main form > div {
+  animation: fadeInUp 0.5s ease-out backwards;
+}
+
+.auth-card-main form > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.auth-card-main form > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.auth-card-main form > div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.auth-card-main form > div:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced focus ring for inputs */
+[data-theme="light"] .auth-input:focus,
+[data-theme="natural-day"] .auth-input:focus {
+  outline: none;
+  box-shadow: 
+    inset 2px 5px 12px rgb(3, 3, 3),
+    0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .auth-input:focus {
+  box-shadow: 
+    0 0 0 4px rgba(139, 92, 246, 0.2),
+    0 4px 16px rgba(139, 92, 246, 0.3),
+    inset 0 1px 2px rgba(139, 92, 246, 0.15);
+}
+
+/* Monkey avatar glow effect */
+label[for="blind-input"] {
+  position: relative;
+}
+
+label[for="blind-input"]::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, transparent 70%);
+  animation: avatarGlow 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes avatarGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+[data-theme="dark"] label[for="blind-input"]::before {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+}
+
+/* Button gradient animation enhancement */
+.auth-button-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-button-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.auth-button-primary:hover::before {
+  left: 100%;
+}

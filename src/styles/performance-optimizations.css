@@ -1,0 +1,284 @@
+/**
+ * Performance Optimizations for Smooth Scrolling and Zooming
+ * Fixes lag issues during scroll and zoom operations
+ */
+
+/* Global Performance Optimizations */
+* {
+  /* Enable hardware acceleration for all elements */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  
+  /* Optimize rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/* Smooth scrolling optimizations */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  /* Prevent layout shifts */
+  overflow-x: hidden;
+  
+  /* Optimize scrolling performance */
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  
+  /* Force hardware acceleration */
+  transform: translateZ(0);
+  will-change: scroll-position;
+}
+
+/* Container optimizations */
+.auth-page-container,
+.min-h-screen {
+  /* Optimize for animations */
+  will-change: transform;
+  transform: translateZ(0);
+  
+  /* Prevent repaints during scroll */
+  contain: layout style paint;
+  
+  /* Optimize rendering */
+  isolation: isolate;
+}
+
+/* Animation performance optimizations */
+[class*="motion-"] {
+  /* Force GPU acceleration */
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  
+  /* Optimize animations */
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
+/* Framer Motion optimizations */
+.framer-motion-div {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Snowflake specific optimizations */
+[class*="snowflake"],
+[key*="snowflake"],
+[key*="snow"] {
+  /* Optimize snowflake animations */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  
+  /* Reduce repaints */
+  contain: layout style paint;
+  
+  /* Optimize text rendering */
+  text-rendering: optimizeSpeed;
+  font-display: swap;
+}
+
+/* Background optimizations */
+.fixed,
+.absolute {
+  /* Optimize fixed/absolute positioned elements */
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Scroll performance */
+.overflow-hidden {
+  /* Optimize overflow hidden containers */
+  contain: layout style paint;
+  transform: translateZ(0);
+}
+
+/* Zoom optimizations */
+@media (hover: hover) {
+  /* Optimize hover effects */
+  *:hover {
+    will-change: transform, opacity, background-color, border-color;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Reduce animations on mobile for better performance */
+  * {
+    animation-duration: 0.5s !important;
+    transition-duration: 0.3s !important;
+  }
+  
+  /* Optimize touch scrolling */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Reduce motion for accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High performance mode for low-end devices */
+@media (max-resolution: 1dppx) {
+  /* Reduce visual effects on low-resolution displays */
+  * {
+    filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Optimize form elements */
+input, button, select, textarea {
+  /* Optimize form interactions */
+  will-change: background-color, border-color, box-shadow;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize images and media */
+img, video, canvas, svg {
+  /* Optimize media rendering */
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  
+  /* Prevent layout shifts */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Grid and flexbox optimizations */
+.grid, .flex, [class*="grid"], [class*="flex"] {
+  /* Optimize layout containers */
+  contain: layout style;
+  transform: translateZ(0);
+}
+
+/* Text optimizations */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  /* Optimize text rendering */
+  text-rendering: optimizeSpeed;
+  font-display: swap;
+  
+  /* Prevent unnecessary repaints */
+  contain: layout style paint;
+}
+
+/* Transition optimizations */
+.transition-all,
+.transition-colors,
+.transition-transform,
+[class*="transition"] {
+  /* Optimize transitions */
+  will-change: transform, opacity, background-color, border-color;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Shadow optimizations */
+[class*="shadow"] {
+  /* Optimize shadow rendering */
+  will-change: box-shadow;
+  transform: translateZ(0);
+}
+
+/* Border radius optimizations */
+[class*="rounded"] {
+  /* Optimize border radius rendering */
+  will-change: border-radius;
+  transform: translateZ(0);
+}
+
+/* Gradient optimizations */
+[style*="gradient"] {
+  /* Optimize gradient rendering */
+  will-change: background;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Performance monitoring */
+.performance-monitor {
+  /* Add this class to monitor performance */
+  contain: strict;
+  will-change: auto;
+}
+
+/* Critical performance fixes */
+.critical-performance {
+  /* Use this class for critical performance elements */
+  transform: translateZ(0) !important;
+  will-change: transform, opacity !important;
+  backface-visibility: hidden !important;
+  contain: layout style paint !important;
+  isolation: isolate !important;
+}
+/*
+ Final Critical Performance Fixes */
+
+/* Prevent layout shifts during zoom */
+@media screen {
+  html {
+    /* Prevent zoom-related layout shifts */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  body {
+    /* Optimize body for zoom operations */
+    zoom: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Optimize for different zoom levels */
+@media (min-resolution: 2dppx) {
+  /* High DPI optimizations */
+  * {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Emergency performance mode */
+.performance-emergency * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Scroll snap for smooth scrolling */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: contain;
+}
+
+/* Optimize for touch devices */
+@media (pointer: coarse) {
+  * {
+    /* Optimize touch interactions */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}

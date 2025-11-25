@@ -1,0 +1,965 @@
+/* Teacher Components Text Visibility Enhancement */
+
+/* Global teacher component text fixes */
+.teacher-dashboard * {
+  /* Ensure all text elements have proper contrast */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* All headings in teacher components */
+.teacher-dashboard h1,
+.teacher-dashboard h2,
+.teacher-dashboard h3,
+.teacher-dashboard h4,
+.teacher-dashboard h5,
+.teacher-dashboard h6,
+.teacher-dashboard .font-bold,
+.teacher-dashboard .font-semibold {
+  color: #1a202c !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* All paragraph and span text */
+.teacher-dashboard p,
+.teacher-dashboard span,
+.teacher-dashboard div:not([class*="cherry-blossom"]) {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Form elements comprehensive styling */
+.teacher-dashboard input[type="text"],
+.teacher-dashboard input[type="email"],
+.teacher-dashboard input[type="password"],
+.teacher-dashboard input[type="number"],
+.teacher-dashboard input[type="date"],
+.teacher-dashboard input[type="time"],
+.teacher-dashboard textarea,
+.teacher-dashboard select {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-weight: 500 !important;
+  text-shadow: none !important;
+  font-size: 16px !important;
+}
+
+.teacher-dashboard input:focus,
+.teacher-dashboard textarea:focus,
+.teacher-dashboard select:focus {
+  outline: none !important;
+  border-color: rgba(255, 182, 193, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+.teacher-dashboard input::placeholder,
+.teacher-dashboard textarea::placeholder {
+  color: #4a5568 !important;
+  opacity: 0.8 !important;
+}
+
+/* Labels and form text */
+.teacher-dashboard label {
+  color: #1a202c !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+/* Button text */
+.teacher-dashboard button {
+  color: #1a202c !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6) !important;
+  font-weight: 600 !important;
+}
+
+.teacher-dashboard button:hover {
+  color: #1a202c !important;
+}
+
+/* Card content */
+.teacher-dashboard .bg-white,
+.teacher-dashboard .bg-surface,
+.teacher-dashboard .backdrop-blur-xl {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Utility classes override */
+.teacher-dashboard .text-gray-900 { color: #1a202c !important; }
+.teacher-dashboard .text-gray-800 { color: #1a202c !important; }
+.teacher-dashboard .text-gray-700 { color: #2d3748 !important; }
+.teacher-dashboard .text-gray-600 { color: #4a5568 !important; }
+.teacher-dashboard .text-gray-500 { color: #4a5568 !important; }
+.teacher-dashboard .text-gray-400 { color: #718096 !important; }
+
+.teacher-dashboard .text-blue-600 { color: #3182ce !important; }
+.teacher-dashboard .text-blue-500 { color: #4299e1 !important; }
+.teacher-dashboard .text-green-600 { color: #38a169 !important; }
+.teacher-dashboard .text-green-500 { color: #48bb78 !important; }
+.teacher-dashboard .text-red-600 { color: #e53e3e !important; }
+.teacher-dashboard .text-red-500 { color: #f56565 !important; }
+
+/* Add text shadow to all utility classes */
+.teacher-dashboard [class*="text-"] {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Quiz specific components */
+.teacher-dashboard .quiz-card,
+.teacher-dashboard .question-card,
+.teacher-dashboard .answer-option {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.teacher-dashboard .quiz-card *,
+.teacher-dashboard .question-card *,
+.teacher-dashboard .answer-option * {
+  color: #1a202c !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Table text */
+.teacher-dashboard table {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.teacher-dashboard th,
+.teacher-dashboard td {
+  color: #1a202c !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* List items */
+.teacher-dashboard li {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Code and pre elements */
+.teacher-dashboard code,
+.teacher-dashboard pre {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  text-shadow: none !important;
+}
+
+/* Links */
+.teacher-dashboard a {
+  color: #3182ce !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+.teacher-dashboard a:hover {
+  color: #2c5282 !important;
+}
+
+/* Status indicators */
+.teacher-dashboard .status-active {
+  color: #38a169 !important;
+}
+
+.teacher-dashboard .status-inactive {
+  color: #e53e3e !important;
+}
+
+/* Badges and chips */
+.teacher-dashboard .badge,
+.teacher-dashboard .chip {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #1a202c !important;
+  text-shadow: none !important;
+}
+
+/* Dropdown menus */
+.teacher-dashboard .dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+.teacher-dashboard .dropdown-item {
+  color: #1a202c !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard .dropdown-item:hover {
+  background-color: rgba(255, 182, 193, 0.2) !important;
+  color: #1a202c !important;
+}
+
+/* Modal content */
+.teacher-dashboard .modal-content {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+.teacher-dashboard .modal-content * {
+  color: #1a202c !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .teacher-dashboard h1,
+  .teacher-dashboard h2,
+  .teacher-dashboard h3 {
+    font-size: 1.5rem !important;
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .teacher-dashboard input,
+  .teacher-dashboard textarea,
+  .teacher-dashboard select {
+    font-size: 16px !important;
+    padding: 10px 14px !important;
+  }
+}/* Qu
+iz List Button Styling Fixes */
+
+/* Quiz card buttons - Action buttons on the right */
+.teacher-dashboard .quiz-card button,
+.teacher-dashboard [class*="bg-gradient-to-r"] {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  font-weight: 700 !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Specific button color fixes */
+.teacher-dashboard button[class*="from-green"] {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4) !important;
+}
+
+.teacher-dashboard button[class*="from-yellow"] {
+  background: linear-gradient(135deg, #ed8936, #dd6b20) !important;
+  box-shadow: 0 4px 15px rgba(237, 137, 54, 0.4) !important;
+}
+
+.teacher-dashboard button[class*="from-blue"] {
+  background: linear-gradient(135deg, #4299e1, #3182ce) !important;
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4) !important;
+}
+
+.teacher-dashboard button[class*="from-red"] {
+  background: linear-gradient(135deg, #f56565, #e53e3e) !important;
+  box-shadow: 0 4px 15px rgba(245, 101, 101, 0.4) !important;
+}
+
+/* Quiz title styling */
+.teacher-dashboard .quiz-card h3 {
+  color: #1a202c !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #1a202c !important;
+  background-clip: unset !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+  font-weight: 800 !important;
+}
+
+/* Quiz description */
+.teacher-dashboard .quiz-card p {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Quiz info badges */
+.teacher-dashboard .quiz-card [class*="from-blue-50"] {
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.9), rgba(191, 219, 254, 0.9)) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.teacher-dashboard .quiz-card [class*="from-purple-50"] {
+  background: linear-gradient(135deg, rgba(237, 233, 254, 0.9), rgba(221, 214, 254, 0.9)) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+.teacher-dashboard .quiz-card [class*="from-green-50"] {
+  background: linear-gradient(135deg, rgba(220, 252, 231, 0.9), rgba(187, 247, 208, 0.9)) !important;
+  border-color: rgba(34, 197, 94, 0.3) !important;
+}
+
+.teacher-dashboard .quiz-card [class*="from-orange-50"] {
+  background: linear-gradient(135deg, rgba(255, 237, 213, 0.9), rgba(254, 215, 170, 0.9)) !important;
+  border-color: rgba(249, 115, 22, 0.3) !important;
+}
+
+/* Badge text colors */
+.teacher-dashboard .quiz-card [class*="text-blue-"] {
+  color: #1e40af !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard .quiz-card [class*="text-purple-"] {
+  color: #7c3aed !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard .quiz-card [class*="text-green-"] {
+  color: #15803d !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard .quiz-card [class*="text-orange-"] {
+  color: #ea580c !important;
+  text-shadow: none !important;
+}
+
+/* Status badge */
+.teacher-dashboard .quiz-card [class*="from-green-400"] {
+  background: linear-gradient(135deg, #4ade80, #22c55e) !important;
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.teacher-dashboard .quiz-card [class*="from-gray-400"] {
+  background: linear-gradient(135deg, #9ca3af, #6b7280) !important;
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Button hover effects */
+.teacher-dashboard button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Copy button styling */
+.teacher-dashboard .quiz-card button[class*="text-blue-600"] {
+  color: #1e40af !important;
+  background: none !important;
+  border: none !important;
+  text-shadow: none !important;
+  font-size: 1.2rem !important;
+}
+
+/* Modal content */
+.teacher-dashboard .modal-content h2,
+.teacher-dashboard .modal-content h3 {
+  color: #1a202c !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+.teacher-dashboard .modal-content p {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Delete confirmation styling */
+.teacher-dashboard .text-yellow-500 {
+  color: #d69e2e !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Cancel button */
+.teacher-dashboard button[class*="bg-surface"] {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard button[class*="bg-surface"]:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 182, 193, 0.5) !important;
+}/* Ci
+rcle Button Enhancements for Cherry Blossom Theme */
+
+.teacher-dashboard .circle-btn {
+  color: #1a202c !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6) !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.teacher-dashboard .circle-btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+}
+
+.teacher-dashboard .circle-btn-primary:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5) !important;
+}
+
+.teacher-dashboard .circle-btn-secondary {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #1a202c !important;
+  text-shadow: none !important;
+  border-color: rgba(255, 182, 193, 0.3) !important;
+}
+
+.teacher-dashboard .circle-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 182, 193, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+.teacher-dashboard .circle-btn-outline {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #667eea !important;
+  border-color: #667eea !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+}
+
+.teacher-dashboard .circle-btn-outline:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Quiz interface buttons */
+.teacher-dashboard .circle-quiz-container button {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard .circle-quiz-container button:hover {
+  border-color: rgba(255, 182, 193, 0.5) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Navigation buttons */
+.teacher-dashboard .nav-btn,
+.teacher-dashboard .navigation-btn {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.teacher-dashboard .nav-btn:hover,
+.teacher-dashboard .navigation-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2)) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Submit and action buttons */
+.teacher-dashboard button[type="submit"],
+.teacher-dashboard .submit-btn,
+.teacher-dashboard .action-btn {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  font-weight: 700 !important;
+}
+
+.teacher-dashboard button[type="submit"]:hover,
+.teacher-dashboard .submit-btn:hover,
+.teacher-dashboard .action-btn:hover {
+  background: linear-gradient(135deg, #38a169, #2f855a) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4) !important;
+}/* ===== 
+QUIZ CREATOR COMPONENT STYLING ===== */
+
+/* Quiz Creator Form Elements */
+.teacher-dashboard .quiz-creator input,
+.teacher-dashboard .quiz-creator textarea,
+.teacher-dashboard .quiz-creator select {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard .quiz-creator input:focus,
+.teacher-dashboard .quiz-creator textarea:focus,
+.teacher-dashboard .quiz-creator select:focus {
+  border-color: rgba(255, 182, 193, 0.6) !important;
+  box-shadow: 0 0 0 4px rgba(255, 182, 193, 0.2) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Quiz Creator Labels */
+.teacher-dashboard .quiz-creator label {
+  color: #1a202c !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 8px !important;
+}
+
+/* Quiz Creator Buttons */
+.teacher-dashboard .quiz-creator button {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 12px 24px !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.teacher-dashboard .quiz-creator button:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Step Navigation Buttons */
+.teacher-dashboard .quiz-creator .step-nav button {
+  min-width: 120px !important;
+  margin: 0 8px !important;
+}
+
+.teacher-dashboard .quiz-creator .step-nav .prev-btn {
+  background: linear-gradient(135deg, #a0aec0, #718096) !important;
+}
+
+.teacher-dashboard .quiz-creator .step-nav .next-btn {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+}
+
+/* Question Options */
+.teacher-dashboard .quiz-creator .option-input {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 182, 193, 0.25) !important;
+  margin-bottom: 12px !important;
+}
+
+.teacher-dashboard .quiz-creator .correct-option {
+  border-color: rgba(72, 187, 120, 0.5) !important;
+  background: rgba(72, 187, 120, 0.05) !important;
+}
+
+/* ===== QUIZ RESULTS (ANALYTICS) COMPONENT STYLING ===== */
+
+/* Analytics Cards */
+.teacher-dashboard .analytics-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.teacher-dashboard .analytics-card h3,
+.teacher-dashboard .analytics-card h4 {
+  color: #1a202c !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+  font-weight: 800 !important;
+}
+
+.teacher-dashboard .analytics-card p,
+.teacher-dashboard .analytics-card span {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Statistics Numbers */
+.teacher-dashboard .stat-number {
+  color: #1a202c !important;
+  font-size: 2.5rem !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+.teacher-dashboard .stat-label {
+  color: #4a5568 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Quiz Selection Dropdown */
+.teacher-dashboard .quiz-selector select {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  font-weight: 600 !important;
+}
+
+/* Results Table */
+.teacher-dashboard .results-table {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+}
+
+.teacher-dashboard .results-table th {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.2)) !important;
+  color: #1a202c !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+  padding: 16px !important;
+}
+
+.teacher-dashboard .results-table td {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+  padding: 14px 16px !important;
+  border-bottom: 1px solid rgba(255, 182, 193, 0.1) !important;
+}
+
+/* Score Badges */
+.teacher-dashboard .score-badge {
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard .score-high {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  color: white !important;
+}
+
+.teacher-dashboard .score-medium {
+  background: linear-gradient(135deg, #ed8936, #dd6b20) !important;
+  color: white !important;
+}
+
+.teacher-dashboard .score-low {
+  background: linear-gradient(135deg, #f56565, #e53e3e) !important;
+  color: white !important;
+}
+
+/* ===== FLAG MONITOR (LIVE MONITORING) COMPONENT STYLING ===== */
+
+/* Flag Cards */
+.teacher-dashboard .flag-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  margin-bottom: 16px !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.teacher-dashboard .flag-card:hover {
+  border-color: rgba(255, 182, 193, 0.4) !important;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.15) !important;
+}
+
+/* Flag Severity Indicators */
+.teacher-dashboard .flag-critical {
+  border-left: 6px solid #f56565 !important;
+  background: linear-gradient(145deg, rgba(245, 101, 101, 0.05), rgba(245, 101, 101, 0.02)) !important;
+}
+
+.teacher-dashboard .flag-high {
+  border-left: 6px solid #ed8936 !important;
+  background: linear-gradient(145deg, rgba(237, 137, 54, 0.05), rgba(237, 137, 54, 0.02)) !important;
+}
+
+.teacher-dashboard .flag-medium {
+  border-left: 6px solid #ecc94b !important;
+  background: linear-gradient(145deg, rgba(236, 201, 75, 0.05), rgba(236, 201, 75, 0.02)) !important;
+}
+
+.teacher-dashboard .flag-low {
+  border-left: 6px solid #48bb78 !important;
+  background: linear-gradient(145deg, rgba(72, 187, 120, 0.05), rgba(72, 187, 120, 0.02)) !important;
+}
+
+/* Flag Text */
+.teacher-dashboard .flag-card h4 {
+  color: #1a202c !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+.teacher-dashboard .flag-card p {
+  color: #2d3748 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Flag Action Buttons */
+.teacher-dashboard .flag-resolve-btn {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.teacher-dashboard .flag-resolve-btn:hover {
+  background: linear-gradient(135deg, #38a169, #2f855a) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Filter Buttons */
+.teacher-dashboard .filter-btn {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #1a202c !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  margin: 0 8px !important;
+}
+
+.teacher-dashboard .filter-btn.active {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.teacher-dashboard .filter-btn:hover {
+  border-color: rgba(255, 182, 193, 0.5) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* View Mode Toggle */
+.teacher-dashboard .view-toggle {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 182, 193, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 8px !important;
+  display: flex !important;
+  gap: 4px !important;
+}
+
+.teacher-dashboard .view-toggle button {
+  background: transparent !important;
+  color: #4a5568 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+
+.teacher-dashboard .view-toggle button.active {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Quiz Creator Step Wizard Styling */
+
+/* Step Indicator */
+.teacher-dashboard .step-indicator {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 32px !important;
+}
+
+.teacher-dashboard .step-item {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 16px !important;
+}
+
+.teacher-dashboard .step-number {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  margin-right: 12px !important;
+  border: 3px solid rgba(255, 182, 193, 0.3) !important;
+}
+
+.teacher-dashboard .step-number.active {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.teacher-dashboard .step-number.completed {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.teacher-dashboard .step-number:not(.active):not(.completed) {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #4a5568 !important;
+}
+
+.teacher-dashboard .step-label {
+  color: #1a202c !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Form Sections */
+.teacher-dashboard .form-section {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  margin-bottom: 24px !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.teacher-dashboard .form-section h3 {
+  color: #1a202c !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 16px !important;
+  border-bottom: 2px solid rgba(255, 182, 193, 0.2) !important;
+  padding-bottom: 12px !important;
+}
+
+/* Question Builder */
+.teacher-dashboard .question-builder {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 182, 193, 0.25) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.teacher-dashboard .question-number {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Option Selector */
+.teacher-dashboard .option-selector {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 12px !important;
+}
+
+.teacher-dashboard .option-radio {
+  width: 20px !important;
+  height: 20px !important;
+  border: 3px solid rgba(255, 182, 193, 0.4) !important;
+  border-radius: 50% !important;
+  margin-right: 12px !important;
+  cursor: pointer !important;
+}
+
+.teacher-dashboard .option-radio.selected {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Audio Proctoring Settings */
+.teacher-dashboard .audio-settings {
+  background: linear-gradient(145deg, rgba(255, 182, 193, 0.05), rgba(255, 182, 193, 0.02)) !important;
+  border: 2px solid rgba(255, 182, 193, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+}
+
+.teacher-dashboard .audio-toggle {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 16px !important;
+}
+
+.teacher-dashboard .toggle-switch {
+  width: 50px !important;
+  height: 26px !important;
+  background: rgba(255, 182, 193, 0.3) !important;
+  border-radius: 13px !important;
+  position: relative !important;
+  cursor: pointer !important;
+  margin-right: 12px !important;
+}
+
+.teacher-dashboard .toggle-switch.active {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+}
+
+.teacher-dashboard .toggle-knob {
+  width: 22px !important;
+  height: 22px !important;
+  background: white !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  top: 2px !important;
+  left: 2px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.teacher-dashboard .toggle-switch.active .toggle-knob {
+  left: 26px !important;
+}
+
+/* Keyword Input */
+.teacher-dashboard .keyword-input {
+  display: flex !important;
+  gap: 8px !important;
+  margin-bottom: 12px !important;
+}
+
+.teacher-dashboard .keyword-tag {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.teacher-dashboard .keyword-remove {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 50% !important;
+  width: 20px !important;
+  height: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  font-size: 12px !important;
+}
+
+/* Threshold Slider */
+.teacher-dashboard .threshold-slider {
+  width: 100% !important;
+  height: 8px !important;
+  background: rgba(255, 182, 193, 0.3) !important;
+  border-radius: 4px !important;
+  outline: none !important;
+  cursor: pointer !important;
+}
+
+.teacher-dashboard .threshold-value {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  padding: 4px 12px !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  margin-left: 12px !important;
+}

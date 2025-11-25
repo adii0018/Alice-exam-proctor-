@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Debug Test</title>
+</head>
+<body>
+    <h1>AI Debug Test</h1>
+    <button onclick="testUserCreate()">Test User Create</button>
+    <button onclick="testChat()">Test Chat</button>
+    <div id="result"></div>
+
+    <script>
+        const API_URL = 'http://localhost:8001/api';
+        
+        async function testUserCreate() {
+            try {
+                console.log('Testing user create...');
+                const response = await fetch(`${API_URL}/user/create/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: 'Debug Test User'
+                    })
+                });
+                
+                const data = await response.json();
+                console.log('User create response:', data);
+                document.getElementById('result').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                
+                // Store for chat test
+                localStorage.setItem('debug_user_id', data.user_id);
+                localStorage.setItem('debug_user_name', data.name);
+                
+            } catch (error) {
+                console.error('User create error:', error);
+                document.getElementById('result').innerHTML = `<pre>Error: ${error.message}</pre>`;
+            }
+        }
+        
+        async function testChat() {
+            try {
+                const userId = localStorage.getItem('debug_user_id');
+                if (!userId) {
+                    alert('Please test user create first');
+                    return;
+                }
+                
+                console.log('Testing chat...');
+                const response = await fetch(`${API_URL}/chat/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: 'Hello Alice, this is a test message',
+                        user_id: userId
+                    })
+                });
+                
+                const data = await response.json();
+                console.log('Chat response:', data);
+                document.getElementById('result').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                
+            } catch (error) {
+                console.error('Chat error:', error);
+                document.getElementById('result').innerHTML = `<pre>Error: ${error.message}</pre>`;
+            }
+        }
+    </script>
+</body>
+</html>

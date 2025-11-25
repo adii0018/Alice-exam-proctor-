@@ -1,0 +1,316 @@
+/* Animated Logout Button Styles */
+.animated-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+  
+  /* Force visibility */
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 9999 !important;
+  flex-shrink: 0 !important;
+  pointer-events: auto !important;
+}
+
+/* Icon container */
+.logout-sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-sign svg {
+  width: 17px;
+  height: 17px;
+}
+
+.logout-sign svg path {
+  fill: white;
+}
+
+/* Text container */
+.logout-text-animated {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  transition-duration: 0.3s;
+  white-space: nowrap;
+}
+
+/* Hover effect - expand button */
+.animated-logout-btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+  background-color: rgb(220, 38, 38);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.animated-logout-btn:hover .logout-sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+
+/* Show text on hover */
+.animated-logout-btn:hover .logout-text-animated {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+
+/* Click effect */
+.animated-logout-btn:active {
+  transform: translate(2px, 2px);
+}
+
+/* Focus state for accessibility */
+.animated-logout-btn:focus {
+  outline: 3px solid rgba(255, 65, 65, 0.5);
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animated-logout-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .animated-logout-btn:hover {
+    width: 110px;
+  }
+  
+  .logout-text-animated {
+    font-size: 0.9rem;
+  }
+  
+  .logout-sign svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-logout-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .animated-logout-btn:hover {
+    width: 100px;
+  }
+  
+  .logout-text-animated {
+    font-size: 0.8rem;
+  }
+  
+  .logout-sign svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .animated-logout-btn {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+  }
+  
+  .animated-logout-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .animated-logout-btn:hover .logout-sign svg path {
+    fill: #000000;
+  }
+  
+  .animated-logout-btn:hover .logout-text-animated {
+    color: #000000;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animated-logout-btn,
+  .logout-sign,
+  .logout-text-animated {
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animated-logout-btn:active {
+    transform: none;
+  }
+}
+
+/* Ensure button is always visible in all contexts */
+.teacher-nav .animated-logout-btn,
+.teacher-user-section .animated-logout-btn,
+.student-dashboard .animated-logout-btn {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+/* Force proper styling even with inline styles */
+.animated-logout-btn[style] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background-color: rgb(255, 65, 65) !important;
+}
+
+/* Animation keyframes for extra smoothness */
+@keyframes expandButton {
+  from {
+    width: 45px;
+    border-radius: 50%;
+  }
+  to {
+    width: 125px;
+    border-radius: 40px;
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 70%;
+  }
+}
+
+@keyframes moveIcon {
+  from {
+    width: 100%;
+    padding-left: 0;
+  }
+  to {
+    width: 30%;
+    padding-left: 20px;
+  }
+}
+
+/* Alternative animation using keyframes for better browser support */
+.animated-logout-btn.use-keyframes:hover {
+  animation: expandButton 0.3s ease-in-out forwards;
+}
+
+.animated-logout-btn.use-keyframes:hover .logout-sign {
+  animation: moveIcon 0.3s ease-in-out forwards;
+}
+
+.animated-logout-btn.use-keyframes:hover .logout-text-animated {
+  animation: showText 0.3s ease-in-out forwards;
+}/*
+ ========================================
+   FLOATING LOGOUT BUTTON STYLES
+   ======================================== */
+
+.floating-logout-container {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+
+.floating-logout-btn {
+  /* Enhanced visibility for floating position */
+  box-shadow: 0 4px 20px rgba(255, 65, 65, 0.4) !important;
+  border: 3px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+.floating-logout-btn:hover {
+  box-shadow: 0 6px 30px rgba(255, 65, 65, 0.6) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Floating animation */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.floating-logout-container {
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Responsive positioning */
+@media (max-width: 768px) {
+  .floating-logout-container {
+    bottom: 15px !important;
+    right: 15px !important;
+  }
+  
+  .floating-logout-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-logout-container {
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+  
+  .floating-logout-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* Ensure floating button is always on top */
+.floating-logout-container,
+.floating-logout-btn {
+  z-index: 99999 !important;
+  position: fixed !important;
+}
+
+/* Pulse effect for attention */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(255, 65, 65, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(255, 65, 65, 0.7);
+  }
+}
+
+.floating-logout-btn {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Hover stops the pulse */
+.floating-logout-btn:hover {
+  animation: none !important;
+}

@@ -1,0 +1,638 @@
+/* ========================================
+   TEACHER HEADER LAYOUT FIX
+   ======================================== */
+
+/* Main Navigation Container */
+.teacher-nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  overflow: visible !important;
+}
+
+/* Container with proper flex layout */
+.teacher-nav-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 1rem 2rem !important;
+  gap: 2rem !important;
+  min-height: 80px !important;
+  overflow: visible !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Logo Section - Fixed Width */
+.teacher-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-shrink: 0 !important;
+  min-width: 220px !important;
+  max-width: 280px !important;
+}
+
+.logo-icon {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  flex-shrink: 0 !important;
+}
+
+.logo-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.logo-main {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: #1f2937 !important;
+}
+
+.logo-sub {
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  color: #6b7280 !important;
+}
+
+/* Navigation Menu - Flexible Center */
+.teacher-nav-menu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(59, 130, 246, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 0.75rem !important;
+  flex: 1 !important;
+  max-width: 500px !important;
+  min-width: 350px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.teacher-nav-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  color: #6b7280 !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  position: relative !important;
+}
+
+.teacher-nav-item:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2) !important;
+}
+
+.teacher-nav-item.active {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4) !important;
+  transform: translateY(-1px) !important;
+}
+
+.nav-icon {
+  font-size: 1rem !important;
+  flex-shrink: 0 !important;
+}
+
+.nav-label {
+  font-weight: 600 !important;
+  flex-shrink: 0 !important;
+}
+
+/* User Section - Fixed Width */
+.teacher-user-section {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 1rem !important;
+  flex-shrink: 0 !important;
+  min-width: 300px !important;
+  max-width: 400px !important;
+}
+
+/* Theme Selector */
+.theme-selector {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(59, 130, 246, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 0.5rem !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.theme-selector:hover {
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.theme-dropdown {
+  background: transparent !important;
+  border: none !important;
+  color: #1f2937 !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  padding: 0.25rem 0.5rem !important;
+  cursor: pointer !important;
+  min-width: 120px !important;
+  max-width: 140px !important;
+  outline: none !important;
+}
+
+/* Time Display */
+.time-display {
+  text-align: center !important;
+  flex-shrink: 0 !important;
+  min-width: 90px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(16, 185, 129, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 0.5rem 0.75rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.current-time {
+  color: #1f2937 !important;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.current-date {
+  color: #6b7280 !important;
+  font-size: 0.7rem !important;
+  font-weight: 500 !important;
+}
+
+/* User Profile */
+.teacher-user-profile {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  padding: 0.75rem 1rem !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(139, 92, 246, 0.2) !important;
+  border-radius: 16px !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.teacher-user-profile:hover {
+  border-color: rgba(139, 92, 246, 0.4) !important;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
+.user-avatar {
+  position: relative !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3) !important;
+}
+
+.status-indicator {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 0.5rem !important;
+  height: 0.5rem !important;
+  background: #10b981 !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 50% !important;
+}
+
+.user-info {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  flex-shrink: 0 !important;
+}
+
+.user-name {
+  color: #1f2937 !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+}
+
+.user-role {
+  color: #6b7280 !important;
+  font-size: 0.7rem !important;
+  font-weight: 500 !important;
+}
+
+/* Logout Button - Always Visible */
+.logout-btn-enhanced {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  min-width: 90px !important;
+  height: 36px !important;
+  padding: 0.5rem 0.75rem !important;
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  border: 2px solid #dc2626 !important;
+  border-radius: 8px !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  z-index: 9999 !important;
+  position: relative !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.logout-btn-enhanced:hover {
+  background: #dc2626 !important;
+  border-color: #b91c1c !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+.logout-btn-enhanced span {
+  color: #ffffff !important;
+  flex-shrink: 0 !important;
+}
+
+.logout-text {
+  color: #ffffff !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+  .teacher-nav-container {
+    padding: 1.25rem 2.5rem !important;
+    gap: 2.5rem !important;
+  }
+  
+  .teacher-logo {
+    min-width: 280px !important;
+  }
+  
+  .teacher-nav-menu {
+    max-width: 600px !important;
+    gap: 0.75rem !important;
+    padding: 1rem !important;
+  }
+  
+  .teacher-nav-item {
+    padding: 0.875rem 1.25rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .teacher-user-section {
+    min-width: 400px !important;
+    gap: 1.25rem !important;
+  }
+}
+
+/* Desktop (1024px - 1399px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .teacher-nav-container {
+    padding: 1rem 2rem !important;
+    gap: 1.5rem !important;
+  }
+  
+  .teacher-logo {
+    min-width: 240px !important;
+  }
+  
+  .teacher-nav-menu {
+    max-width: 450px !important;
+    gap: 0.5rem !important;
+  }
+  
+  .teacher-nav-item {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .teacher-user-section {
+    min-width: 320px !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .teacher-nav-container {
+    padding: 0.5rem 1rem !important;
+    gap: 0.75rem !important;
+  }
+  
+  .teacher-logo {
+    min-width: 150px !important;
+  }
+  
+  .logo-main {
+    font-size: 1.1rem !important;
+  }
+  
+  .logo-sub {
+    font-size: 0.7rem !important;
+  }
+  
+  .teacher-nav-menu {
+    max-width: 350px !important;
+    gap: 0.25rem !important;
+  }
+  
+  .teacher-nav-item {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .nav-label {
+    display: none !important;
+  }
+  
+  .teacher-user-section {
+    min-width: 280px !important;
+    gap: 0.5rem !important;
+  }
+  
+  .user-info {
+    display: none !important;
+  }
+  
+  .theme-dropdown {
+    min-width: 80px !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .time-display {
+    min-width: 60px !important;
+  }
+  
+  .current-time {
+    font-size: 0.75rem !important;
+  }
+  
+  .current-date {
+    font-size: 0.65rem !important;
+  }
+  
+  .logout-btn-enhanced {
+    min-width: 70px !important;
+    height: 32px !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .logout-text {
+    display: none !important;
+  }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 767px) {
+  .teacher-nav-container {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+    min-height: auto !important;
+  }
+  
+  .teacher-logo,
+  .teacher-nav-menu,
+  .teacher-user-section {
+    width: 100% !important;
+    min-width: auto !important;
+    max-width: none !important;
+    justify-content: center !important;
+  }
+  
+  .teacher-nav-menu {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .teacher-user-section {
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .logout-btn-enhanced {
+    order: -1 !important;
+    width: 100% !important;
+    justify-content: center !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Force visibility on all screen sizes */
+.logout-btn-enhanced {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Prevent any parent from hiding logout button */
+.teacher-user-section,
+.teacher-nav-container,
+.teacher-nav {
+  overflow: visible !important;
+}
+
+/* Debug mode - remove in production */
+.logout-btn-enhanced {
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3), 0 0 0 1px rgba(239, 68, 68, 0.2) !important;
+}/* ======
+==================================
+   HEADER POLISH & ENHANCEMENTS
+   ======================================== */
+
+/* Add subtle animations */
+.teacher-nav {
+  backdrop-filter: blur(25px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+}
+
+/* Logo enhancements */
+.logo-icon {
+  transition: all 0.3s ease !important;
+}
+
+.teacher-logo:hover .logo-icon {
+  transform: rotate(5deg) scale(1.05) !important;
+}
+
+.logo-main {
+  background: linear-gradient(135deg, #1f2937, #3b82f6) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+}
+
+.logo-sub {
+  color: #6b7280 !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+}
+
+/* Navigation menu enhancements */
+.teacher-nav-menu {
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* Add nav indicator */
+.nav-indicator {
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 80% !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent) !important;
+  border-radius: 2px !important;
+}
+
+/* User section enhancements */
+.teacher-user-section > * {
+  transition: all 0.3s ease !important;
+}
+
+.teacher-user-section > *:hover {
+  transform: translateY(-1px) !important;
+}
+
+/* Status indicator animation */
+.status-indicator {
+  animation: pulse 2s infinite !important;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* User info text */
+.user-name {
+  color: #1f2937 !important;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.user-role {
+  color: #8b5cf6 !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Header glow effect */
+.teacher-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    rgba(59, 130, 246, 0.05) 0%, 
+    rgba(139, 92, 246, 0.05) 50%, 
+    rgba(16, 185, 129, 0.05) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Smooth transitions for all elements */
+.teacher-nav-container * {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Focus states for accessibility */
+.teacher-nav-item:focus,
+.theme-dropdown:focus,
+.teacher-user-profile:focus {
+  outline: 3px solid rgba(59, 130, 246, 0.5) !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast mode improvements */
+@media (prefers-contrast: high) {
+  .teacher-nav {
+    background: #ffffff !important;
+    border-bottom: 3px solid #000000 !important;
+  }
+  
+  .teacher-nav-menu,
+  .theme-selector,
+  .time-display,
+  .teacher-user-profile {
+    background: #ffffff !important;
+    border: 3px solid #000000 !important;
+  }
+  
+  .teacher-nav-item.active {
+    background: #000000 !important;
+    color: #ffffff !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .teacher-nav-container *,
+  .status-indicator {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .teacher-logo:hover .logo-icon {
+    transform: none !important;
+  }
+}

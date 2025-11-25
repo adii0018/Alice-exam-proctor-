@@ -1,0 +1,365 @@
+/**
+ * AUTH PAGE TEXT VISIBILITY FIX
+ * Ensures all text on auth pages is perfectly visible
+ */
+
+/* ============================================
+   LIGHT THEME AUTH PAGE - DARK CARD STYLE
+   ============================================ */
+
+/* Main auth card text - white on dark background */
+[data-theme="light"] .auth-card-main,
+[data-theme="light"] .auth-card-main * {
+  color: #ffffff !important;
+}
+
+/* Headings in auth card */
+[data-theme="light"] .auth-card-main h1,
+[data-theme="light"] .auth-card-main h2,
+[data-theme="light"] .auth-card-main h3,
+[data-theme="light"] .auth-card-main h4 {
+  color: #ffffff !important;
+}
+
+/* Labels in auth card */
+[data-theme="light"] .auth-card-main label {
+  color: #ffffff !important;
+}
+
+/* Input text in auth card */
+[data-theme="light"] .auth-card-main input {
+  color: #d3d3d3 !important;
+  background: #171717 !important;
+}
+
+[data-theme="light"] .auth-card-main input::placeholder {
+  color: #666666 !important;
+}
+
+/* Button text in auth card */
+[data-theme="light"] .auth-card-main button:not(.auth-button-primary) {
+  color: #ffffff !important;
+}
+
+/* Links in auth card */
+[data-theme="light"] .auth-card-main a {
+  color: #999999 !important;
+}
+
+[data-theme="light"] .auth-card-main a:hover {
+  color: #ffffff !important;
+}
+
+/* Divider text */
+[data-theme="light"] .auth-card-main .auth-divider-text {
+  color: #999999 !important;
+}
+
+/* Helper text */
+[data-theme="light"] .auth-card-main .auth-helper-text {
+  color: #666666 !important;
+}
+
+/* Tab text */
+[data-theme="light"] .auth-card-main .auth-tab-button {
+  color: #999999 !important;
+}
+
+[data-theme="light"] .auth-card-main .auth-tab-button.active {
+  color: #ffffff !important;
+}
+
+/* Demo button text */
+[data-theme="light"] .auth-card-main .auth-demo-button {
+  color: #ffffff !important;
+}
+
+/* ============================================
+   DARK THEME AUTH PAGE - GLASSMORPHIC STYLE
+   ============================================ */
+
+/* Main auth card text - light on dark background */
+[data-theme="dark"] .auth-card-main,
+[data-theme="dark"] .auth-card-main * {
+  color: #f9fafb !important;
+}
+
+/* Headings in auth card */
+[data-theme="dark"] .auth-card-main h1,
+[data-theme="dark"] .auth-card-main h2,
+[data-theme="dark"] .auth-card-main h3,
+[data-theme="dark"] .auth-card-main h4 {
+  color: #ffffff !important;
+}
+
+/* Labels in auth card */
+[data-theme="dark"] .auth-card-main label {
+  color: #d1d5db !important;
+}
+
+/* Input text in auth card */
+[data-theme="dark"] .auth-card-main input {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] .auth-card-main input::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Button text in auth card */
+[data-theme="dark"] .auth-card-main button:not(.auth-button-primary) {
+  color: #9ca3af !important;
+}
+
+/* Links in auth card */
+[data-theme="dark"] .auth-card-main a {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] .auth-card-main a:hover {
+  color: #f9fafb !important;
+}
+
+/* Divider text */
+[data-theme="dark"] .auth-card-main .auth-divider-text {
+  color: #9ca3af !important;
+}
+
+/* Helper text */
+[data-theme="dark"] .auth-card-main .auth-helper-text {
+  color: #6b7280 !important;
+}
+
+/* Tab text */
+[data-theme="dark"] .auth-card-main .auth-tab-button {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .auth-card-main .auth-tab-button.active {
+  color: #ffffff !important;
+}
+
+/* Demo button text */
+[data-theme="dark"] .auth-card-main .auth-demo-button {
+  color: #9ca3af !important;
+}
+
+/* ============================================
+   AUTH PAGE BACKGROUND TEXT
+   ============================================ */
+
+/* Auth page title and subtitle outside card */
+[data-theme="light"] .auth-title {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .auth-subtitle {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] .auth-title {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .auth-subtitle {
+  color: #d1d5db !important;
+}
+
+/* Auth features text */
+[data-theme="light"] .auth-feature {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .auth-feature:hover {
+  color: #3b82f6 !important;
+}
+
+[data-theme="dark"] .auth-feature {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] .auth-feature:hover {
+  color: #60a5fa !important;
+}
+
+/* Copyright text */
+[data-theme="light"] .auth-copyright {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .auth-copyright {
+  color: #6b7280 !important;
+}
+
+/* ============================================
+   FORM ELEMENTS IN AUTH CARD
+   ============================================ */
+
+/* Ensure form elements have proper text color */
+[data-theme="light"] .auth-card-main form label {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .auth-card-main form input {
+  color: #d3d3d3 !important;
+}
+
+[data-theme="light"] .auth-card-main form p {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .auth-card-main form label {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .auth-card-main form input {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] .auth-card-main form p {
+  color: #d1d5db !important;
+}
+
+/* ============================================
+   ICON VISIBILITY IN AUTH CARD
+   ============================================ */
+
+/* Icons should be visible */
+[data-theme="light"] .auth-card-main svg {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .auth-card-main button:hover svg {
+  color: #3b82f6 !important;
+}
+
+[data-theme="dark"] .auth-card-main svg {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] .auth-card-main button:hover svg {
+  color: #60a5fa !important;
+}
+
+/* ============================================
+   GRADIENT BUTTONS TEXT
+   ============================================ */
+
+/* Primary button text should always be white */
+[data-theme="light"] .auth-button-primary,
+[data-theme="light"] .auth-button-primary * {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .auth-button-primary,
+[data-theme="dark"] .auth-button-primary * {
+  color: #ffffff !important;
+}
+
+/* ============================================
+   TAB SWITCHER TEXT
+   ============================================ */
+
+/* Tab container text */
+[data-theme="light"] .auth-tabs-container {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .auth-tabs-container .auth-tab-button {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .auth-tabs-container .auth-tab-button.active {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .auth-tabs-container {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .auth-tabs-container .auth-tab-button {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .auth-tabs-container .auth-tab-button.active {
+  color: #ffffff !important;
+}
+
+/* ============================================
+   ROLE SELECTOR TEXT
+   ============================================ */
+
+[data-theme="light"] .auth-role-button {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .auth-role-button.selected {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .auth-role-button {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] .auth-role-button.selected {
+  color: #ffffff !important;
+}
+
+/* ============================================
+   PROGRESS INDICATOR TEXT
+   ============================================ */
+
+[data-theme="light"] .auth-progress-circle {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .auth-progress-circle.active,
+[data-theme="light"] .auth-progress-circle.completed {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .auth-progress-circle {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] .auth-progress-circle.active,
+[data-theme="dark"] .auth-progress-circle.completed {
+  color: #ffffff !important;
+}
+
+/* ============================================
+   ENSURE VISIBILITY FOR ALL TEXT ELEMENTS
+   ============================================ */
+
+/* Force visibility for any missed elements */
+[data-theme="light"] .auth-card-main span:not(.relative) {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .auth-card-main span:not(.relative) {
+  color: #f9fafb !important;
+}
+
+/* Ensure small text is visible */
+[data-theme="light"] .auth-card-main .text-sm {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .auth-card-main .text-sm {
+  color: #d1d5db !important;
+}
+
+/* Ensure extra small text is visible */
+[data-theme="light"] .auth-card-main .text-xs {
+  color: #999999 !important;
+}
+
+[data-theme="dark"] .auth-card-main .text-xs {
+  color: #9ca3af !important;
+}

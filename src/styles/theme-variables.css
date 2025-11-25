@@ -1,0 +1,432 @@
+/**
+ * Theme CSS Variables
+ * These variables are dynamically updated based on theme mode and scheme
+ */
+
+:root {
+  /* Dark Theme Default - App is locked to dark mode */
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+  --color-secondary: #a78bfa;
+  --color-accent: #34d399;
+  
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-hover: #334155;
+  --color-surface-alt: #1e293b;
+  
+  --color-text: #ffffff;
+  --color-text-secondary: #e2e8f0;
+  --color-text-muted: #cbd5e1;
+  --color-text-disabled: #94a3b8;
+  
+  --color-border: #374151;
+  --color-border-hover: #4b5563;
+  --color-border-focus: #60a5fa;
+  
+  --color-error: #f87171;
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-info: #60a5fa;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+  
+  --font-size-base: 16px;
+  --transition-duration: 300ms;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --focus-outline: 3px solid var(--color-primary);
+  --focus-outline-offset: 2px;
+}
+
+/* Dark Mode Theme - Enhanced contrast for better readability */
+[data-theme="dark"] {
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+  --color-secondary: #a78bfa;
+  --color-accent: #34d399;
+  
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-hover: #334155;
+  --color-surface-alt: #1e293b;
+  
+  --color-text: #ffffff;
+  --color-text-secondary: #e2e8f0;
+  --color-text-muted: #cbd5e1;
+  --color-text-disabled: #94a3b8;
+  
+  --color-border: #374151;
+  --color-border-hover: #4b5563;
+  --color-border-focus: #60a5fa;
+  
+  --color-error: #f87171;
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-info: #60a5fa;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+}
+
+/* High Contrast Mode - Ensures 7:1 contrast ratio for WCAG AAA compliance */
+[data-high-contrast="true"] {
+  --color-text: #000000;
+  --color-text-secondary: #1a1a1a;
+  --color-text-muted: #333333;
+  --color-background: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-surface-hover: #e8e8e8;
+  --color-border: #000000;
+  --color-border-hover: #1a1a1a;
+  --color-primary: #0000ee;
+  --color-primary-hover: #0000cc;
+  --color-secondary: #4b0082;
+  --color-accent: #006400;
+  --color-error: #cc0000;
+  --color-success: #006400;
+  --color-warning: #cc6600;
+  --color-info: #0000ee;
+  
+  /* Enhanced focus indicators for high contrast */
+  --focus-outline: 3px solid #000000;
+  --focus-outline-offset: 3px;
+  
+  /* Stronger shadows for better depth perception */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.5);
+  --shadow-md: 0 4px 8px -1px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 10px 20px -3px rgb(0 0 0 / 0.7);
+}
+
+[data-high-contrast="true"][data-theme="dark"] {
+  --color-text: #ffffff;
+  --color-text-secondary: #e6e6e6;
+  --color-text-muted: #cccccc;
+  --color-background: #000000;
+  --color-surface: #0a0a0a;
+  --color-surface-hover: #1a1a1a;
+  --color-border: #ffffff;
+  --color-border-hover: #e6e6e6;
+  --color-primary: #66b3ff;
+  --color-primary-hover: #99ccff;
+  --color-secondary: #cc99ff;
+  --color-accent: #66ff66;
+  --color-error: #ff6666;
+  --color-success: #66ff66;
+  --color-warning: #ffaa33;
+  --color-info: #66b3ff;
+  
+  /* Enhanced focus indicators for high contrast dark mode */
+  --focus-outline: 3px solid #ffffff;
+  --focus-outline-offset: 3px;
+  
+  /* Stronger shadows for better depth perception */
+  --shadow-sm: 0 1px 3px 0 rgb(255 255 255 / 0.3);
+  --shadow-md: 0 4px 8px -1px rgb(255 255 255 / 0.4);
+  --shadow-lg: 0 10px 20px -3px rgb(255 255 255 / 0.5);
+}
+
+/* High contrast mode border enhancements */
+[data-high-contrast="true"] button,
+[data-high-contrast="true"] input,
+[data-high-contrast="true"] select,
+[data-high-contrast="true"] textarea {
+  border-width: 2px;
+}
+
+[data-high-contrast="true"] *:focus-visible {
+  outline-width: 4px;
+  outline-offset: 3px;
+}
+
+/* Font Size Adjustments - Responsive scaling for all text elements */
+[data-font-size="small"] {
+  --font-size-base: 14px;
+  --font-size-sm: 0.8125rem;   /* 13px */
+  --font-size-lg: 1.0625rem;   /* 17px */
+  --font-size-xl: 1.1875rem;   /* 19px */
+  --font-size-2xl: 1.375rem;   /* 22px */
+}
+
+[data-font-size="medium"] {
+  --font-size-base: 16px;
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+}
+
+[data-font-size="large"] {
+  --font-size-base: 18px;
+  --font-size-sm: 0.9375rem;   /* 15px */
+  --font-size-lg: 1.1875rem;   /* 19px */
+  --font-size-xl: 1.3125rem;   /* 21px */
+  --font-size-2xl: 1.625rem;   /* 26px */
+}
+
+[data-font-size="xlarge"] {
+  --font-size-base: 20px;
+  --font-size-sm: 1rem;        /* 16px */
+  --font-size-lg: 1.25rem;     /* 20px */
+  --font-size-xl: 1.375rem;    /* 22px */
+  --font-size-2xl: 1.75rem;    /* 28px */
+}
+
+/* Apply font size to body and all text elements */
+body {
+  font-size: var(--font-size-base);
+}
+
+/* Ensure all text elements scale with font size setting */
+[data-font-size] h1 {
+  font-size: calc(var(--font-size-base) * 2);
+}
+
+[data-font-size] h2 {
+  font-size: calc(var(--font-size-base) * 1.75);
+}
+
+[data-font-size] h3 {
+  font-size: calc(var(--font-size-base) * 1.5);
+}
+
+[data-font-size] h4 {
+  font-size: calc(var(--font-size-base) * 1.25);
+}
+
+[data-font-size] h5 {
+  font-size: calc(var(--font-size-base) * 1.125);
+}
+
+[data-font-size] h6 {
+  font-size: var(--font-size-base);
+}
+
+/* Ensure buttons and inputs scale appropriately */
+[data-font-size] button,
+[data-font-size] input,
+[data-font-size] select,
+[data-font-size] textarea {
+  font-size: var(--font-size-base);
+}
+
+/* Scale small text appropriately */
+[data-font-size] .text-sm,
+[data-font-size] small {
+  font-size: var(--font-size-sm);
+}
+
+/* Scale large text appropriately */
+[data-font-size] .text-lg {
+  font-size: var(--font-size-lg);
+}
+
+[data-font-size] .text-xl {
+  font-size: var(--font-size-xl);
+}
+
+[data-font-size] .text-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+/* Reduced Motion - Respects user preference for minimal animations */
+[data-reduced-motion="true"] {
+  --transition-duration: 0ms;
+}
+
+[data-reduced-motion="true"] *,
+[data-reduced-motion="true"] *::before,
+[data-reduced-motion="true"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Disable specific animations when reduced motion is enabled */
+[data-reduced-motion="true"] * {
+  animation-name: none !important;
+  transform: none !important;
+}
+
+/* Keep essential transitions for state changes but make them instant */
+[data-reduced-motion="true"] button:hover,
+[data-reduced-motion="true"] a:hover,
+[data-reduced-motion="true"] input:focus,
+[data-reduced-motion="true"] select:focus,
+[data-reduced-motion="true"] textarea:focus {
+  transition: opacity 0.01ms, background-color 0.01ms, border-color 0.01ms !important;
+}
+
+/* Respect system preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-reduced-motion="false"]) {
+    --transition-duration: 0ms;
+  }
+  
+  :root:not([data-reduced-motion="false"]) *,
+  :root:not([data-reduced-motion="false"]) *::before,
+  :root:not([data-reduced-motion="false"]) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ocean Theme */
+[data-scheme="ocean"] {
+  --color-primary: #0ea5e9;
+  --color-secondary: #06b6d4;
+  --color-accent: #14b8a6;
+}
+
+[data-scheme="ocean"][data-theme="light"] {
+  --color-background: #f0f9ff;
+  --color-surface: #e0f2fe;
+  --color-text: #0c4a6e;
+  --color-text-secondary: #075985;
+  --color-border: #bae6fd;
+}
+
+[data-scheme="ocean"][data-theme="dark"] {
+  --color-primary: #38bdf8;
+  --color-secondary: #22d3ee;
+  --color-accent: #2dd4bf;
+  --color-background: #0c4a6e;
+  --color-surface: #075985;
+  --color-text: #f0f9ff;
+  --color-text-secondary: #bae6fd;
+  --color-border: #0369a1;
+}
+
+/* Forest Theme */
+[data-scheme="forest"] {
+  --color-primary: #22c55e;
+  --color-secondary: #84cc16;
+  --color-accent: #eab308;
+}
+
+[data-scheme="forest"][data-theme="light"] {
+  --color-background: #f0fdf4;
+  --color-surface: #dcfce7;
+  --color-text: #14532d;
+  --color-text-secondary: #166534;
+  --color-border: #bbf7d0;
+}
+
+[data-scheme="forest"][data-theme="dark"] {
+  --color-primary: #4ade80;
+  --color-secondary: #a3e635;
+  --color-accent: #facc15;
+  --color-background: #14532d;
+  --color-surface: #166534;
+  --color-text: #f0fdf4;
+  --color-text-secondary: #bbf7d0;
+  --color-border: #15803d;
+}
+
+/* Sunset Theme */
+[data-scheme="sunset"] {
+  --color-primary: #f97316;
+  --color-secondary: #ec4899;
+  --color-accent: #a855f7;
+}
+
+[data-scheme="sunset"][data-theme="light"] {
+  --color-background: #fff7ed;
+  --color-surface: #ffedd5;
+  --color-text: #7c2d12;
+  --color-text-secondary: #9a3412;
+  --color-border: #fed7aa;
+}
+
+[data-scheme="sunset"][data-theme="dark"] {
+  --color-primary: #fb923c;
+  --color-secondary: #f472b6;
+  --color-accent: #c084fc;
+  --color-background: #7c2d12;
+  --color-surface: #9a3412;
+  --color-text: #fff7ed;
+  --color-text-secondary: #fed7aa;
+  --color-border: #c2410c;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing);
+}
+
+/* Focus styles for accessibility - Enhanced keyboard navigation support */
+*:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+  outline-style: solid;
+}
+
+/* Ensure focus is always visible, even on elements that remove default outline */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+  outline-style: solid;
+}
+
+/* Enhanced focus for interactive elements */
+button:focus-visible,
+[role="button"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-primary), 0 0 0 6px var(--color-background);
+}
+
+/* Skip to content link for keyboard navigation */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 100;
+  transition: top var(--transition-duration);
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Keyboard navigation indicators */
+[data-keyboard-nav="true"] *:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Remove focus outline for mouse users */
+[data-keyboard-nav="false"] *:focus:not(:focus-visible) {
+  outline: none;
+}
